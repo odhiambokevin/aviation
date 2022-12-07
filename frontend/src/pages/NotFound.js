@@ -10,7 +10,7 @@ const NotFound = () => {
                 </div>
                     <img src='static/images/notfound.jpg' style={{paddingLeft:'25%',paddingRight:'0', height:'70vh'}} alt='' />
                     <div className="erorpage">
-                        <p> Page Response : {`${error.status} ${error.statusText || error.message}`}</p>
+                        <p> Page Response : {`${error.status}: ${error.statusText || error.message}`}</p>
                     </div>
             </div>
             

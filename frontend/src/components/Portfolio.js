@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import {Link} from 'react-scroll';
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import {allWorks} from '../state/slices/worksSlice';
 import {motion} from 'framer-motion';
 
@@ -51,13 +50,13 @@ const Works = ()=> {
                       <img src={work.image} alt="thumbnail" />
                       
                        <div className="hover-link">
-                          <Link to={`${work.slug}`}>
+                          <NavLink to={`/projects/${work.slug}`}>
                               <i className="fa fa-link"></i>
-                          </Link>
+                          </NavLink>
 
-                          <Link to={work.image} className="popup-image">
+                          <a href={work.image} className="popup-image">
                               <i className="fa fa-plus"></i>
-                          </Link>
+                          </a>
                        </div>
                   
                        <div className="work-caption">

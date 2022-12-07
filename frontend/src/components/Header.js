@@ -1,10 +1,24 @@
-import { Link } from 'react-scroll';
-import { useState } from 'react';
-import { NavLink } from 'react-router-dom'
+import { useEffect } from 'react';
+import { NavLink, Link, useLocation } from 'react-router-dom'
 
 function Header() {
     
-    const [activeclassName, setactiveclassName] = useState('home');
+    // const [activeclassName, setactiveclassName] = useState('home');
+    const location = useLocation();
+    const { pathname } = location;
+    const splitLocation = pathname.split('/');
+
+    useEffect(() => {
+        if (location.hash) {
+            let elem = document.getElementById(location.hash.slice(1))
+            if (elem) {
+                elem.scrollIntoView({behavior: 'smooth'})
+            }
+        } else {
+            window.scrollTo({top: 0, left: 0, behavior: 'smooth'})
+        }
+        
+    }, [location]);
 
     return ( 
         <header id="header">
@@ -18,18 +32,19 @@ function Header() {
                             <span className="icon-bar"></span>
                         </button>
                         <div className="logo-nav">
-                            <NavLink to="/" >
+                            <NavLink reloadDocument to="/" >
                                 <img src="static/images/logo.png" alt="Company logo" style={{height: "100px"}} />
                             </NavLink>
                         </div>
                         <div className="clear-toggle"></div>
                         <div id="main-menu" className="collapse scroll navbar-right">
                             <ul className="nav">
-                                <li className={activeclassName === 'home' ? "active":""}> <Link to="home" spy={true} smooth={true} offset={-10} duration={1500} onSetActive={()=>setactiveclassName('home')}>Home</Link> </li>
-                                <li className={activeclassName === 'portfolio' ? "active":""}> <Link to="works" spy={true} smooth={true} offset={-10} duration={1500} onSetActive={()=>setactiveclassName('portfolio')}>Portfolio</Link></li>
-                                <li className={activeclassName === 'ourspecialization' ? "active":""}> <Link to="services" spy={true} smooth={true} offset={-10} duration={1500} onSetActive={()=>setactiveclassName('ourspecialization')}>Our Specialization</Link> </li>
-                                <li className={activeclassName === 'blog' ? "active":""}> <NavLink to='/blogs' >blog</NavLink></li>
-                                <li className={activeclassName === 'contact' ? "active":""}> <Link to="contact" spy={true} smooth={true} offset={-10} duration={1500} onSetActive={()=>setactiveclassName('contact')}>contact</Link></li>
+                                <li> <NavLink className='' to="/#home">Home</NavLink> </li>
+                                <li> <NavLink className='' to="/#works">Portfolio</NavLink></li>
+                                <li> <NavLink className='' to="/#services">Our Specialization</NavLink> </li>
+                                <li> <NavLink to='/blogs'>blog</NavLink></li>
+                                <li> <NavLink className='' to="/#contact">contact</NavLink></li>
+                                {/* <li className={splitLocation[1] === '#contact' ? 'active' : ''}> <Link  to="/#contact">contact</Link></li> */}
                             </ul>
                         </div>
                     </div>
