@@ -17,6 +17,7 @@
 */
 
 import { useState } from "react";
+import CssBaseline from "@mui/material/CssBaseline";
 
 // react-router-dom components
 import { Link } from "react-router-dom";
