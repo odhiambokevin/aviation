@@ -2,18 +2,17 @@ from enum import unique
 from unittest.util import _MAX_LENGTH
 from django.db import models
 
-categories = (
-    ('agriculture','agriculture'),
-    ('biodiversity','biodiversity'),
-    ('water','water'),
-    ('facility','facility'),
-)
+class Category(models.TextChoices):
+    AGRIC = 'agriculture', 'Agriculture',
+    BIO = 'biodiversity', 'Biodiversity',
+    WAT = 'water', 'Water',
+    FACIL = 'facility', 'Facility',
 
 class Work(models.Model):
     id = models.IntegerField(primary_key=True,unique=True)
     title = models.CharField(max_length=100)
     slug = models.SlugField(null=False, unique=True)
-    category = models.CharField(max_length=20, choices=categories, default='agriculture')
+    category = models.CharField(max_length=20, choices=Category.choices, default=Category.AGRIC)
     software = models.TextField()
     release_date = models.DateField()
     is_published = models.BooleanField(default=False, verbose_name="Publish Status", help_text="Publish Status")

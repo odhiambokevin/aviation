@@ -8,9 +8,9 @@ class UserAdmin(BaseUserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = User
-    list_display = ["pkid","id","email","username", "first_name", "last_name","is_staff","is_active"]
+    list_display = ["pkid","id","email","username", "first_name", "last_name","designation","is_staff","is_active"]
     list_display_links = ["email"]
-    list_filter = ["is_staff","is_active","username"]
+    list_filter = ["is_staff","is_active","username","designation"]
     fieldsets = (
         (
             "Login Credentials",{
@@ -19,7 +19,7 @@ class UserAdmin(BaseUserAdmin):
         ),
         (
             "Personal Information",{
-            "fields": ("username", "first_name","last_name",)
+            "fields": ("username", "first_name","last_name","designation")
         },
         ),
         (
@@ -36,9 +36,9 @@ class UserAdmin(BaseUserAdmin):
     add_fieldsets = (
         (None,{
             "classes": ("wide",),
-            "fields": ("email", "password1","password2","is_staff","is_active"),
+            "fields": ("email", "password1","password2","is_staff","is_active","designation"),
         })
     ),
-    search_fields = ["email","username","first_name","last_name"]
+    search_fields = ["email","username","first_name","last_name","designation"]
 
 admin.site.register(User, UserAdmin)

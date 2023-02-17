@@ -84,22 +84,6 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'yaspi.wsgi.application'
 
-
-# Database
-# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
-
-DATABASES = {
-    'default': {
-        'ENGINE': config('ENGINE'),
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-        'PORT': config('DB_PORT'),
-    }
-}
-
-
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
@@ -143,6 +127,21 @@ STATICFILES_DIRS = [
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Database
+# https://docs.djangoproject.com/en/4.0/ref/settings/#databases
+
+DATABASES = {
+    'default': {
+        'ENGINE': config('ENGINE'),
+        'NAME': config('DB_NAME'),
+        'USER': config('DB_USER'),
+        'PASSWORD': config('DB_PASSWORD'),
+        'HOST': config('DB_HOST'),
+        'PORT': config('DB_PORT'),
+    }
+}
+
+
 # Email settings
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 EMAIL_HOST = config('EMAIL_HOST')
@@ -150,9 +149,13 @@ EMAIL_HOST_USER = config('EMAIL_HOST_USER')
 EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-RECIPIENT_ADDRESS=EMAIL_HOST_USER
 DOMAIN = config('DOMAIN')
+DEFAULT_FROM_EMAIL = config('DEFAULT_FROM_EMAIL')
 SITE_NAME = config('SITE_NAME')
+ADMINS = (
+    ('Kevin Odhiambo', 'contactyaspi@gmail.com'),
+)
+MANAGERS = ADMINS
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
@@ -161,8 +164,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = "users.User"
 
-
-
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
 
@@ -170,13 +171,13 @@ REST_FRAMEWORK = {
 
         )
 }
-
+ 
 from datetime import timedelta
 
 SIMPLE_JWT = {
     "AUTH_HEADER_TYPES": (
+        # "JWT",
         "Bearer",
-        "JWT",
         ),
     "ACCESS_TOKEN_LIFETIME": timedelta(minutes=60),
     "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
@@ -191,7 +192,7 @@ DJOSER = {
     "USERNAME_CHANGED_EMAIL_CONFIRMATION": True,
     "PASSWORD_CHANGED_EMAIL_CONFIRMATION": True,
     "SEND_CONFIRMATION_EMAIL": True,
-    "PASSWORD_RESET_CONFRIM_URL": "password/reset/confirm/{uid}/{token}",
+    "PASSWORD_RESET_CONFIRM_URL": "password/reset/confirm/{uid}/{token}",
     "SET_PASSWORD_RETYPE": True,
     "PASSWORD_RESET_CONFRIM_RETYPE": True,
     "USERNAME_RESET_CONFRIM_URL": "email/reset/confirm/{uid}/{token}",
@@ -201,7 +202,7 @@ DJOSER = {
         "user_create":"apps.users.serializers.CreateUserSerializer",
         "user":"apps.users.serializers.UserSerializer",
         "current_user":"apps.users.serializers.UserSerializer",
-        "user_delete":"apps.users.serializers.UserDeleteSerializer",
+        "user_delete":"djoser.serializers.UserDeleteSerializer",
     },
 
 }

@@ -4,6 +4,10 @@ from django.utils import timezone
 from django.db import models
 from .managers import CustomUserManager
 
+class Designation(models.TextChoices):
+    WCO = 'wcontrol', 'Wildife Control Officer'
+    WMAN = 'wmanager', 'Wildife Control Manager'
+    
 class User(AbstractBaseUser, PermissionsMixin):
     pkid = models.BigAutoField(primary_key=True, editable=False)
     id = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)
@@ -11,12 +15,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     first_name = models.CharField(verbose_name='First Name', max_length=25)
     last_name = models.CharField(verbose_name='Last Name', max_length=25)
     email = models.EmailField(verbose_name='Email Address', unique=True)
+    designation = models.CharField(max_length=20, choices=Designation.choices)
     is_staff = models.BooleanField(default=False)
-    is_active = models.BooleanField(default=True)
+    is_active = models.BooleanField(default=False)
     date_created = models.DateTimeField(default=timezone.now) #use 'auto_now_add=True' to enforce integrity
     
     USERNAME_FIELD = "email"
-    REQUIRED_FIELDS = ["username","first_name","last_name"]
+    REQUIRED_FIELDS = ["username"]
 
     #make use of custom user manager
     objects = CustomUserManager()

@@ -5,15 +5,16 @@ from .exceptions import NotYourProfile, ProfileNotFound
 from .models import Profile
 from .renderers import ProfileJSONRenderer
 from .serializers import ProfileSerializer, UpdateProfileSerializer
+from apps.users.models import User
 
 class WControlListAPIView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
-    queryset = Profile.objects.filter(is_wcontrol=True)
+    queryset = User.objects.filter(designation='Wildlife Control Officer')
     serializer_class = ProfileSerializer
 
 class WManagerListAPIView(generics.ListAPIView):
     permission_classes = [permissions.IsAuthenticated]
-    queryset = Profile.objects.filter(is_wmanager=True)
+    queryset = User.objects.filter(designation='Wildlife Control Manager')
     serializer_class = ProfileSerializer
 
 class GetProfileAPIView(APIView):

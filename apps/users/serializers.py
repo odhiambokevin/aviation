@@ -9,8 +9,6 @@ User = get_user_model()
 class UserSerializer(serializers.ModelSerializer):
     gender = serializers.CharField(source="profile.gender")
     station = serializers.CharField(source="profile.station")
-    is_wcontrol = serializers.BooleanField(source="profile.is_wcontrol")
-    is_manager = serializers.BooleanField(source="profile.is_wmanager")
     photo = serializers.ImageField(source="profile.photo")
     first_name = serializers.SerializerMethodField()
     last_name = serializers.SerializerMethodField()
@@ -18,7 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = User
-        fields = ['id','username','email','first_name','last_name','full_name','gender','station','is_manager','is_wcontrol','photo']
+        fields = ['id','username','email','first_name','last_name','full_name',"designation",'gender','station','photo']
 
     def get_first_name(self, obj):
         return obj.first_name.title()
@@ -36,5 +34,5 @@ class UserSerializer(serializers.ModelSerializer):
 class CreateUserSerializer(UserCreateSerializer):
     class Meta(UserCreateSerializer.Meta):
         model = User
-        fields = ["id","username","first_name","last_name","password"]
+        fields = ["id","username","password",'email']
         

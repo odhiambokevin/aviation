@@ -11,6 +11,7 @@ const initialState = {
 }
 
 // get all work items
+// allWorks is an ACTION, works/getAllWorks is a TYPE and the try:catch block holds the PAYLOAD of the ACTION
 export const allWorks = createAsyncThunk('works/getAllWorks', async (_,thunkAPI)=>{
     try {
         return await worksApi.getWorks();      
@@ -21,9 +22,7 @@ export const allWorks = createAsyncThunk('works/getAllWorks', async (_,thunkAPI)
     }
 })
 
-// allWorks is an ACTION, works/getAllWorks is a TYPE and the try:catch block holds the PAYLOAD of the ACTION
 // Below the ACTION 'allWorks' is added to the slice using the extraReducer(without using the builder PARAM)
-
 export const worksSlice = createSlice({
     name: "works",
     initialState: initialState,

@@ -8,6 +8,7 @@ import NotFound from './pages/NotFound';
 import Footer from './components/Footer';
 import Crop from './pages/Crop';
 import SignIn from "./layouts/authentication/sign-in";
+import SignUp from "./layouts/authentication/sign-up";
 
 export const AppLayout = ()=>{
   return(
@@ -27,6 +28,7 @@ const router = createBrowserRouter(createRoutesFromElements(
       <Route path='blogs' element={<Blog />} />
   </Route>
   <Route path='projects/airport-wildlife-management' element={<SignIn/>} />
+  <Route path='authentication/sign-up' element={<SignUp/>} />
 </>
   ));
 
