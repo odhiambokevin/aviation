@@ -24,10 +24,10 @@ const router = createBrowserRouter(createRoutesFromElements(
 <>
   <Route element={<AppLayout />} errorElement={<NotFound />}>
     <Route path='/' element={<Home />} />
-      <Route path='projects/production-management-system' element={<Crop/>} />
       <Route path='blogs' element={<Blog />} />
   </Route>
-  <Route path='projects/airport-wildlife-management' element={<SignIn/>} />
+  <Route path='projects/:slug' element={<SignIn/>} />
+  <Route path='authentication/sign-in' element={<SignIn/>} />
   <Route path='authentication/sign-up' element={<SignUp/>} />
 </>
   ));

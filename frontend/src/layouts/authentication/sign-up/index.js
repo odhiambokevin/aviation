@@ -43,14 +43,7 @@ function SignUp() {
 	const dispatch = useDispatch();
   const navigate = useNavigate();
   const form = useRef();
-	
-	// useEffect(()=> {
-	// 	dispatch(registerNewUser())
-	// },[dispatch,isError, message])
-
-
-  const [rememberMe, setRememberMe] = useState(true);
-
+	const [rememberMe, setRememberMe] = useState(true);
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
 
   const [ userData , setUserData ] = useState({
@@ -74,10 +67,10 @@ const addUser = async (e) => {
     <CoverLayout
       title="Welcome!"
       color="white"
-      description="Use these awesome forms to login or create new account in your project for free."
+      description="Register for free."
       image={bgSignIn}
-      premotto="INSPIRED BY THE FUTURE:"
-      motto="THE VISION UI DASHBOARD"
+      premotto="WILDLIFE MANAGEMENT SYSTEM"
+      motto="AIRPORT AUTHORITY"
       cardContent
     >
       <GradientBorder borderRadius={borders.borderRadius.form} minWidth="100%" maxWidth="100%">
@@ -222,6 +215,7 @@ const addUser = async (e) => {
                 })}
                 onChange={handleChange}
                 value={userData.username}
+                required
               />
             </GradientBorder>
           </VuiBox>
@@ -250,6 +244,7 @@ const addUser = async (e) => {
                 })}
                 onChange={handleChange}
                 value={userData.email}
+                required
               />
             </GradientBorder>
           </VuiBox>
@@ -278,6 +273,7 @@ const addUser = async (e) => {
                 })}
                 onChange={handleChange}
                 value={userData.password}
+                required
               />
             </GradientBorder>
           </VuiBox>
@@ -306,6 +302,7 @@ const addUser = async (e) => {
                 })}
                 onChange={handleChange}
                 value={userData.re_password}
+                required
               />
             </GradientBorder>
           </VuiBox>

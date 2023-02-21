@@ -9,15 +9,29 @@ const initialState = {
         password:'',
         re_password:''
     },
+    access: localStorage.getItem('access'),
+    refresh: localStorage.getItem('refresh'),
+    isAuthenticated: false,
     isError: false,
     isLoading: false,
     isSuccess: false,
     message: 'Initial STATE'
 }
 
+// retreiving active user
+export const activeUser = createAsyncThunk('user/registerUser', async (_,thunkAPI)=>{
+    if (localStorage.getItem('access'));
+        try {
+            return await userApi.getUser();      
+        } catch (error) {
+            const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
+            return thunkAPI.rejectWithValue(message);
+            
+        }
+})
+
 // registering a user
 // registerNewUser is an ACTION, user/registerUser is a TYPE and the try:catch block holds the PAYLOAD of the ACTION
-
 export const registerNewUser = createAsyncThunk('user/registerUser', async (userData,thunkAPI)=>{
     try {
         return await userApi.registerUser(userData);      
@@ -28,9 +42,20 @@ export const registerNewUser = createAsyncThunk('user/registerUser', async (user
     }
 })
 
-// Below the ACTION 'registerNewUser' is added to the slice using the extraReducer(without using the builder PARAM)
+// login for a user
+// loginActiveUser is an ACTION, auth/loginUser is a TYPE and the try:catch block holds the PAYLOAD of the ACTION
+export const loginActiveUser = createAsyncThunk('auth/loginUser', async (userData,thunkAPI)=>{
+    try {
+        return await userApi.loginUser(userData);      
+    } catch (error) {
+        const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
+        return thunkAPI.rejectWithValue(message);
+        
+    }
+})
  
-export const regUserSlice = createSlice({
+// Below the ACTION 'registerNewUser' is added to the slice using the extraReducer(without using the builder PARAM)
+export const userSlice = createSlice({
     name: "user",
     initialState: initialState,
     reducers: {},
@@ -48,6 +73,20 @@ export const regUserSlice = createSlice({
             state.isLoading = false;
             state.isSuccess = false;
             state.isError = true;
+            state.message = payload;
+        },
+        [loginActiveUser.fulfilled]: (state, {payload})=>{
+            localStorage.setItem('access', payload.access);
+            state.access = payload.access;
+            state.refresh = payload.refresh;
+            state.isAuthenticated = true;
+        },
+        [loginActiveUser.rejected]: (state, {payload})=>{
+            localStorage.removeItem('access');
+            localStorage.removeItem('refresh');
+            state.access = null;
+            state.refresh = null;
+            state.isAuthenticated = false;
             state.message = payload;
         },
     },

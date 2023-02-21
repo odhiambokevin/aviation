@@ -1,12 +1,26 @@
-import { useState, useEffect, useRef } from "react";
-import { activeUser, loginActiveUser } from '../../../state/slices/userSlice';
+/*!
+
+=========================================================
+* Vision UI Free React - v1.0.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
+* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
+* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
+
+* Design and Coded by Simmmple & Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+*/
+
+import { useState } from "react";
 import CssBaseline from "@mui/material/CssBaseline";
 
-//redux imports
-import {useDispatch, useSelector} from 'react-redux';
-
 // react-router-dom components
-import { Link, useNavigate} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 // Vision UI Dashboard React components
 import VuiBox from "../../../components/VuiBox";
@@ -27,31 +41,10 @@ import CoverLayout from "../../../layouts/authentication/components/CoverLayout"
 // Images
 import bgSignIn from "../../../assets/images/signInImage.png";
 
-function SignIn() {
-  const {user,isError, isLoading,isSuccess,message} = useSelector((state)=> state.user)
-	const dispatch = useDispatch();
-  const navigate = useNavigate();
-  const form = useRef();
+function Verify() {
   const [rememberMe, setRememberMe] = useState(true);
 
   const handleSetRememberMe = () => setRememberMe(!rememberMe);
-
-  const [ userData , setUserData ] = useState({
-    email:'',
-    password:''
-  })
-
-const handleChange = (e)=>{
-    setUserData({...userData, [e.target.name]:e.target.value});
-}
-
-const loginUser = async (e) => {
-  e.preventDefault();
-    dispatch(loginActiveUser(userData)).then(
-      dispatch(activeUser)
-    );
-    navigate('/');
-};
 
   return (
     <CoverLayout
@@ -62,7 +55,7 @@ const loginUser = async (e) => {
       motto="AIRPORT AUTHORITY"
       image={bgSignIn}
     >
-      <VuiBox component="form" role="form" onSubmit={loginUser} ref={form}>
+      <VuiBox component="form" role="form">
         <VuiBox mb={2}>
           <VuiBox mb={1} ml={0.5}>
             <VuiTypography component="label" variant="button" color="white" fontWeight="medium">
@@ -79,7 +72,7 @@ const loginUser = async (e) => {
               palette.gradients.borderLight.angle
             )}
           >
-            <VuiInput name='email' type="email" placeholder="Your email..." fontWeight="500" onChange={handleChange} value={userData.email} required />
+            <VuiInput type="email" placeholder="Your email..." fontWeight="500" />
           </GradientBorder>
         </VuiBox>
         <VuiBox mb={2}>
@@ -99,13 +92,11 @@ const loginUser = async (e) => {
             )}
           >
             <VuiInput
-              name='password'
               type="password"
               placeholder="Your password..."
               sx={({ typography: { size } }) => ({
                 fontSize: size.sm,
               })}
-              onChange={handleChange} value={userData.password} required
             />
           </GradientBorder>
         </VuiBox>
@@ -122,7 +113,7 @@ const loginUser = async (e) => {
           </VuiTypography>
         </VuiBox>
         <VuiBox mt={4} mb={1}>
-          <VuiButton type='submit' color="info" fullWidth>
+          <VuiButton color="info" fullWidth>
             SIGN IN
           </VuiButton>
         </VuiBox>
@@ -145,4 +136,4 @@ const loginUser = async (e) => {
   );
 }
 
-export default SignIn;
+export default Verify;
