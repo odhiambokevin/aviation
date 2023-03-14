@@ -1,12 +1,12 @@
 import React from 'react';
 
 import { Card, Stack } from '@mui/material';
-import VuiBox from 'components/VuiBox';
-import VuiTypography from 'components/VuiTypography';
+import VuiBox from '../../../../components/VuiBox';
+import VuiTypography from '../../../../components/VuiTypography';
 import CircularProgress from '@mui/material/CircularProgress';
 import { IoHappy } from 'react-icons/io5';
-import colors from 'assets/theme/base/colors';
-import linearGradient from 'assets/theme/functions/linearGradient';
+import colors from '../../../../assets/theme/base/colors';
+import linearGradient from '../../../../assets/theme/functions/linearGradient';
 
 const SatisfactionRate = () => {
 	const { info, gradients } = colors;

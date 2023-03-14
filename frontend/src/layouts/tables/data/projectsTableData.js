@@ -1,43 +1,25 @@
-/*!
-
-=========================================================
-* Vision UI Free React - v1.0.0
-=========================================================
-
-* Product Page: https://www.creative-tim.com/product/vision-ui-free-react
-* Copyright 2021 Creative Tim (https://www.creative-tim.com/)
-* Licensed under MIT (https://github.com/creativetimofficial/vision-ui-free-react/blob/master LICENSE.md)
-
-* Design and Coded by Simmmple & Creative Tim
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
-
 /* eslint-disable react/prop-types */
 // @mui material components
 import Icon from "@mui/material/Icon";
 
 // Vision UI Dashboard React components
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
-import VuiProgress from "components/VuiProgress";
+import VuiBox from "../../../components/VuiBox";
+import VuiTypography from "../../../components/VuiTypography";
+import VuiProgress from "../../../components/VuiProgress";
 
 // Images
-import AdobeXD from "examples/Icons/AdobeXD";
-import Atlassian from "examples/Icons/Atlassian";
-import Slack from "examples/Icons/Slack";
-import Spotify from "examples/Icons/Spotify";
-import Jira from "examples/Icons/Jira";
-import Invision from "examples/Icons/Invision";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
-import logoInvesion from "assets/images/small-logos/logo-invision.svg";
-import logoJira from "assets/images/small-logos/logo-jira.svg";
-import logoSlack from "assets/images/small-logos/logo-slack.svg";
-import logoWebDev from "assets/images/small-logos/logo-webdev.svg";
-import logoXD from "assets/images/small-logos/logo-xd.svg";
+import AdobeXD from "../../../examples/Icons/AdobeXD";
+import Atlassian from "../../../examples/Icons/Atlassian";
+import Slack from "../../../examples/Icons/Slack";
+import Spotify from "../../../examples/Icons/Spotify";
+import Jira from "../../../examples/Icons/Jira";
+import Invision from "../../../examples/Icons/Invision";
+import logoSpotify from "../../../assets/images/small-logos/logo-spotify.svg";
+import logoInvesion from "../../../assets/images/small-logos/logo-invision.svg";
+import logoJira from "../../../assets/images/small-logos/logo-jira.svg";
+import logoSlack from "../../../assets/images/small-logos/logo-slack.svg";
+import logoWebDev from "../../../assets/images/small-logos/logo-webdev.svg";
+import logoXD from "../../../assets/images/small-logos/logo-xd.svg";
 
 function Completion({ value, color }) {
   return (

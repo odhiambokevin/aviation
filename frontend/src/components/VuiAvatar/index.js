@@ -22,7 +22,7 @@ import { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 // Custom styles for VuiAvatar
-import VuiAvatarRoot from "components/VuiAvatar/VuiAvatarRoot";
+import VuiAvatarRoot from "./VuiAvatarRoot";
 
 const VuiAvatar = forwardRef(({ bgColor, size, shadow, ...rest }, ref) => (
   <VuiAvatarRoot ref={ref} ownerState={{ shadow, bgColor, size }} {...rest} />

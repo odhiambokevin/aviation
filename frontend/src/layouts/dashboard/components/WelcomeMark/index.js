@@ -1,10 +1,10 @@
 import React from "react";
 
 import { Card, Icon } from "@mui/material";
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
+import VuiBox from "../../../../components/VuiBox";
+import VuiTypography from "../../../../components/VuiTypography";
 
-import gif from "assets/images/cardimgfree.png";
+import gif from "../../../../assets/images/cardimgfree.png";
 
 const WelcomeMark = () => {
   return (
