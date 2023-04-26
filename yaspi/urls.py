@@ -16,6 +16,8 @@ urlpatterns = [
     path('api/v1/blogs/', include('apps.blog.urls')),
     path('api/v1/banners/', include('apps.banner.urls')),
     path('api/v1/works/', include('apps.works.urls')),
+    path('api/v1/incidents/', include('apps.incident.urls')),
+    path('api/v1/incidentcontrol/', include('apps.incidentcontrol.urls')),
 
 
 ]

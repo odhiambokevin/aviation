@@ -22,6 +22,7 @@ class Work(models.Model):
         ordering = ['title']
         verbose_name = "Works"
         verbose_name_plural = "Works"
+        db_table = "works"
 
     def __str__(self):
         return self.title

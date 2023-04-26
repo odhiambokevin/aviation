@@ -6,6 +6,7 @@ class Banner(models.Model):
 
     class Meta:
         ordering = ['title']
+        db_table = "banner"
 
     def __str__(self):
         return self.title

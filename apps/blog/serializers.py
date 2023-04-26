@@ -15,3 +15,4 @@ class BlogsSerializer(serializers.ModelSerializer):
     class Meta:
         model = Blogs
         fields = ['id','title','slug','body','author','modified_date','image','created_date']
+        # read_only_fields = []
