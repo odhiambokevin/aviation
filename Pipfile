@@ -44,6 +44,7 @@ django-cors-headers = "*"
 celery = "==5.2.6"
 redis = "==4.3.1"
 django-celery-email = "==3.0.0"
+djangorestframework-gis = "*"
 
 [dev-packages]
 black = "==22.3.0"

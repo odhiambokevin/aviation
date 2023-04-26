@@ -22,7 +22,7 @@ import { forwardRef } from "react";
 import PropTypes from "prop-types";
 
 // Custom styles for the VuiBadge
-import VuiBadgeRoot from "components/VuiBadge/VuiBadgeRoot";
+import VuiBadgeRoot from "./VuiBadgeRoot";
 
 const VuiBadge = forwardRef(
   ({ color, variant, size, circular, indicator, border, container, children, ...rest }, ref) => (

@@ -37,6 +37,7 @@ THIRD_PARTY_APPS = [
     'djoser',
     'rest_framework',
     'rest_framework_simplejwt',
+    'leaflet',
 
 ]
 
@@ -46,6 +47,8 @@ USER_APPS = [
     'apps.blog',
     'apps.banner',
     'apps.works',
+    'apps.incident',
+    'apps.incidentcontrol',
 ]  
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + USER_APPS
@@ -141,7 +144,6 @@ DATABASES = {
     }
 }
 
-
 # Email settings
 EMAIL_BACKEND = config('EMAIL_BACKEND')
 EMAIL_HOST = config('EMAIL_HOST')
@@ -204,7 +206,15 @@ DJOSER = {
         "current_user":"apps.users.serializers.UserSerializer",
         "user_delete":"djoser.serializers.UserDeleteSerializer",
     },
+}
 
+#Leaflet Config
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (-0.3, 36.25),
+    'DEFAULT_ZOOM': 8,
+    'MAX_ZOOM': 20,
+    'SCALE':'both',
+    'ATTRIBUTION_PREFIX': 'Yaspi Labs'
 }
 
 #logs

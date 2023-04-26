@@ -21,6 +21,7 @@ class Blogs(models.Model):
         ordering = ['-created_date',]
         verbose_name = "Blogs"
         verbose_name_plural = "Blogs"
+        db_table = "blogs"
 
     def __str__(self):
         return self.title

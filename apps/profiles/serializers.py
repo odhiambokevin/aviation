@@ -2,20 +2,13 @@ from django.forms import CharField
 from rest_framework import serializers
 from .models import Profile
 
-
-
 class ProfileSerializer(serializers.ModelSerializer):
     username = serializers.CharField(source="user.username")
     first_name = serializers.CharField(source="user.first_name")
     last_name = serializers.CharField(source="user.last_name")
-    designation = serializers.CharField(source="user.designation")
     email = serializers.EmailField(source="user.email")
     full_name = serializers.SerializerMethodField(read_only=True)
-    gender = serializers.CharField(source="profile.gender")
-    station = serializers.CharField(source="profile.station")
-    photo = serializers.ImageField(source="profile.photo")
-    
-    
+       
     class Meta:
         model = Profile
         fields = ['id','username','email','first_name','last_name','full_name','gender','station','designation','photo']

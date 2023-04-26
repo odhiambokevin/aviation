@@ -1,8 +1,8 @@
 import React from "react";
 
 import { Card, Icon } from "@mui/material";
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
+import VuiBox from "../../../../components/VuiBox";
+import VuiTypography from "../../../../components/VuiTypography";
 
 const WelcomeMark = () => {
   return (

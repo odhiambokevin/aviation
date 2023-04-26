@@ -10,10 +10,11 @@ class UserSerializer(serializers.ModelSerializer):
     gender = serializers.CharField(source="profile.gender")
     station = serializers.CharField(source="profile.station")
     photo = serializers.ImageField(source="profile.photo")
+    designation = serializers.CharField(source='profile.designation')
     first_name = serializers.SerializerMethodField()
     last_name = serializers.SerializerMethodField()
     full_name = serializers.SerializerMethodField(source="get_full_name")
-    
+     
     class Meta:
         model = User
         fields = ['id','username','email','first_name','last_name','full_name',"designation",'gender','station','photo']

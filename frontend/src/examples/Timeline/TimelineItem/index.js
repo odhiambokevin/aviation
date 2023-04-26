@@ -23,15 +23,15 @@ import PropTypes from "prop-types";
 import Icon from "@mui/material/Icon";
 
 // Vision UI Dashboard React components
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
-import VuiBadge from "components/VuiBadge";
+import VuiBox from "../../../components/VuiBox";
+import VuiTypography from "../../../components/VuiTypography";
+import VuiBadge from "../../../components/VuiBadge";
 
 // Timeline context
-import { useTimeline } from "examples/Timeline/context";
+import { useTimeline } from "../context";
 
 // Custom styles for the TimelineItem
-import { timelineItem } from "examples/Timeline/TimelineItem/styles";
+import { timelineItem } from "./styles";
 
 function TimelineItem({ color, icon, title, dateTime, description, badges, lastItem }) {
   const isDark = useTimeline();

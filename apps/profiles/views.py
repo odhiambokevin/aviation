@@ -8,13 +8,13 @@ from .serializers import ProfileSerializer, UpdateProfileSerializer
 from apps.users.models import User
 
 class WControlListAPIView(generics.ListAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-    queryset = User.objects.filter(designation='Wildlife Control Officer')
+    permission_classes = [permissions.AllowAny] #remember to change this to isAuthenticated
+    queryset = Profile.objects.filter(designation='wcontrol')
     serializer_class = ProfileSerializer
 
 class WManagerListAPIView(generics.ListAPIView):
-    permission_classes = [permissions.IsAuthenticated]
-    queryset = User.objects.filter(designation='Wildlife Control Manager')
+    permission_classes = [permissions.AllowAny] #remember to change this to isAuthenticated
+    queryset = Profile.objects.filter(designation='wmanager')
     serializer_class = ProfileSerializer
 
 class GetProfileAPIView(APIView):

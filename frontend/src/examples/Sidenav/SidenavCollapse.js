@@ -27,7 +27,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Icon from "@mui/material/Icon";
 
 // Vision UI Dashboard React components
-import VuiBox from "components/VuiBox";
+import VuiBox from "../../components/VuiBox";
 
 // Custom styles for the SidenavCollapse
 import {
@@ -35,10 +35,10 @@ import {
   collapseIconBox,
   collapseIcon,
   collapseText,
-} from "examples/Sidenav/styles/sidenavCollapse";
+} from "./styles/sidenavCollapse";
 
 // Vision UI Dashboard React context
-import { useVisionUIController } from "context";
+import { useVisionUIController } from "../../context";
 
 function SidenavCollapse({ color, icon, name, children, active, noCollapse, open, ...rest }) {
   const [controller] = useVisionUIController();

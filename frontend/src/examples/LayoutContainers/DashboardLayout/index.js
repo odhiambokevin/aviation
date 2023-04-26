@@ -25,10 +25,10 @@ import { useLocation } from "react-router-dom";
 import PropTypes from "prop-types";
 
 // Vision UI Dashboard React components
-import VuiBox from "components/VuiBox";
+import VuiBox from "../../../components/VuiBox";
 
 // Vision UI Dashboard React context
-import { useVisionUIController, setLayout } from "context";
+import { useVisionUIController, setLayout } from "../../../context";
 
 function DashboardLayout({ children }) {
   const [controller, dispatch] = useVisionUIController();

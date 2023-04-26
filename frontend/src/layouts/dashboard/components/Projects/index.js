@@ -26,14 +26,14 @@ import MenuItem from "@mui/material/MenuItem";
 import { BsCheckCircleFill } from "react-icons/bs";
 
 // Vision UI Dashboard React components
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
+import VuiBox from "../../../../components/VuiBox";
+import VuiTypography from "../../../../components/VuiTypography";
 
 // Vision UI Dashboard Materail-UI example components
-import Table from "examples/Tables/Table";
+import Table from "../../../../examples/Tables/Table";
 
 // Data
-import data from "layouts/dashboard/components/Projects/data";
+import data from "../../../../layouts/dashboard/components/Projects/data";
 
 function Projects() {
   const { columns, rows } = data();

@@ -22,14 +22,14 @@ import React from "react";
 import { Card, Stack } from "@mui/material";
 
 // Vision UI Dashboard assets
-import balance from "assets/images/billing-background-balance.png";
-import Graph from "assets/images/shapes/graph-billing.svg";
+import balance from "../../../../assets/images/billing-background-balance.png";
+import Graph from "../../../../assets/images/shapes/graph-billing.svg";
 
-import palette from "assets/theme/base/colors";
+import palette from "../../../../assets/theme/base/colors";
 
 // Vision UI Dashboard components
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
+import VuiBox from "../../../../components/VuiBox";
+import VuiTypography from "../../../../components/VuiTypography";
 
 // React icons
 import { FaEllipsisH } from "react-icons/fa";

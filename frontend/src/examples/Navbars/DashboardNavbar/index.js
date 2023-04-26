@@ -32,13 +32,13 @@ import Menu from "@mui/material/Menu";
 import Icon from "@mui/material/Icon";
 
 // Vision UI Dashboard React components
-import VuiBox from "components/VuiBox";
-import VuiTypography from "components/VuiTypography";
-import VuiInput from "components/VuiInput";
+import VuiBox from "../../../components/VuiBox";
+import VuiTypography from "../../../components/VuiTypography";
+import VuiInput from "../../../components/VuiInput";
 
 // Vision UI Dashboard React example components
-import Breadcrumbs from "examples/Breadcrumbs";
-import NotificationItem from "examples/Items/NotificationItem";
+import Breadcrumbs from "../../../examples/Breadcrumbs";
+import NotificationItem from "../../../examples/Items/NotificationItem";
 
 // Custom styles for DashboardNavbar
 import {
@@ -47,7 +47,7 @@ import {
   navbarRow,
   navbarIconButton,
   navbarMobileMenu,
-} from "examples/Navbars/DashboardNavbar/styles";
+} from "./styles";
 
 // Vision UI Dashboard React context
 import {
@@ -55,11 +55,11 @@ import {
   setTransparentNavbar,
   setMiniSidenav,
   setOpenConfigurator,
-} from "context";
+} from "../../../context";
 
 // Images
-import team2 from "assets/images/team-2.jpg";
-import logoSpotify from "assets/images/small-logos/logo-spotify.svg";
+import team2 from "../../../assets/images/team-2.jpg";
+import logoSpotify from "../../../assets/images/small-logos/logo-spotify.svg";
 
 function DashboardNavbar({ absolute, light, isMini }) {
   const [navbarType, setNavbarType] = useState();
