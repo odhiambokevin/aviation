@@ -3,14 +3,13 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { Provider } from 'react-redux';
 import { store } from './state/store';
-import { VisionUIControllerProvider } from "./context";
+import { ProSidebarProvider } from 'react-pro-sidebar';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
-        <VisionUIControllerProvider>
+        <ProSidebarProvider>
           <App />
-        </VisionUIControllerProvider>
+        </ProSidebarProvider>
     </Provider>
-
 );
