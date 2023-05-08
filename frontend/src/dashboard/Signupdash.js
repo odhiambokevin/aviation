@@ -29,10 +29,10 @@ const Signupdash = () => {
       }
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const addUser = async () => {
-          dispatch(registerNewUser(userData));
+  const addUser = async (values) => {
+          dispatch(registerNewUser(values));
           navigate('verification');
-          console.log(userData);
+          console.log(values);
           console.log(message);
       };
 
