@@ -3,12 +3,8 @@ import userApi from "../api/userApi";
 
 
 const initialState = {
-    user: {
-        username:'',
-        email:'',
-        password:'',
-        re_password:''
-    },
+    user: {},
+    users: [],
     access: localStorage.getItem('access'),
     refresh: localStorage.getItem('refresh'),
     isAuthenticated: false,
@@ -16,10 +12,10 @@ const initialState = {
     isLoading: false,
     isSuccess: false,
     message: 'Initial STATE'
-}
+} 
 
 // retreiving active user
-export const activeUser = createAsyncThunk('user/registerUser', async (_,thunkAPI)=>{
+export const activeUser = createAsyncThunk('user/activeUser', async (_,thunkAPI)=>{
     if (localStorage.getItem('access'));
         try {
             return await userApi.getUser();      

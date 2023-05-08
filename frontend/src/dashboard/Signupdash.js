@@ -8,25 +8,40 @@ import InputAdornment from '@mui/material/InputAdornment';
 import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import { Formik } from "formik";
+import { Formik} from "formik";
 import * as yup from "yup";
 import Dashheader from "./Dashheader";
+import { registerNewUser } from "../state/slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Signupdash = () => {
+  const {user,isError, isLoading,isSuccess,message} = useSelector((state)=> state.users)
   const isNonMobile = useMediaQuery("(min-width:600px)");
-  const handleFormSubmit = (values) => {
-    console.log(values);
-  };
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = () => setShowPassword((show) => !show);
+  const userData = {
+    username:'',
+        email:'',
+        password:'',
+        re_password:''
+      }
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const addUser = async () => {
+          dispatch(registerNewUser(userData));
+          navigate('verification');
+          console.log(userData);
+          console.log(message);
+      };
 
   return (
     <Box m="20px">
       <Dashheader title="SIGN UP" subtitle="Create a New Profile" />
       <Formik
-        onSubmit={handleFormSubmit}
-        initialValues={initialValues}
+        onSubmit={addUser}
+        initialValues={userData}
         validationSchema={submitSchema}
       >
         {({
@@ -34,8 +49,8 @@ const Signupdash = () => {
           errors,
           touched,
           handleBlur,
-          handleChange,
           handleSubmit,
+          handleChange,
           }) => (
           <form onSubmit={handleSubmit}>
             <Box
@@ -102,11 +117,11 @@ const Signupdash = () => {
               </FormControl>
 
               <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
-                <InputLabel htmlFor="outlined-adornment-re-password"> Reenter Password</InputLabel>
+                <InputLabel htmlFor="outlined-adornment-re-password"> Confirm Password</InputLabel>
                 <OutlinedInput
                   id="outlined-adornment-re-password"
                   type={showPassword ? 'text' : 'password'}
-                  label="Password Reenter"
+                  label="Confrim Password"
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.re_password}
@@ -135,11 +150,5 @@ const submitSchema = yup.object().shape({
   email: yup.string().email("invalid email").required("required"),
   re_password: yup.string().label('confirm password').required().min(8, 'Must be at least 8 characters').oneOf([yup.ref('password'), null], 'Passwords must match'),
 });
-const initialValues = {
-  username: "",
-  email: "",
-  password: "",
-  re_password: "",
-};
 
 export default Signupdash;

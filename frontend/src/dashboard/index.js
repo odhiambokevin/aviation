@@ -1,3 +1,5 @@
+import React, {useEffect, useState} from 'react';
+import {useDispatch, useSelector} from 'react-redux';
 import Dashheader from "./Dashheader";
 import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
 import { tokens } from "../theme";
@@ -10,6 +12,7 @@ import LineChart from "./LineChartdash";
 import GeographyChart from "./GeographyChart";
 import StatBox from "./StatBox";
 import ProgressCircle from "./ProgressCircle";
+import { allRawIncidents } from '../state/slices/incidentsSlice';
 
 const mockTransactions = [
     {
@@ -65,9 +68,24 @@ const mockTransactions = [
 const Dashboard = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
+    const dispatch = useDispatch();
+      useEffect(()=> {
+      dispatch(allRawIncidents())
+    },[dispatch,isError, message])
+      const [stateload, setIsLoading] = useState(isLoading);
+  const da = (incident)=>{
+        let day = new Date().getDate(incident.properties.incidentdate)
+        let month = new Date().getMonth(incident.properties.incidentdate)
+        let year = new Date().getFullYear(incident.properties.incidentdate)
+        let hours = new Date().getHours(incident.properties.incidentdate)
+        let minutes = new Date().getMinutes(incident.properties.incidentdate)
+        let da = day +'/'+ month +'/' + year + ' ' + hours + ':' + minutes
+        return da
+      }
   
     return (
-      <Box m="20px">
+      <Box m="20px" >
         {/* HEADER */}
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Dashheader title="DASHBOARD" subtitle="Welcome to your dashboard" />
@@ -178,7 +196,7 @@ const Dashboard = () => {
             gridColumn="span 8"
             gridRow="span 2"
             backgroundColor={colors.primary[400]}
-          >
+          > 
             <Box
               mt="25px"
               p="0 30px"
@@ -229,12 +247,12 @@ const Dashboard = () => {
               p="15px"
             >
               <Typography color={colors.grey[100]} variant="h5" fontWeight="600">
-                Recent Transactions
+                Live Incidents
               </Typography>
             </Box>
-            {mockTransactions.map((transaction, i) => (
+            {incidents.map((incident, i) => (
               <Box
-                key={`${transaction.txId}-${i}`}
+                key={`${incident.id}-${i}`}
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
@@ -247,19 +265,21 @@ const Dashboard = () => {
                     variant="h5"
                     fontWeight="600"
                   >
-                    {transaction.txId}
+                    ID: {incident.id}
                   </Typography>
                   <Typography color={colors.grey[100]}>
-                    {transaction.user}
+                    Recorded by: {incident.properties.recordedby}
                   </Typography>
                 </Box>
-                <Box color={colors.grey[100]}>{transaction.date}</Box>
+                <Box color={colors.grey[100]}>{da(incident)}</Box>
                 <Box
                   backgroundColor={colors.greenAccent[500]}
                   p="5px 10px"
                   borderRadius="4px"
+                  width='100px'
+                  textAlign='center'
                 >
-                  ${transaction.cost}
+                  {incident.properties.speciesname}
                 </Box>
               </Box>
             ))}
