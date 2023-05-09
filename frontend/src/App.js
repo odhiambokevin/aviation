@@ -49,21 +49,22 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path='blogs' element={<Blog />} />
   </Route>
-
+ 
   <Route path='projects/airport-wildlife-management' element={<DashLayout />} errorElement={<NotFound />}>
     <Route index element={<Dashboard />} />
     <Route path='dashboard' element={<Dashboard />} />
     <Route path='staff' element={<Staff />} />
-    <Route path='authentication/sign-up' element={<Signupdash />} />
-    <Route path='authentication/sign-in' element={<Signindash />} />
+    <Route path='sign-up' element={<Signupdash />} />
+    <Route path='sign-in' element={<Signindash />} />
     <Route path='incidents' element={<Incidentraw/>} />
     <Route path='incidents/incidentsl1/:id' element={<Incident/>} />
     <Route path='faq' element={<FAQ/>} />
     <Route path='line' element={<Line/>} />
     <Route path='geography' element={<Geography/>} />
     <Route path='events' element={<Event/>} />
-    <Route path='authentication/sign-up/verification' element={<Verification/>} />
-  </Route>  
+    <Route path='sign-up/verification' element={<Verification/>} />
+  </Route>
+  <Route path='activate/:uid/:token' element={<Verification/>} />  
 </>
   ));
 

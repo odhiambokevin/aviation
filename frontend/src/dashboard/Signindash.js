@@ -11,22 +11,31 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Dashheader from "./Dashheader";
+import { loginActiveUser } from "../state/slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const Signindash = () => {
+  const {user,isError, isLoading,isSuccess,message} = useSelector((state)=> state.users)
   const isNonMobile = useMediaQuery("(min-width:600px)");
-  const handleFormSubmit = (values) => {
-    console.log(values);
-  };
   const [showPassword, setShowPassword] = useState(false);
   const handleClickShowPassword = () => setShowPassword((show) => !show);
   const handleMouseDownPassword = () => setShowPassword((show) => !show);
-
+  const userData = {email:'', password:''}
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const loginUser = async (values) => {
+          dispatch(loginActiveUser(values));
+          navigate('verification');
+          console.log(values);
+          console.log(message);
+      };
   return (
     <Box m="20px">
       <Dashheader title="SIGN IN" subtitle="Log in to your account" />
       <Formik
-        onSubmit={handleFormSubmit}
-        initialValues={initialValues}
+        onSubmit={loginUser}
+        initialValues={userData}
         validationSchema={submitSchema}
       >
         {({

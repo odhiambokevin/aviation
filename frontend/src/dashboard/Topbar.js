@@ -43,11 +43,11 @@ const Topbar = () => {
                 </IconButton>
                 
                 <IconButton>
-                <NavLink to='authentication/sign-up'><HowToRegOutlinedIcon /> </NavLink>
+                <NavLink to='sign-up'><HowToRegOutlinedIcon /> </NavLink>
                 </IconButton>
 
                 <IconButton>
-                <NavLink to='authentication/sign-in'><HowToRegOutlinedIcon /> </NavLink>
+                <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
                 </IconButton>
                 
 

@@ -207,7 +207,7 @@ DJOSER = {
         "user_delete":"djoser.serializers.UserDeleteSerializer",
     },
 }
-
+ 
 #Leaflet Config
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (-0.3, 36.25),

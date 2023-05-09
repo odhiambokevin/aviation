@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
+import axios from "axios";
 import OutlinedInput from '@mui/material/OutlinedInput';
 import InputLabel from '@mui/material/InputLabel';
 import IconButton from '@mui/material/IconButton';
@@ -11,17 +12,34 @@ import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { Formik } from "formik";
 import * as yup from "yup";
 import Dashheader from "./Dashheader";
+import { useNavigate, useParams, redirect } from "react-router-dom";
+// import { activateNewUser } from "../state/slices/userSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 const Verification = () => {
-  const verifyUser = () => {
-          console.log('Verified');
+  // const {users,isError, isLoading,isSuccess,message} = useSelector((state)=> state.users)
+  const {uid, token} = useParams();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+ 
+  const activateUser = () => {
+    const config = {
+      headers: {
+          'Content-Type': 'application/json'
+      }
+  }
+    axios.post('http://127.0.0.1:8000/api/v1/auth/users/activation/', {uid: uid, token: token})
+    .then(console.log(uid, token,'Verified')
+    )
+    .catch(err => {alert(err.response.data)}); 
+    
       };
 
   return (
     <Box m="20px">
       <Dashheader title="VERIFY ACCOUNT" subtitle="Verify Your Account" />
             <Box display="flex" justifyContent="center" mt="20px">
-              <Button type="submit" color="secondary" variant="contained" onSubmit={verifyUser}>
+              <Button type="button" color="secondary" variant="contained" onClick={activateUser}>
                 Verify My Account
               </Button>
             </Box>

@@ -7,6 +7,8 @@ const initialState = {
     users: [],
     access: localStorage.getItem('access'),
     refresh: localStorage.getItem('refresh'),
+    // uid: localStorage.getItem('uid'),
+    // token: localStorage.getItem('token'),
     isAuthenticated: false,
     isError: false,
     isLoading: false,
@@ -25,7 +27,7 @@ export const activeUser = createAsyncThunk('user/activeUser', async (_,thunkAPI)
             
         }
 })
-
+ 
 // registering a user
 // registerNewUser is an ACTION, user/registerUser is a TYPE and the try:catch block holds the PAYLOAD of the ACTION
 export const registerNewUser = createAsyncThunk('user/registerUser', async (userData,thunkAPI)=>{
@@ -38,6 +40,16 @@ export const registerNewUser = createAsyncThunk('user/registerUser', async (user
     }
 })
 
+// activate registered user
+// export const activateNewUser = createAsyncThunk('user/activateUser', async (load,thunkAPI)=>{
+//     try {
+//         return await userApi.activateUser(load);      
+//     } catch (error) {
+//         const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
+//         return thunkAPI.rejectWithValue(message);
+        
+//     }
+// })
 // login for a user
 // loginActiveUser is an ACTION, auth/loginUser is a TYPE and the try:catch block holds the PAYLOAD of the ACTION
 export const loginActiveUser = createAsyncThunk('auth/loginUser', async (userData,thunkAPI)=>{
@@ -63,7 +75,6 @@ export const userSlice = createSlice({
         [registerNewUser.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
-            state.user = payload.userData;
         },
         [registerNewUser.rejected]: (state,{ payload })=>{
             state.isLoading = false;
@@ -83,6 +94,24 @@ export const userSlice = createSlice({
             state.access = null;
             state.refresh = null;
             state.isAuthenticated = false;
+            state.message = payload;
+        },
+        // [activateNewUser.pending]: (state, {payload})=>{
+        //     localStorage.setItem('uid', payload.uid);
+        //     localStorage.setItem('token', payload.token);
+        //     state.message = payload;
+        // },
+        // [activateNewUser.fulfilled]: (state, {payload})=>{
+        //     console.log('activated');
+        // },
+        // [activateNewUser.rejected]: (state, {payload})=>{
+        //     state.messaged = payload;
+        // },
+        [activeUser.success]: (state, {payload})=>{
+            state.user = payload;
+        },
+        [activeUser.rejected]: (state, {payload})=>{
+            state.user = null;
             state.message = payload;
         },
     },
