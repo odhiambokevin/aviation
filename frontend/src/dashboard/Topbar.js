@@ -49,6 +49,10 @@ const Topbar = () => {
                 <IconButton>
                 <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
                 </IconButton>
+
+                <IconButton>
+                <NavLink to='sign-in' onClick={()=>{localStorage.removeItem('access'); localStorage.removeItem('refresh');}}><HowToRegOutlinedIcon /> </NavLink>
+                </IconButton>
                 
 
             </Box>

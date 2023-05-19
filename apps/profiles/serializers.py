@@ -23,7 +23,7 @@ class ProfileSerializer(serializers.ModelSerializer):
     #     if instance.is_wmanager:
     #         representation["is_wmanager"] = True
     #     return representation
-
+ 
 class UpdateProfileSerializer(serializers.ModelSerializer):
     designation = serializers.CharField(source="user.designation")
     

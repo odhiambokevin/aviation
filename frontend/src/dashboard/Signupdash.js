@@ -32,10 +32,7 @@ const Signupdash = () => {
   const addUser = async (values) => {
           dispatch(registerNewUser(values));
           navigate('verification');
-          console.log(values);
-          console.log(message);
       };
-
   return (
     <Box m="20px">
       <Dashheader title="SIGN UP" subtitle="Create a New Profile" />

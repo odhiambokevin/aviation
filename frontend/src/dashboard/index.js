@@ -66,26 +66,26 @@ const mockTransactions = [
   ];
 
 const Dashboard = () => {
-    const theme = useTheme();
-    const colors = tokens(theme.palette.mode);
-    const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
-    const dispatch = useDispatch();
-      useEffect(()=> {
-      dispatch(allRawIncidents())
-    },[dispatch,isError, message])
-      const [stateload, setIsLoading] = useState(isLoading);
+  const theme = useTheme();
+  const colors = tokens(theme.palette.mode);
+  const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
+  const dispatch = useDispatch();
+    useEffect(()=> {
+    dispatch(allRawIncidents())
+  },[dispatch,isError, message])
+    const [stateload, setIsLoading] = useState(isLoading);
   const da = (incident)=>{
-        let day = new Date().getDate(incident.properties.incidentdate)
-        let month = new Date().getMonth(incident.properties.incidentdate)
-        let year = new Date().getFullYear(incident.properties.incidentdate)
-        let hours = new Date().getHours(incident.properties.incidentdate)
-        let minutes = new Date().getMinutes(incident.properties.incidentdate)
-        let da = day +'/'+ month +'/' + year + ' ' + hours + ':' + minutes
-        return da
-      }
+      let day = new Date().getDate(incident.properties.incidentdate)
+      let month = new Date().getMonth(incident.properties.incidentdate)
+      let year = new Date().getFullYear(incident.properties.incidentdate)
+      let hours = new Date().getHours(incident.properties.incidentdate)
+      let minutes = new Date().getMinutes(incident.properties.incidentdate)
+      let da = day +'/'+ month +'/' + year + ' ' + hours + ':' + minutes
+      return da
+    }
   
     return (
-      <Box m="20px" >
+      <Box m="20px">
         {/* HEADER */}
         <Box display="flex" justifyContent="space-between" alignItems="center">
           <Dashheader title="DASHBOARD" subtitle="Welcome to your dashboard" />

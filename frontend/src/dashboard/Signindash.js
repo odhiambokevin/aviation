@@ -11,7 +11,7 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Dashheader from "./Dashheader";
-import { loginActiveUser } from "../state/slices/userSlice";
+import { activeUser, loginActiveUser } from "../state/slices/userSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 
@@ -25,11 +25,11 @@ const Signindash = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const loginUser = async (values) => {
-          dispatch(loginActiveUser(values));
-          navigate('verification');
-          console.log(values);
-          console.log(message);
-      };
+          dispatch(loginActiveUser(values))
+          
+          .then(()=>dispatch(activeUser()))
+          .then(()=>console.log(user))
+      }; 
   return (
     <Box m="20px">
       <Dashheader title="SIGN IN" subtitle="Log in to your account" />

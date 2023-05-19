@@ -1,4 +1,10 @@
-import { createBrowserRouter, createRoutesFromElements, RouterProvider, Route, Outlet, Redirect, useLocation } from 'react-router-dom';
+import {createBrowserRouter,
+        createRoutesFromElements,
+        RouterProvider,
+        Route, Outlet,
+        Redirect, useLocation
+      }
+        from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from "@mui/material";
 import { ColorModeContext, useMode } from "./theme";
 import Home from "./pages/Home";
@@ -20,7 +26,7 @@ import Event from './dashboard/Event';
 import Verification from './dashboard/Verification';
 import Signupdash from './dashboard/Signupdash';
 import Signindash from './dashboard/Signindash';
-
+import ScrollToTop from './ScrollToTop';
 export const AppLayout = ()=>{
   return(
     <>
@@ -34,6 +40,7 @@ export const AppLayout = ()=>{
 export const DashLayout = ()=>{
   return(
     <div className="app">
+      <ScrollToTop />
       <Sidebarnav />
       <main className="content">
         <Topbar />

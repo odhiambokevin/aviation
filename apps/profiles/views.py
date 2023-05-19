@@ -18,7 +18,7 @@ class WManagerListAPIView(generics.ListAPIView):
     serializer_class = ProfileSerializer
 
 class GetProfileAPIView(APIView):
-    permission_classes = [permissions.IsAuthenticated]
+    permission_classes = [permissions.AllowAny]
     renderer_classes = [ProfileJSONRenderer]
 
     def get(self, request):

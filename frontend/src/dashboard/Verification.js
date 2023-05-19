@@ -28,7 +28,7 @@ const Verification = () => {
           'Content-Type': 'application/json'
       }
   }
-    axios.post('http://127.0.0.1:8000/api/v1/auth/users/activation/', {uid: uid, token: token})
+    axios.post('http://127.0.0.1:8000/auth/users/activation/', {uid: uid, token: token})
     .then(console.log(uid, token,'Verified')
     )
     .catch(err => {alert(err.response.data)}); 
