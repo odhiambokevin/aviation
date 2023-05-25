@@ -10,11 +10,14 @@ import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../state/slices/userSlice';
  
 const Topbar = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
+    const dispatch = useDispatch();
     return (
     
         <Box display="flex" justifyContent="space-between" p={2}>
@@ -51,7 +54,7 @@ const Topbar = () => {
                 </IconButton>
 
                 <IconButton>
-                <NavLink to='sign-in' onClick={()=>{localStorage.removeItem('access'); localStorage.removeItem('refresh');}}><HowToRegOutlinedIcon /> </NavLink>
+                <NavLink to='sign-in' onClick={()=> dispatch(logout())}><HowToRegOutlinedIcon /> </NavLink>
                 </IconButton>
                 
 

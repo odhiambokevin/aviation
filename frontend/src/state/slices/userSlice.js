@@ -57,7 +57,12 @@ export const activeUser = createAsyncThunk('users/activeUser', async (_,thunkAPI
 export const userSlice = createSlice({
     name: "users",
     initialState,
-    reducers: {},
+    reducers: {
+        logout: (state)=> {
+            localStorage.removeItem('access');
+            state = initialState}
+            
+    },
     extraReducers: {
         [registerNewUser.pending]: (state, {payload})=>{
             state.isLoading = true;
@@ -75,7 +80,6 @@ export const userSlice = createSlice({
         },
         [loginActiveUser.fulfilled]: (state, {payload})=>{
             localStorage.setItem('access', payload.access);
-            localStorage.setItem('refresh', payload.refresh);
             state.access = payload.access;
             state.refresh = payload.refresh;
             state.isAuthenticated = true;
@@ -85,7 +89,6 @@ export const userSlice = createSlice({
         },
         [loginActiveUser.rejected]: (state,{payload})=>{
             localStorage.removeItem('access');
-            localStorage.removeItem('refresh');
             state.access = null;
             state.refresh = null;
             state.isAuthenticated = false;
@@ -100,4 +103,5 @@ export const userSlice = createSlice({
     },
 });
 
+export const { logout } = userSlice.actions
 export default userSlice

@@ -28,9 +28,10 @@ const Signindash = () => {
           dispatch(loginActiveUser(values))
           
           .then(()=>dispatch(activeUser()))
-          .then(()=>console.log(user))
+          .then(()=>navigate('dashboard', {replace: true}))
       }; 
   return (
+     
     <Box m="20px">
       <Dashheader title="SIGN IN" subtitle="Log in to your account" />
       <Formik

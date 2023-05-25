@@ -13,6 +13,7 @@ import GeographyChart from "./GeographyChart";
 import StatBox from "./StatBox";
 import ProgressCircle from "./ProgressCircle";
 import { allRawIncidents } from '../state/slices/incidentsSlice';
+import { useNavigate } from 'react-router-dom';
 
 const mockTransactions = [
     {
@@ -69,6 +70,8 @@ const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
+  const {user} = useSelector((state)=> state.users)
+  const navigate = useNavigate();
   const dispatch = useDispatch();
     useEffect(()=> {
     dispatch(allRawIncidents())
