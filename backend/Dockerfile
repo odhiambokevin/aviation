@@ -29,7 +29,7 @@ LABEL twitter="https://twitter.com/KevinAbrahams12"
 RUN pip install pipenv
 
 WORKDIR /Yaspibackend
-COPY Pipfile.lock Pipfile.lock 
+#COPY Pipfile.lock Pipfile.lock 
 COPY Pipfile Pipfile
 RUN pipenv install --system --deploy
 

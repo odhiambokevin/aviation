@@ -1,6 +1,10 @@
+.. image:: frontend/public/static/images/logo.png
+
 #############
 YASPI
 #############
+
+.. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio
 
 This is my portfolio website
 ============================
@@ -14,6 +18,3 @@ have conceptualized.
 
 Links
 ~~~~~
-
-Link to the website:
-https://www.yaspikenya.com
