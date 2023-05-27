@@ -12,16 +12,24 @@ Yaspi Documentation!
 
 .. toctree::
    :maxdepth: 2
-   :caption: Backend:
+   :numbered: 4
+   :caption: Backend
+
+   backend
 
 .. toctree::
    :maxdepth: 2
-   :caption: Frontend:
+   :numbered: 4
+   :caption: Frontend
+
+   frontend
 
 .. toctree::
    :maxdepth: 2
-   :caption: Server Configuration:
+   :numbered: 4
+   :caption: Server Configuration
 
+   server
 
 Indices and tables
 ==================

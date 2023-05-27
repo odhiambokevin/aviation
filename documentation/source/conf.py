@@ -19,7 +19,7 @@ sys.path.insert(0, os.path.abspath('../../'))
 
 project = 'Yaspi'
 copyright = '2023, Odhiambo Kevin'
-author = 'Odhiambo Kevin'
+author = 'Yaspi'
 
 
 # -- General configuration ---------------------------------------------------
@@ -29,8 +29,15 @@ author = 'Odhiambo Kevin'
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
-    'sphinx.ext.todo'
+    'sphinx.ext.todo',
+    'sphinx.ext.viewcode'
 ]
+
+# The name of an image file (relative to this directory) to place at the top
+# of the sidebar.
+html_logo = '_static/images/yaspi2.png'
+#html faviocn
+html_favicon = '_static/images/favicon.ico'
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
