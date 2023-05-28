@@ -1,0 +1,66 @@
+import {Box, IconButton, useTheme} from '@mui/material';
+import { useContext } from 'react';
+import { ColorModeContext, tokens } from '../theme';
+import InputBase from '@mui/material/InputBase';
+import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
+import DarkModeOutlinedIcon from '@mui/icons-material/DarkModeOutlined';
+import NotificationsOutlinedIcon from '@mui/icons-material/NotificationsOutlined';
+import SettingsOutlinedIcon from '@mui/icons-material/SettingsOutlined';
+import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
+import SearchIcon from '@mui/icons-material/Search';
+import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
+import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { logout } from '../state/slices/userSlice';
+ 
+const Topbar = () => {
+    const theme = useTheme();
+    const colors = tokens(theme.palette.mode);
+    const colorMode = useContext(ColorModeContext);
+    const dispatch = useDispatch();
+    return (
+    
+        <Box display="flex" justifyContent="space-between" p={2}>
+            {/*search bar */}
+            <Box display="flex" backgroundColor={colors.primary[400]} borderRadius="3px">
+                <InputBase sx={{ml: 2, flex: 1}} placeholder='Search' />
+                <IconButton type='button' sx={{p: 1}}>
+                    <SearchIcon />
+                </IconButton>
+            </Box>
+            <Box display={'flex'}>
+                <IconButton onClick={colorMode.toggleColorMode}>
+                    {theme.palette.mode === 'dark' ? (<DarkModeOutlinedIcon />):(<LightModeOutlinedIcon />)}
+                </IconButton>
+
+                <IconButton>
+                    <NotificationsOutlinedIcon />
+                </IconButton>
+
+                <IconButton>
+                    <SettingsOutlinedIcon />
+                </IconButton>
+
+                <IconButton>
+                    <PersonOutlinedIcon />
+                </IconButton>
+                
+                <IconButton>
+                <NavLink to='sign-up'><HowToRegOutlinedIcon /> </NavLink>
+                </IconButton>
+
+                <IconButton>
+                <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
+                </IconButton>
+
+                <IconButton>
+                <NavLink to='sign-in' onClick={()=> dispatch(logout())}><HowToRegOutlinedIcon /> </NavLink>
+                </IconButton>
+                
+
+            </Box>
+        </Box>
+        );
+}
+ 
+export default Topbar;

@@ -72,7 +72,7 @@ const addUser = async (e) => {
       premotto="WILDLIFE MANAGEMENT SYSTEM"
       motto="AIRPORT AUTHORITY"
       cardContent
-    >
+    > 
       <GradientBorder borderRadius={borders.borderRadius.form} minWidth="100%" maxWidth="100%">
         <VuiBox
           component="form"

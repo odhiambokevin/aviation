@@ -122,7 +122,6 @@ function Blog() {
 				</div> 		
 			</div>		
 		</section>
-        <Footer />
         </>
      );
 }

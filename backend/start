@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# entire script fails on any error
+set -o errexit
+
+#exit if any pipe command fails
+set -o pipefail
+
+#exists if no variable is available
+set -o nounset
+
+python manage.py migrate --no-input
+python manage.py collectstatic --no-input
+python manage.py runserver 0.0.0.0:8000
+
+gunicorn yaspi.wsgi --bind 0.0.0.0:8000

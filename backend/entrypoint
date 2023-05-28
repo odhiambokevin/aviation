@@ -1,0 +1,36 @@
+#!/bin/bash
+
+# entire script fails on any error
+set -o errexit
+
+#exit if any pipe command fails
+set -o pipefail
+
+#exists if no variable is available
+set -o nounset
+
+postgres_ready() {
+python << END
+import sys
+import psycopg2
+try:
+    psycopg2.connect(
+        dbname="${DB_NAME}",
+        user="${DB_USER}",
+        password="${DB_PASSWORD}",
+        host="${localhost}",
+        port="${DB_PORT}"
+    )
+except psycopg2.OperationalError:
+        sys.exit(-1)
+sys.exit(0)
+END
+}
+
+until postgres_ready; do
+ >& echo "Database loading.."
+ sleep 1
+done
+>& echo "Database Ready!"
+
+exec "$@"

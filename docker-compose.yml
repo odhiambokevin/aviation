@@ -1,0 +1,67 @@
+version: "3.9"
+services:
+  backend:
+    build:
+      context: ./backend
+    command: ./start
+    volumes:
+      - static_volume:/Yaspibackend/static
+      - media_volume:/Yaspibackend/media
+    ports:
+      - 8000:8000
+    env_file:
+      - .env
+    depends_on:
+      - yaspidb
+    networks:
+      - yaspinetwork
+    container_name: yaspi_backend
+  yaspidb:
+    image: kartoza/postgis:latest
+    ports:
+      - 5432:5432
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+    environment:
+      - DB_NAME=${DB_NAME}
+      - DB_USER=${DB_USER}
+      - DB_PASSWORD=${DB_PASSWORD}
+    restart: on-failure
+    networks:
+      - yaspinetwork
+    container_name: yaspi_db
+  frontend:
+    build:
+      context: ./frontend
+    restart: on-failure
+    volumes:
+      - frontend_buildfiles:/frontend/build
+    depends_on:
+      - backend
+    networks:
+      - yaspinetwork
+    container_name: yaspi_frontend
+  nginx:
+    build:
+      context: ./Nginx
+    restart: always
+    depends_on:
+      - backend
+      - frontend
+    volumes:
+      - static_volume:/Yaspibackend/static
+      - media_volume:/Yaspibackend/media
+      - frontend_buildfiles:/var/www/frontend/build
+    ports:
+      - 8000:80
+    networks:
+      - yaspinetwork
+    container_name: yaspi_nginx_proxy
+networks:
+  yaspinetwork:
+    driver: bridge
+volumes:
+  postgres_data:
+  static_volume:
+  media_volume:
+  frontend_buildfiles:
