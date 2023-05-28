@@ -14,7 +14,7 @@ This is my portfolio website
 This is a portfolio website for projects that I
 have conceptualized.
 
-..note::
+.. note::
     This is a development version of the projects and is not complete.
 
 Project documentation is found at 
