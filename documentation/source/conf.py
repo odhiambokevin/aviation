@@ -30,7 +30,8 @@ author = 'Yaspi'
 extensions = [
     'sphinx.ext.autodoc',
     'sphinx.ext.todo',
-    'sphinx.ext.viewcode'
+    'sphinx.ext.viewcode',
+    'sphinx.ext.doctest',
 ]
 
 # The name of an image file (relative to this directory) to place at the top

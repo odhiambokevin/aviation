@@ -34,8 +34,10 @@ Deplyment of the Production Server
 Nginx
 -----
 
-Installation
-++++++++++++
+.. _dockerinstall:
+
+Installation of Docker
+++++++++++++++++++++++
 
 .. attention:: 
 

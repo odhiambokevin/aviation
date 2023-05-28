@@ -1,10 +1,11 @@
 .. image:: frontend/public/static/images/logo.png
+.. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio
 
 #############
 YASPI
 #############
 
-.. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio
+
 
 This is my portfolio website
 ============================
@@ -14,7 +15,6 @@ This is a portfolio website for projects that I
 have conceptualized.
 
 ..note::
-    Install GDAL using OSGeo4W to on Windows.
+    This is a development version of the projects and is not complete.
 
-Links
-~~~~~
+Project documentation is found at 

@@ -10,17 +10,19 @@ Yaspi Documentation!
 
    Include all the contents
 
+For server configuration, you can quickly jump to :doc:`server` section or jump quicly on how to :ref:`install in docker. <dockerinstall>`
+
 .. toctree::
    :maxdepth: 2
    :numbered: 4
-   :caption: Backend
+   :caption: Django Backend
 
    backend
 
 .. toctree::
    :maxdepth: 2
    :numbered: 4
-   :caption: Frontend
+   :caption: React Frontend
 
    frontend
 
