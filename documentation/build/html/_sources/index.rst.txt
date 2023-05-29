@@ -18,6 +18,7 @@ For server configuration, you can quickly jump to :doc:`server` section or jump 
    :caption: Django Backend
 
    backend
+   modules
 
 .. toctree::
    :maxdepth: 2

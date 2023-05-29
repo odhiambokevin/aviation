@@ -5,6 +5,7 @@ class Banner(models.Model):
     desc = models.TextField()
 
     class Meta:
+        """How the model is shown"""
         ordering = ['title']
         db_table = "banner"
 
