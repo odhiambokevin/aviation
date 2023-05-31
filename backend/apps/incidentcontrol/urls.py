@@ -1,3 +1,4 @@
+"""Urls for incidentcontrol app"""
 from django.urls import path
 from .views import IncidentControlListAPIView
 

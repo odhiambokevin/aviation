@@ -1,3 +1,4 @@
+"""Exceptions for profiles app"""
 from email.policy import default
 from rest_framework.exceptions import APIException
 

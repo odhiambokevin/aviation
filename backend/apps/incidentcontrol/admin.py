@@ -1,7 +1,9 @@
+"""Admin settings for incidentcontrol app"""
 from django.contrib import admin
 from .models import IncidentControl
 
 class IncidentControlAdmin(admin.ModelAdmin):
+	"""Fields to be displayed"""
 	list_display = ('get_incidentid', 'get_recordedby', 'verifiedby', 'date', 'impact', 'pilotwarning','flightphase', 'airlineoperator')
 	list_filter = ('verifiedby', 'date', 'impact')
 	search_fields = ('verifiedby',)
@@ -10,6 +12,7 @@ class IncidentControlAdmin(admin.ModelAdmin):
 		return obj.incidentid.incidentid
 	
 	def get_recordedby(self, obj):
+		"""Returns the string name for this field"""
 		return obj.recordedby.recordedby
 
 admin.site.register(IncidentControl, IncidentControlAdmin)

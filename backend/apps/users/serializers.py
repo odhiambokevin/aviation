@@ -1,3 +1,4 @@
+"""Serializers for users app"""
 from dataclasses import Field, fields
 from django.contrib.auth import get_user_model
 from numpy import source
