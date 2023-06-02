@@ -76,7 +76,7 @@ const Dashboard = () => {
     useEffect(()=> {
     dispatch(allRawIncidents())
   },[dispatch,isError, message])
-    const [stateload, setIsLoading] = useState(isLoading);
+
   const da = (incident)=>{
       let day = new Date().getDate(incident.properties.incidentdate)
       let month = new Date().getMonth(incident.properties.incidentdate)
@@ -91,7 +91,7 @@ const Dashboard = () => {
       <Box m="20px">
         {/* HEADER */}
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Dashheader title="DASHBOARD" subtitle="Welcome to your dashboard" />
+          <Dashheader title="DASHBOARD" subtitle={`Current user: ${user ? user.username : 'none'}`} />
   
           <Box>
             <Button

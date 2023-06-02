@@ -52,6 +52,21 @@ export const activeUser = createAsyncThunk('users/activeUser', async (_,thunkAPI
         console.log('failed')
     }
 })
+
+// verify token for active user
+// export const verifyUserToken = createAsyncThunk('users/verifyUserToken', async (_,thunkAPI)=>{
+//     if (localStorage.getItem('access')){
+//         try {
+//             return await userApi.verifyToken();      
+//         } catch (error) {
+//             const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
+//             return thunkAPI.rejectWithValue(message);
+            
+//         }
+//     } else {
+//         console.log('failed')
+//     }
+// })
  
 // Below the ACTION 'registerNewUser' is added to the slice using the extraReducer(without using the builder PARAM)
 export const userSlice = createSlice({
@@ -60,7 +75,16 @@ export const userSlice = createSlice({
     reducers: {
         logout: (state)=> {
             localStorage.removeItem('access');
-            state = initialState}
+            state.user = {};
+            state.userslist = [];
+            state.access = null;
+            state.refresh = null;
+            state.isAuthenticated = false;
+            state.isError = false;
+            state.isLoading = false;
+            state.isSuccess = false;
+            state.message = ''
+        }
             
     },
     extraReducers: {
@@ -78,6 +102,7 @@ export const userSlice = createSlice({
             state.isError = true;
             state.message = payload;
         },
+        
         [loginActiveUser.fulfilled]: (state, {payload})=>{
             localStorage.setItem('access', payload.access);
             state.access = payload.access;
@@ -94,12 +119,22 @@ export const userSlice = createSlice({
             state.isAuthenticated = false;
             state.message = payload;
         },
+
         [activeUser.fulfilled]: (state, {payload})=>{
             state.user = payload;
         },
         [activeUser.rejected]: (state, {payload})=>{
             (state.message = payload)
         },
+
+        // [verifyUserToken.fulfilled]: (state, {payload})=>{
+        //     state.isAuthenticated = true;
+        //     (state.message = payload);
+        // },
+        // [verifyUserToken.rejected]: (state, {payload})=>{
+        //     state.isAuthenticated = false;
+        //     (state.message = payload);
+        // },
     },
 });
 

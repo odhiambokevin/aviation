@@ -14,7 +14,6 @@ class UserAdmin(BaseUserAdmin):
     list_display_links = ["email"]
     list_filter = ["is_staff","is_active","username"]
     fieldsets = (
-        """Fields to be used for groping fieldsets"""
         (
             "Login Credentials",{
             "fields": ("email", "password",)

@@ -4,7 +4,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['127.0.0.1','localhost', 'backend', '0.0.0.0']
 
-CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "0.0.0.0"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:3000", "http://127.0.0.1:3000", "http://0.0.0.0"]
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_METHODS = ["DELETE","GET","OPTIONS","PATCH","POST","PUT",]
 # CSRF_TRUSTED_ORIGINS = ['http://localhost:3000']

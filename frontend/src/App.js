@@ -27,6 +27,7 @@ import Verification from './dashboard/Verification';
 import Signupdash from './dashboard/Signupdash';
 import Signindash from './dashboard/Signindash';
 import ScrollToTop from './ScrollToTop';
+import {AuthRoutes} from './dashboard/authRoutes';
 export const AppLayout = ()=>{
   return(
     <>
