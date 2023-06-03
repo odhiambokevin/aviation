@@ -1,5 +1,5 @@
 import {Box, IconButton, useTheme} from '@mui/material';
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { ColorModeContext, tokens } from '../theme';
 import InputBase from '@mui/material/InputBase';
 import LightModeOutlinedIcon from '@mui/icons-material/LightModeOutlined';
@@ -10,16 +10,16 @@ import PersonOutlinedIcon from '@mui/icons-material/PersonOutlined';
 import SearchIcon from '@mui/icons-material/Search';
 import HowToRegOutlinedIcon from "@mui/icons-material/HowToRegOutlined";
 import { NavLink } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { logout } from '../state/slices/userSlice';
+import { useDispatch, useSelector } from 'react-redux';
+import { activeUser, logout } from '../state/slices/userSlice';
  
 const Topbar = () => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
     const colorMode = useContext(ColorModeContext);
-    const dispatch = useDispatch();
+    const {user} = useSelector((state)=> state.users)
+    const dispatch= useDispatch();
     return (
-    
         <Box display="flex" justifyContent="space-between" p={2}>
             {/*search bar */}
             <Box display="flex" backgroundColor={colors.primary[400]} borderRadius="3px">
@@ -32,7 +32,8 @@ const Topbar = () => {
                 <IconButton onClick={colorMode.toggleColorMode}>
                     {theme.palette.mode === 'dark' ? (<DarkModeOutlinedIcon />):(<LightModeOutlinedIcon />)}
                 </IconButton>
-
+                {user.username ? 
+                <>
                 <IconButton>
                     <NotificationsOutlinedIcon />
                 </IconButton>
@@ -44,20 +45,22 @@ const Topbar = () => {
                 <IconButton>
                     <PersonOutlinedIcon />
                 </IconButton>
-                
-                <IconButton>
-                <NavLink to='sign-up'><HowToRegOutlinedIcon /> </NavLink>
-                </IconButton>
-
-                <IconButton>
-                <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
-                </IconButton>
 
                 <IconButton>
                 <NavLink to='sign-in' onClick={()=> dispatch(logout())}><HowToRegOutlinedIcon /> </NavLink>
                 </IconButton>
-                
-
+                </>
+                :
+                <>
+                <IconButton>
+                <NavLink to='sign-up'><HowToRegOutlinedIcon /> </NavLink>
+                </IconButton>
+    
+                <IconButton>
+                <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
+                </IconButton>
+                </>
+                }
             </Box>
         </Box>
         );

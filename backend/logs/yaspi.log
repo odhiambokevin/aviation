@@ -1,0 +1,19 @@
+2023-06-01 13:02:06,623 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-01 13:03:33,308 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\users\admin.py changed, reloading.
+2023-06-01 13:04:07,619 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-01 13:05:14,881 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\yaspi\settings\development.py changed, reloading.
+2023-06-01 13:05:22,761 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-01 13:22:50,789 django.request WARNING  Not Found: /media/water_F8DtL8L.jpg
+2023-06-01 13:22:50,804 django.request WARNING  Not Found: /media/crop.jpg
+2023-06-01 13:22:50,819 django.request WARNING  Not Found: /media/ave.jpg
+2023-06-01 13:22:50,830 django.request WARNING  Not Found: /media/bird.jpg
+2023-06-01 13:22:50,846 django.request WARNING  Not Found: /media/biodiversity.jpg
+2023-06-01 13:38:30,802 django.request WARNING  Not Found: /media/ave.jpg
+2023-06-01 13:38:30,883 django.request WARNING  Not Found: /media/bird.jpg
+2023-06-01 13:38:30,905 django.request WARNING  Not Found: /media/crop.jpg
+2023-06-01 13:38:30,945 django.request WARNING  Not Found: /media/biodiversity.jpg
+2023-06-01 13:38:31,057 django.request WARNING  Not Found: /media/water_F8DtL8L.jpg
+2023-06-01 14:37:19,367 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-02 08:57:48,299 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-02 14:24:15,402 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-03 11:09:01,090 django.utils.autoreload INFO     Watching for file changes with StatReloader

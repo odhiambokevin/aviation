@@ -1,3 +1,4 @@
+"""Views for incident app"""
 from rest_framework import generics, permissions, status, filters
 from apps.incident.pagination import IncidentPagination
 from .models import Incident

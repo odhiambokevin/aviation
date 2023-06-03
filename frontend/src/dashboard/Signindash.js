@@ -26,9 +26,8 @@ const Signindash = () => {
   const navigate = useNavigate();
   const loginUser = async (values) => {
           dispatch(loginActiveUser(values))
-          
           .then(()=>dispatch(activeUser()))
-          .then(()=>navigate('dashboard', {replace: true}))
+          .then(()=>navigate('/projects/airport-wildlife-management/dashboard', {replace: true}))
       }; 
   return (
      

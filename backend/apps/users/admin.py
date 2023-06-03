@@ -1,3 +1,4 @@
+"""Admin settings for users app"""
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin as BaseUserAdmin
 from .forms import CustomUserChangeForm, CustomUserCreationForm
@@ -8,6 +9,7 @@ class UserAdmin(BaseUserAdmin):
     add_form = CustomUserCreationForm
     form = CustomUserChangeForm
     model = User
+    """Fields to be displayed"""
     list_display = ["pkid","id","email","username", "first_name", "last_name","is_staff","is_active"]
     list_display_links = ["email"]
     list_filter = ["is_staff","is_active","username"]

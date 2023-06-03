@@ -1,3 +1,4 @@
+"""Serializers for profiles app"""
 from django.forms import CharField
 from rest_framework import serializers
 from .models import Profile

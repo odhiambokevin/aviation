@@ -1,3 +1,4 @@
+"""Models for incidentcontrol app"""
 from django.contrib.auth import get_user_model
 from django.contrib.gis.db import models
 from apps.incident.models import Incident

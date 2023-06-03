@@ -1,3 +1,4 @@
+"""Urls for works app"""
 from django.urls import path
 from .views import WorkListAPIView
 

@@ -1,3 +1,4 @@
+"""Urls for profiles app"""
 from django.urls import path
 from .views import (GetProfileAPIView, UpdateProfileAPIView, WControlListAPIView, WManagerListAPIView)
 

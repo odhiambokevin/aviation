@@ -1,3 +1,4 @@
+"""Views for works app"""
 from rest_framework import generics, filters
 from .pagination import WorksPagination
 from .models import Work

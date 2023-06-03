@@ -29,7 +29,18 @@ const getUser = async ()=>{
     const res = await axios.get("profile/me/", config);
     return res.data.profile
 }
+//endpoint for verifying token for active user
+// const verifyToken = async ()=>{
+//     const config = {
+//         headers: {
+//             'Content-Type': 'application/json', 
+//             'Accept': 'application/json'
+//         }
+//     }
+//     const res = await axios.post("auth/jwt/verify/",{token: localStorage.getItem('access')}, config);
+//     return res.data
+// }
  
-const userApi = {registerUser, loginUser, getUser}
+const userApi = {registerUser, loginUser, getUser, /*verifyToken*/}
 
 export default userApi;

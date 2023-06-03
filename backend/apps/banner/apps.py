@@ -1,3 +1,4 @@
+"""Configuration for banner app"""
 from django.apps import AppConfig
 
 class BannerConfig(AppConfig):
