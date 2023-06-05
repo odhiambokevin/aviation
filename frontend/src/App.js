@@ -11,6 +11,7 @@ import Home from "./pages/Home";
 import Blog from './pages/Blog';
 import Header from './components/Header';
 import NotFound from './pages/NotFound';
+import Unauthorized from './pages/Unauthorized';
 import Footer from './components/Footer';
 import Topbar from './dashboard/Topbar';
 import Sidebarnav from './dashboard/Sidebarnav';
@@ -28,6 +29,7 @@ import Signupdash from './dashboard/Signupdash';
 import Signindash from './dashboard/Signindash';
 import ScrollToTop from './ScrollToTop';
 import {AuthRoutes} from './dashboard/authRoutes';
+import {useSelector} from "react-redux";
 export const AppLayout = ()=>{
   return(
     <>
@@ -57,20 +59,27 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route index element={<Home />} />
     <Route path='blogs' element={<Blog />} />
   </Route>
-  
+  {/* Dashboard Routes */}
   <Route path='projects/airport-wildlife-management' element={<DashLayout />} errorElement={<NotFound />}>
     <Route index element={<Dashboard />} />
-    <Route path='dashboard' element={<Dashboard />} />
     <Route path='sign-up' element={<Signupdash />} />
     <Route path='sign-in' element={<Signindash />} />
-    <Route path='staff' element={<Staff />} />
-    <Route path='incidents' element={<Incidentraw/>} />
-    <Route path='incidents/incidentsl1/:id' element={<Incident/>} />
+    <Route path='dashboard' element={<Dashboard />} />
+    <Route path='unauthorized' element={<Unauthorized />} />
     <Route path='faq' element={<FAQ/>} />
-    <Route path='line' element={<Line/>} />
-    <Route path='geography' element={<Geography/>} />
-    <Route path='events' element={<Event/>} />
-    
+    {/*Routes accessed by logged in staff only */}
+    <Route element={<AuthRoutes allowedDesignation={["wmanager","wcontrol","admin"]} />}>
+      <Route path='line' element={<Line/>} />
+      <Route path='geography' element={<Geography/>} />
+      <Route path='events' element={<Event/>} />
+    </Route>
+    {/*Routes accessed by logged in satff with either admin or manager access level */}
+    <Route element={<AuthRoutes allowedDesignation={["wmanager","admin"]} />}>
+      <Route path='staff' element={<Staff />} />
+      <Route path='incidents' element={<Incidentraw/>} />
+      <Route path='incidentsl1' element={<Incident/>} />
+      <Route path='verification' element={<Incident/>} />
+    </Route>
   </Route>
   <Route path='activate/:uid/:token' element={<Verification/>} />  
 </>

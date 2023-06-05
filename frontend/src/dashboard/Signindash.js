@@ -11,9 +11,9 @@ import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import Dashheader from "./Dashheader";
-import { activeUser, loginActiveUser } from "../state/slices/userSlice";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import {activeUser, loginActiveUser} from "../state/slices/userSlice";
+import {useDispatch, useSelector} from "react-redux";
+import {useNavigate, useLocation} from "react-router-dom";
 
 const Signindash = () => {
   const {user,isError, isLoading,isSuccess,message} = useSelector((state)=> state.users)
@@ -24,10 +24,12 @@ const Signindash = () => {
   const userData = {email:'', password:''}
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || 'dashboard';
   const loginUser = async (values) => {
           dispatch(loginActiveUser(values))
           .then(()=>dispatch(activeUser()))
-          .then(()=>navigate('/projects/airport-wildlife-management/dashboard', {replace: true}))
+          .then(()=>navigate(from, {replace: true}))
       }; 
   return (
      
