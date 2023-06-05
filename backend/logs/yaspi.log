@@ -17,3 +17,8 @@
 2023-06-02 08:57:48,299 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-06-02 14:24:15,402 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-06-03 11:09:01,090 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-03 12:06:49,592 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-05 08:36:33,644 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-05 08:38:31,514 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-05 09:51:22,101 django.request WARNING  Not Found: /api/v1/users/
+2023-06-05 09:51:40,486 django.request WARNING  Not Found: /favicon.ico
