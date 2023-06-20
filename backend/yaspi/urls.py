@@ -9,6 +9,7 @@ from . import views
 
 urlpatterns = [
     path('', views.index),
+    path('', include('apps.airports.urls')),
     path('vault/', admin.site.urls),
     path('api/v1/auth/', include('djoser.urls')),
     path('api/v1/auth/', include('djoser.urls.jwt')),

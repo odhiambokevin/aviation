@@ -1,4 +1,5 @@
 """Views for profiles app"""
+from django.db.models import Q
 from rest_framework import generics, permissions, status
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -15,7 +16,7 @@ class WControlListAPIView(generics.ListAPIView):
 
 class WManagerListAPIView(generics.ListAPIView):
     permission_classes = [permissions.AllowAny] #remember to change this to isAuthenticated
-    queryset = Profile.objects.filter(designation='wmanager')
+    queryset = Profile.objects.filter(Q(designation='wmanager') | Q(designation='admin'))
     serializer_class = ProfileSerializer
 
 class GetProfileAPIView(APIView):
