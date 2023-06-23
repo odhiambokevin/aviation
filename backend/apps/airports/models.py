@@ -9,9 +9,9 @@ class County(models.TextChoices):
     Mombasa = 'Mombasa', 'Mombasa'
     Kwale = 'Kwale', 'Kwale'
     Kilifi = 'Kilifi', 'Kilifi'
-    Tana_River = 'Tana_River', 'Tana_River'
+    Tana_River = 'Tana River', 'Tana_River'
     Lamu = 'Lamu', 'Lamu'
-    Taita_Taveta = 'Taita_Taveta', 'Taita_Taveta'
+    Taita_Taveta = 'Taita Taveta', 'Taita Taveta'
     Garissa = 'Garissa', 'Garissa'
     Wajir = 'Wajir', 'Wajir'
     Mandera = 'Mandera', 'Mandera'
@@ -55,11 +55,11 @@ class County(models.TextChoices):
     Nairobi = 'Nairobi', 'Nairobi'
 
 class Airport(models.Model):
-    stationID = models.IntegerField(primary_key=True,)
-    station = models.CharField(max_length=100,help_text='name of duty station',unique=True)
-    type = models.CharField(choices=Airport.choices, default=Airport.Airport, max_length=50)
-    county = models.CharField(choices=County.choices, default=County.Nairobi, max_length=50)
-    geom = models.MultiPolygonField(srid=4326)
+    stationid = models.IntegerField(primary_key=True,db_column="stationid")
+    station = models.CharField(max_length=100,help_text='name of duty station',db_column="station")
+    type = models.CharField(choices=Airport.choices, default=Airport.Airport, max_length=50,db_column="type")
+    county = models.CharField(choices=County.choices, default=County.Nairobi, max_length=50,db_column="county")
+    geom = models.MultiPolygonField(srid=4326,db_column="geom")
 
     def __str__(self):
         return f"{self.station}"

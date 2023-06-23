@@ -5,7 +5,7 @@ from .models import Airport
 
 class AirportAdmin(LeafletGeoAdmin):
 	"""Fields to be displayed"""
-	list_display = ('stationID', 'station', 'type', 'county')
+	list_display = ('stationid', 'station', 'type', 'county')
 	list_filter = ('type',)
 	search_fields = ('type',)
 
