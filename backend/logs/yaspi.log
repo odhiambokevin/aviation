@@ -22,3 +22,1645 @@
 2023-06-05 08:38:31,514 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-06-05 09:51:22,101 django.request WARNING  Not Found: /api/v1/users/
 2023-06-05 09:51:40,486 django.request WARNING  Not Found: /favicon.ico
+2023-06-14 20:15:55,177 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:17:31,430 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-06-14 20:17:37,915 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-06-14 20:17:44,023 django.request WARNING  Not Found: /favicon.ico
+2023-06-14 20:20:57,986 django.request WARNING  Not Found: /api/v1/airports
+2023-06-14 20:22:00,596 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\airports\urls.py changed, reloading.
+2023-06-14 20:22:26,745 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:22:46,214 django.request ERROR    Internal Server Error: /api/v1/airports/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\renderers.py", line 724, in render
+    context = self.get_context(data, accepted_media_type, renderer_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\renderers.py", line 655, in get_context
+    raw_data_post_form = self.get_raw_data_form(data, view, 'POST', request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\renderers.py", line 563, in get_raw_data_form
+    data = serializer.data.copy()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 257, in data
+    self._data = self.get_initial()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 405, in get_initial
+    for field in self.fields.values()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\functional.py", line 49, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 356, in fields
+    for key, value in self.get_fields().items():
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 1052, in get_fields
+    field_names = self.get_field_names(declared_fields, info)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 1148, in get_field_names
+    assert field_name in fields, (
+AssertionError: The field 'staff' was declared on serializer AirportSerializer, but has not been included in the 'fields' option.
+2023-06-14 20:23:27,303 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\airports\serializers.py changed, reloading.
+2023-06-14 20:23:39,927 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:25:38,432 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\airports\models.py changed, reloading.
+2023-06-14 20:25:46,013 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:33:37,015 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\users\managers.py changed, reloading.
+2023-06-14 20:34:23,544 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:38:19,856 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\models.py changed, reloading.
+2023-06-14 20:38:30,648 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:39:16,724 django.request ERROR    Internal Server Error: /vault/login/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 98, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 872, in save_base
+    post_save.send(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "D:\Projects\Portfolio\backend\apps\profiles\signals.py", line 17, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 461, in __get__
+    raise self.RelatedObjectDoesNotExist(
+apps.users.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2023-06-14 20:40:38,455 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\models.py changed, reloading.
+2023-06-14 20:40:48,232 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:42:10,482 django.security.csrf WARNING  Forbidden (CSRF token from POST incorrect.): /vault/login/
+2023-06-14 20:42:43,626 django.request ERROR    Internal Server Error: /vault/login/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 98, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 872, in save_base
+    post_save.send(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "D:\Projects\Portfolio\backend\apps\profiles\signals.py", line 17, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 461, in __get__
+    raise self.RelatedObjectDoesNotExist(
+apps.users.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2023-06-14 20:43:19,682 django.request ERROR    Internal Server Error: /vault/login/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 98, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 872, in save_base
+    post_save.send(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "D:\Projects\Portfolio\backend\apps\profiles\signals.py", line 17, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 461, in __get__
+    raise self.RelatedObjectDoesNotExist(
+apps.users.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2023-06-14 20:52:58,653 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\models.py changed, reloading.
+2023-06-14 20:53:22,904 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:53:53,558 django.request ERROR    Internal Server Error: /vault/login/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 440, in login
+    return LoginView.as_view(**defaults)(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\debug.py", line 92, in sensitive_post_parameters_wrapper
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 67, in dispatch
+    return super().dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 119, in dispatch
+    return handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\edit.py", line 153, in post
+    return self.form_valid(form)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\views.py", line 98, in form_valid
+    auth_login(self.request, form.get_user())
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\__init__.py", line 144, in login
+    user_logged_in.send(sender=user.__class__, request=request, user=user)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\models.py", line 22, in update_last_login
+    user.save(update_fields=["last_login"])
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\auth\base_user.py", line 68, in save
+    super().save(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 872, in save_base
+    post_save.send(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 176, in send
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\dispatch\dispatcher.py", line 177, in <listcomp>
+    (receiver, receiver(signal=self, sender=sender, **named))
+  File "D:\Projects\Portfolio\backend\apps\profiles\signals.py", line 17, in save_user_profile
+    instance.profile.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 461, in __get__
+    raise self.RelatedObjectDoesNotExist(
+apps.users.models.User.profile.RelatedObjectDoesNotExist: User has no profile.
+2023-06-14 20:55:26,439 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\models.py changed, reloading.
+2023-06-14 20:55:35,412 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:56:01,525 django.request ERROR    Internal Server Error: /api/v1/counties/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 559, in __init__
+    raise TypeError(
+TypeError: County() got an unexpected keyword argument 'airports'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 981, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `County.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `County.objects.create()`. You may need to make the field read-only, or override the CountySerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 512, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 559, in __init__
+    raise TypeError(
+TypeError: County() got an unexpected keyword argument 'airports'
+
+2023-06-14 20:58:31,264 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\counties\serializers.py changed, reloading.
+2023-06-14 20:58:44,001 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 20:59:08,472 django.request ERROR    Internal Server Error: /api/v1/counties/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "geom" of relation "counties" violates not-null constraint
+DETAIL:  Failing row contains (1, Mombasa, null).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\mixins.py", line 19, in create
+    self.perform_create(serializer)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\mixins.py", line 24, in perform_create
+    serializer.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 212, in save
+    self.instance = self.create(validated_data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 514, in create
+    obj.save(force_insert=True, using=self.db)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "geom" of relation "counties" violates not-null constraint
+DETAIL:  Failing row contains (1, Mombasa, null).
+
+2023-06-14 21:01:04,976 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\models.py changed, reloading.
+2023-06-14 21:01:19,605 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 21:01:43,450 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\admin.py changed, reloading.
+2023-06-14 21:01:52,024 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-14 21:04:31,967 django.utils.autoreload INFO     D:\Projects\Portfolio\backend\apps\profiles\serializers.py changed, reloading.
+2023-06-14 21:07:32,539 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-17 17:51:52,532 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 11:47:02,688 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 11:48:34,207 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-06-20 11:48:36,955 django.request WARNING  Not Found: /favicon.ico
+2023-06-20 11:54:37,097 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\airports\serializers.py changed, reloading.
+2023-06-20 11:54:51,621 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 11:57:32,770 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\models.py changed, reloading.
+2023-06-20 11:57:42,661 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:03:16,492 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:03:30,600 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:06:51,650 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:06:58,818 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:07:31,032 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:07:39,509 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:08:12,848 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:08:19,577 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:10:01,509 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:10:11,557 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:10:33,168 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:10:41,171 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:12:54,050 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:13:01,338 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:13:17,099 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:13:23,574 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:16:26,970 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:16:33,480 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:18:01,939 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:18:08,303 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:24:49,681 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\profiles\views.py changed, reloading.
+2023-06-20 12:24:56,256 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:26:26,438 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:34:47,639 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\serializers.py changed, reloading.
+2023-06-20 12:34:58,490 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:36:06,599 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.NotNullViolation: null value in column "county" of relation "incident" violates not-null constraint
+DETAIL:  Failing row contains (1, 2023-06-20 09:36:05.671138+00, None, 1, null, 0101000020E6100000CCB56801DA5E4240DD43C2F7FE06D73F, No remarks, Bird, Balearica regulorum, Bird strike, default.png, 6).
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.IntegrityError: null value in column "county" of relation "incident" violates not-null constraint
+DETAIL:  Failing row contains (1, 2023-06-20 09:36:05.671138+00, None, 1, null, 0101000020E6100000CCB56801DA5E4240DD43C2F7FE06D73F, No remarks, Bird, Balearica regulorum, Bird strike, default.png, 6).
+
+2023-06-20 12:38:09,015 django.request ERROR    Internal Server Error: /vault/incident/incident/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedFunction: operator does not exist: character varying = integer
+LINE 1: ...") INNER JOIN "airports" ON ("incident"."airport" = "airport...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 2063, in changelist_view
+    "selection_note": _("0 of %(cnt)s selected") % {"cnt": len(cl.result_list)},
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: operator does not exist: character varying = integer
+LINE 1: ...") INNER JOIN "airports" ON ("incident"."airport" = "airport...
+                                                             ^
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+2023-06-20 12:40:24,616 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 12:40:40,970 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:41:10,329 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\airports\models.py changed, reloading.
+2023-06-20 12:41:20,268 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:41:52,725 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\airports\models.py changed, reloading.
+2023-06-20 12:41:59,776 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:44:50,263 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 12:44:58,925 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:45:21,295 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 12:45:30,098 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:54:00,005 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 12:54:17,304 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:55:22,389 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 12:59:52,017 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 13:00:11,675 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 13:00:27,653 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 13:00:36,482 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 13:01:20,984 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 13:01:32,906 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:07:26,213 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:08:51,583 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+2023-06-20 14:12:48,932 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(6) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(6) is not present in table "incident".
+
+2023-06-20 14:21:20,391 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-20 14:21:29,807 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:22:31,985 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 14:22:41,418 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:23:25,421 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 14:23:40,868 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:25:22,526 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-20 14:25:33,436 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:29:04,296 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+2023-06-20 14:32:27,987 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-20 14:32:43,839 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:35:40,424 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\migrations\0001_initial.py changed, reloading.
+2023-06-20 14:35:55,723 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 14:37:09,659 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(6) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(6) is not present in table "incident".
+
+2023-06-20 14:41:03,915 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-20 15:05:30,349 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 15:11:02,784 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(6) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(6) is not present in table "incident".
+
+2023-06-20 15:27:04,277 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+2023-06-20 15:31:40,632 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-20 15:32:16,919 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-20 15:35:16,537 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-20 15:35:25,121 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-21 09:18:07,503 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-21 09:21:16,836 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-06-21 09:21:24,140 django.request WARNING  Not Found: /favicon.ico
+2023-06-21 11:02:34,664 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+psycopg2.errors.ForeignKeyViolation: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\transaction.py", line 255, in __exit__
+    connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\asyncio.py", line 26, in inner
+    return func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 291, in commit
+    self._commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\base\base.py", line 267, in _commit
+    return self.connection.commit()
+django.db.utils.IntegrityError: insert or update on table "incidentcontrol" violates foreign key constraint "incidentcontrol_recordedby_38f1c33e_fk_incident_incidentid"
+DETAIL:  Key (recordedby)=(7) is not present in table "incident".
+
+2023-06-21 11:03:49,630 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incident\models.py changed, reloading.
+2023-06-21 11:27:26,485 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-21 12:30:00,485 django.request ERROR    Internal Server Error: /vault/incidentcontrol/incidentcontrol/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\options.py", line 672, in get_field
+    return self.fields_map[field_name]
+KeyError: 'get_recordedby'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\utils.py", line 271, in lookup_field
+    f = _get_non_gfk_field(opts, name)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\utils.py", line 302, in _get_non_gfk_field
+    field = opts.get_field(name)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\options.py", line 674, in get_field
+    raise FieldDoesNotExist(
+django.core.exceptions.FieldDoesNotExist: IncidentControl has no field named 'get_recordedby'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 220, in _get_response
+    response = response.render()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\response.py", line 114, in render
+    self.content = self.rendered_content
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\response.py", line 92, in rendered_content
+    return template.render(context, self._request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\backends\django.py", line 62, in render
+    return self.template.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 175, in render
+    return self._render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader_tags.py", line 157, in render
+    return compiled_parent._render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 167, in _render
+    return self.nodelist.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader_tags.py", line 63, in render
+    result = block.nodelist.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 1000, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\base.py", line 958, in render_annotated
+    return self.render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\templatetags\base.py", line 45, in render
+    return super().render(context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\library.py", line 260, in render
+    _dict = self.func(*resolved_args, **resolved_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 336, in result_list
+    "results": list(results(cl)),
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 312, in results
+    yield ResultList(None, items_for_result(cl, res, None))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 303, in __init__
+    super().__init__(*items)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\templatetags\admin_list.py", line 213, in items_for_result
+    f, attr, value = lookup_field(field_name, result, cl.model_admin)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\utils.py", line 280, in lookup_field
+    value = attr(obj)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\admin.py", line 16, in get_recordedby
+    return obj.recordedby.recordedby
+AttributeError: 'User' object has no attribute 'recordedby'
+2023-06-21 12:35:22,541 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\admin.py changed, reloading.
+2023-06-21 12:35:47,842 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-22 09:44:47,857 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-22 10:00:22,796 django.request WARNING  Not Found: /favicon.ico
+2023-06-22 10:06:53,988 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-22 10:07:39,556 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-22 10:08:06,087 django.request ERROR    Internal Server Error: /vault/incidentcontrol/incidentcontrol/5/change/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1888, in change_view
+    return self.changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1854, in _changeform_view
+    "subtitle": str(obj) if obj else None,
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py", line 50, in __str__
+    return f"ID: {self.incidenti} recorded by{self.recordedby}"
+AttributeError: 'IncidentControl' object has no attribute 'incidenti'
+2023-06-22 10:08:33,320 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-22 10:08:54,833 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-22 10:09:58,505 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-22 10:10:19,083 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 11:05:43,721 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 11:09:20,944 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-06-23 11:09:23,052 django.request WARNING  Not Found: /favicon.ico
+2023-06-23 11:16:26,571 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentid, recordedby)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentid, recordedby)
+    VALUES(NEW.incidentid, NEW.recordedby)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentid, recordedby)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentid, recordedby)
+    VALUES(NEW.incidentid, NEW.recordedby)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+2023-06-23 11:19:38,516 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+2023-06-23 11:21:07,111 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 11:22:34,099 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+2023-06-23 11:27:46,242 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+2023-06-23 11:28:12,745 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO incidentcontrol(incidentID, recordedBy)
+                                    ^
+QUERY:  INSERT INTO incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function incidencontroltentry() line 3 at SQL statement
+
+2023-06-23 12:50:54,813 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-23 12:52:18,741 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 13:14:10,175 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 13:18:59,690 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO public.incidentcontrol(incidentID, recordedBy)
+                                           ^
+QUERY:  INSERT INTO public.incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function autoincident() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "incidentid" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO public.incidentcontrol(incidentID, recordedBy)
+                                           ^
+QUERY:  INSERT INTO public.incidentcontrol(incidentID, recordedBy)
+    VALUES(NEW.incidentID, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function autoincident() line 3 at SQL statement
+
+2023-06-23 13:24:31,014 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-06-23 13:24:49,291 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 13:26:58,524 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-06-23 13:27:35,373 django.request ERROR    Internal Server Error: /vault/incident/incident/add/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column "recordedby" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO public.incidentcontrol(incidentid, recordedBy)
+                                                       ^
+QUERY:  INSERT INTO public.incidentcontrol(incidentid, recordedBy)
+    VALUES(NEW.incidentid, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function autoincident() line 3 at SQL statement
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 683, in wrapper
+    return self.admin_site.admin_view(view)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\cache.py", line 62, in _wrapped_view_func
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\sites.py", line 242, in inner
+    return view(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1885, in add_view
+    return self.changeform_view(request, None, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 46, in _wrapper
+    return bound_method(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\decorators.py", line 133, in _wrapped_view
+    response = view_func(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1745, in changeform_view
+    return self._changeform_view(request, object_id, form_url, extra_context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1797, in _changeform_view
+    self.save_model(request, new_object, form, not add)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\contrib\admin\options.py", line 1220, in save_model
+    obj.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1000, in _save_table
+    results = self._do_insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1041, in _do_insert
+    return manager._insert(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1434, in _insert
+    return query.get_compiler(using=using).execute_sql(returning_fields)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1621, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column "recordedby" of relation "incidentcontrol" does not exist
+LINE 1: INSERT INTO public.incidentcontrol(incidentid, recordedBy)
+                                                       ^
+QUERY:  INSERT INTO public.incidentcontrol(incidentid, recordedBy)
+    VALUES(NEW.incidentid, NEW.recordedBy)
+CONTEXT:  PL/pgSQL function autoincident() line 3 at SQL statement
+
+2023-06-23 13:36:07,878 django.utils.autoreload INFO     Watching for file changes with StatReloader

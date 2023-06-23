@@ -2,18 +2,9 @@
 from django.contrib.auth import get_user_model
 import uuid
 from django.contrib.gis.db import models
+from apps.airports.models import Airport
 
 User = get_user_model()
-
-class Airport(models.TextChoices):
-    JKIA = "JKIA"
-    MOI = "MOI"
-    KIA = "KIA"
-
-class Counties(models.TextChoices):
-    Nairobi = "Nairobi"
-    Mombasa = "Mombasa"
-    Kisumu = "Kisumu"
 
 class Species(models.TextChoices):
     Mammal = "Mammal"
@@ -27,18 +18,17 @@ class Precipitation(models.TextChoices):
     Zero = "None"
 
 class Incident(models.Model):
-    incidentid = models.AutoField(primary_key=True, editable=False,db_column="incidentid")
-    recordedby = models.ForeignKey(User,related_name="incidents",db_column="recordedby",default="staff",on_delete=models.SET_DEFAULT)
-    incidentdate = models.DateTimeField(auto_now_add=True)
-    precipitation = models.CharField(choices=Precipitation.choices, default=Precipitation.Zero, max_length=50)
-    airport =  models.CharField(choices=Airport.choices, default=Airport.JKIA, max_length=50)
-    county = models.CharField(choices=Counties.choices, default=Counties.Nairobi, max_length=50)
-    location = models.PointField(srid=4326)
-    locationremarks = models.TextField()
-    speciestype = models.CharField(choices=Species.choices, default=Species.Bird, max_length=50)
-    speciesname = models.CharField(max_length=100)
-    incidentremarks = models.TextField()
-    image = models.ImageField(default='default.png',null=True, blank=True)
+    incidentid = models.UUIDField(primary_key=True,default=uuid.uuid4, editable=False,db_column='incidentid')
+    recordedby = models.ForeignKey(User,related_name="incidents",db_column="recordedby",default=1,on_delete=models.SET_DEFAULT)
+    incidentdate = models.DateTimeField(auto_now_add=True,db_column="incidentdate")
+    precipitation = models.CharField(choices=Precipitation.choices, default=Precipitation.Zero, max_length=50,db_column="precipiation")
+    airport =  models.ForeignKey(Airport,related_name='incidentairport',db_column="airport",default=1,on_delete=models.SET_DEFAULT)
+    location = models.PointField(srid=4326,db_column="location")
+    locationremarks = models.TextField(blank=True,db_column="locationremarks")
+    speciestype = models.CharField(choices=Species.choices, default=Species.Bird, max_length=50,db_column="speciestype")
+    speciesname = models.CharField(max_length=100, blank=True,db_column="speciesname")
+    incidentremarks = models.TextField(blank=True,db_column="incidentremarks")
+    image = models.ImageField(default='default.png',null=True, blank=True,db_column="image")
 
     class Meta:
         ordering = ['-incidentdate',]
@@ -46,7 +36,7 @@ class Incident(models.Model):
         verbose_name_plural = "Incidents"
         db_table = "incident"
 
-    def __int__(self):
-        return self.incidentid
+    def __str__(self):
+        return f"Incident ID: {self.incidentid} Involving: {self.speciestype}" 
 
     

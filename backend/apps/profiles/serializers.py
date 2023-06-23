@@ -9,10 +9,10 @@ class ProfileSerializer(serializers.ModelSerializer):
     last_name = serializers.CharField(source="user.last_name")
     email = serializers.EmailField(source="user.email")
     full_name = serializers.SerializerMethodField(read_only=True)
-       
+           
     class Meta:
         model = Profile
-        fields = ['id','username','email','first_name','last_name','full_name','gender','station','designation','photo']
+        fields = ['id','username','email','first_name','last_name','full_name','gender','designation','photo']
 
     def get_full_name(self, obj):
         first_name = obj.user.first_name.title()
@@ -30,4 +30,4 @@ class UpdateProfileSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = Profile
-        fields = ['station','designation','photo']
+        fields = ['designation','photo']

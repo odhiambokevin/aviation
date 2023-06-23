@@ -10,8 +10,15 @@ class IncidentSerializer(GeoFeatureModelSerializer):
         
         '''
     recordedby = serializers.CharField(source='recordedby.username')
+    longitude = serializers.SerializerMethodField()
+    latitude = serializers.SerializerMethodField()
     class Meta:
         model = Incident
-        fields = ['incidentid','recordedby','location','incidentdate','precipitation','airport','county','locationremarks','speciestype','speciesname','incidentremarks','image']
+        fields = ['incidentid','recordedby','location','longitude','latitude','incidentdate','precipitation','airport','locationremarks','speciestype','speciesname','incidentremarks','image']
         geo_field = 'location'
         # read_only_fields = []
+    def get_latitude(self, obj):
+        return obj.location.y
+    
+    def get_longitude(self, obj):
+        return obj.location.x
