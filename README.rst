@@ -1,5 +1,5 @@
 .. image:: frontend/public/static/images/logo.png
-.. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio/dashboard
+.. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio/development
 :   alt: GitHub last commit (branch)
 
 
