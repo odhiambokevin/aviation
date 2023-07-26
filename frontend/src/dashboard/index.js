@@ -12,7 +12,7 @@ import LineChart from "./LineChartdash";
 import GeographyChart from "./GeographyChart";
 import StatBox from "./StatBox";
 import ProgressCircle from "./ProgressCircle";
-import { allRawIncidents } from '../state/slices/incidentsSlice';
+import { allVerifiedIncidents } from '../state/slices/incidentsSlice';
 import { useNavigate } from 'react-router-dom';
 
 const mockTransactions = [
@@ -27,62 +27,28 @@ const mockTransactions = [
       user: "jackdower",
       date: "2022-04-01",
       cost: "133.45",
-    },
-    {
-      txId: "01e4dsa",
-      user: "aberdohnny",
-      date: "2021-09-01",
-      cost: "43.95",
-    },
-    {
-      txId: "51034szv",
-      user: "goodmanave",
-      date: "2022-11-05",
-      cost: "200.95",
-    },
-    {
-      txId: "0a123sb",
-      user: "stevebower",
-      date: "2022-11-02",
-      cost: "13.55",
-    },
-    {
-      txId: "01e4dsa",
-      user: "aberdohnny",
-      date: "2021-09-01",
-      cost: "43.95",
-    },
-    {
-      txId: "120s51a",
-      user: "wootzifer",
-      date: "2019-04-15",
-      cost: "24.20",
-    },
-    {
-      txId: "0315dsaa",
-      user: "jackdower",
-      date: "2022-04-01",
-      cost: "133.45",
-    },
+    }
   ];
 
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
-  const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
-  const {user} = useSelector((state)=> state.users)
   const navigate = useNavigate();
   const dispatch = useDispatch();
-    useEffect(()=> {
-    dispatch(allRawIncidents())
-  },[dispatch,isError, message])
+
+ 
+
+  const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
+  const {user} = useSelector((state)=> state.users)
+
+  useEffect(()=> {dispatch(allVerifiedIncidents())},[dispatch,isError, message])
 
   const da = (incident)=>{
-      let day = new Date().getDate(incident.properties.incidentdate)
-      let month = new Date().getMonth(incident.properties.incidentdate)
-      let year = new Date().getFullYear(incident.properties.incidentdate)
-      let hours = new Date().getHours(incident.properties.incidentdate)
-      let minutes = new Date().getMinutes(incident.properties.incidentdate)
+      let day = new Date().getDate(incident.date)
+      let month = new Date().getMonth(incident.date)
+      let year = new Date().getFullYear(incident.date)
+      let hours = new Date().getHours(incident.date)
+      let minutes = new Date().getMinutes(incident.date)
       let da = day +'/'+ month +'/' + year + ' ' + hours + ':' + minutes
       return da
     }
@@ -255,7 +221,7 @@ const Dashboard = () => {
             </Box>
             {incidents.map((incident, i) => (
               <Box
-                key={`${incident.id}-${i}`}
+                key={incident.incidentid}
                 display="flex"
                 justifyContent="space-between"
                 alignItems="center"
@@ -268,13 +234,13 @@ const Dashboard = () => {
                     variant="h5"
                     fontWeight="600"
                   >
-                    ID: {incident.id}
+                    ID: {incident.incidentid}
                   </Typography>
                   <Typography color={colors.grey[100]}>
-                    Recorded by: {incident.properties.recordedby}
+                    {incident.airport}
                   </Typography>
                 </Box>
-                <Box color={colors.grey[100]}>{da(incident)}</Box>
+                <Box color={colors.grey[100]}>{da(incident)}</Box> &nbsp; &nbsp;
                 <Box
                   backgroundColor={colors.greenAccent[500]}
                   p="5px 10px"
@@ -282,7 +248,7 @@ const Dashboard = () => {
                   width='100px'
                   textAlign='center'
                 >
-                  {incident.properties.speciesname}
+                  {incident.recordedby}
                 </Box>
               </Box>
             ))}

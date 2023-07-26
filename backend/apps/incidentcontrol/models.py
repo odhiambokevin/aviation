@@ -6,17 +6,17 @@ from apps.incident.models import Incident
 User = get_user_model()
 
 class Phase(models.TextChoices):
-    landing_roll = "Landing Roll"
-    take_off_run = "Take Off Run"
-    approach = "Approach"
-    climbing = "Climbing"
+    landing_roll = "landing roll","Landing Roll"
+    take_off_run = "take-off run","Take-off Run"
+    approach = "approach","Approach"
+    climbing = "climbing","Climbing"
 
 class Impact(models.TextChoices):
-    zero = "None"
-    precautionary = "Precautionary"
-    landing = "Landing"
-    flight_cancelled = "Flight Cancelled"
-    engine_shut_down = "Engine Shut Down"
+    zero = "none","None"
+    precautionary = "precautionary","Precautionary"
+    landing = "landing","Landing"
+    flight_cancelled = "flight cancelled","Flight Cancelled"
+    engine_shut_down = "engine shutdown","Engine Shut Down"
 
 class Wildlife(models.TextChoices):
     less_than_5 = "1 to 5"
@@ -38,6 +38,7 @@ class IncidentControl(models.Model):
     wildlifenumber = models.CharField(choices=Wildlife.choices, null=True,default=Wildlife.less_than_5, max_length=100,db_column="wildlifenumber")
     wildlifenumberactual = models.IntegerField(null=True,db_column="wildlifenumberactual")
     airlineoperator = models.CharField(null=True, max_length=100,db_column="airlineoperator")
+    is_verified = models.BooleanField(default=False, verbose_name="Verification Status")
     verifiedby = models.ForeignKey(User,related_name="incidentverify",db_column="verifiedby",null=True,default=1,on_delete=models.SET_DEFAULT)
 
     class Meta:

@@ -31,7 +31,7 @@ function Header() {
                             <span className="icon-bar"></span>
                             <span className="icon-bar"></span>
                         </button>
-                        <div className="logo-nav">
+                        <div className="logo-nav floating-logo">
                             <NavLink reloadDocument to="/" >
                                 <img src="static/images/logo.png" alt="Company logo" style={{height: "100px"}} />
                             </NavLink>

@@ -9,10 +9,21 @@ const initialState = {
     message: 'Initial STATE'
 }
 
-// retreiving active user
+// retrieve unverified incidents
 export const allRawIncidents = createAsyncThunk('incidents/getIncidents', async (_,thunkAPI)=>{
         try {
             return await incidentsApi.getIncidents();      
+        } catch (error) {
+            const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
+            return thunkAPI.rejectWithValue(message);
+            
+        }
+})
+
+// retrieve verified incidents only
+export const allVerifiedIncidents = createAsyncThunk('incidents/getVerifiedIncidents', async (_,thunkAPI)=>{
+        try {
+            return await incidentsApi.getVerifiedIncidents();      
         } catch (error) {
             const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
             return thunkAPI.rejectWithValue(message);
@@ -26,14 +37,28 @@ export const incidentsSlice = createSlice({
     initialState: initialState,
     reducers: {},
     extraReducers: {
+        [allVerifiedIncidents.pending]: (state, {payload})=>{
+            state.isLoading = true;
+        },
+        [allVerifiedIncidents.fulfilled]: (state,{ payload })=>{
+            state.isLoading = false;
+            state.isSuccess = true;
+            state.incidents = payload.results;
+        },
+        [allVerifiedIncidents.rejected]: (state,{ payload })=>{
+            state.isLoading = false;
+            state.isSuccess = false;
+            state.isError = true;
+            state.message = payload;
+        },
+
         [allRawIncidents.pending]: (state, {payload})=>{
             state.isLoading = true;
-            state.message = payload;
         },
         [allRawIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
-            state.incidents = payload.results.features;
+            state.incidents = payload.results;
         },
         [allRawIncidents.rejected]: (state,{ payload })=>{
             state.isLoading = false;

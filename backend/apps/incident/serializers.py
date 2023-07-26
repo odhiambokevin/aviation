@@ -9,6 +9,7 @@ class IncidentSerializer(GeoFeatureModelSerializer):
         first_name = serializers.CharField(source="user.first_name")
         
         '''
+    airport = serializers.CharField(source='airport.station')
     recordedby = serializers.CharField(source='recordedby.username')
     longitude = serializers.SerializerMethodField()
     latitude = serializers.SerializerMethodField()
