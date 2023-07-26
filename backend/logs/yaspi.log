@@ -4696,3 +4696,5 @@ DETAIL:  Failing row contains (dbfc93de-b6a2-4082-920f-d107408d34b5, null, null,
 2023-07-26 14:01:25,296 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
 2023-07-26 14:01:33,158 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-07-26 14:05:14,245 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-26 14:05:21,117 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-26 14:07:39,513 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/
