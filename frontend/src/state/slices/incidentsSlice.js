@@ -3,6 +3,7 @@ import incidentsApi from '../api/incidentsApi';
 
 const initialState = {
     incidents: [],
+    incident: {},
     isError: false,
     isLoading: false,
     isSuccess: false,
@@ -24,6 +25,17 @@ export const allRawIncidents = createAsyncThunk('incidents/getIncidents', async 
 export const allVerifiedIncidents = createAsyncThunk('incidents/getVerifiedIncidents', async (_,thunkAPI)=>{
         try {
             return await incidentsApi.getVerifiedIncidents();      
+        } catch (error) {
+            const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
+            return thunkAPI.rejectWithValue(message);
+            
+        }
+})
+
+// verfiy incident
+export const verifyIncident = createAsyncThunk('incidents/verifyIncident', async ({incidentid,values},thunkAPI)=>{
+        try {
+            return await incidentsApi.verifyIncident({incidentid,values});      
         } catch (error) {
             const message = (error.res && error.res.data && error.res.message) || error.message || error.toString();
             return thunkAPI.rejectWithValue(message);
@@ -58,9 +70,24 @@ export const incidentsSlice = createSlice({
         [allRawIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
-            state.incidents = payload.results;
+            state.incidents = payload;
         },
         [allRawIncidents.rejected]: (state,{ payload })=>{
+            state.isLoading = false;
+            state.isSuccess = false;
+            state.isError = true;
+            state.message = payload;
+        },
+
+        [verifyIncident.pending]: (state)=>{
+            state.isLoading = true;
+        },
+        [verifyIncident.fulfilled]: (state,{ payload })=>{
+            state.isLoading = false;
+            state.isSuccess = true;
+            state.incident = payload;
+        },
+        [verifyIncident.rejected]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = false;
             state.isError = true;

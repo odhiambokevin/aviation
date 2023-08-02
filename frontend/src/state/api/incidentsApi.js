@@ -12,11 +12,12 @@ const getVerifiedIncidents = async ()=>{
 }
 
 //endpoint for posting verified incident
-const verifiedIncident = async (incidentData)=>{
-    const res = await axios.post("auth/users/", incidentData);
+const verifyIncident = async ({incidentid,values})=>{
+    
+    const res = await axios.patch(`http://127.0.0.1:8000/api/v1/incidentcontrol/raw/${incidentid}/`, values);
     return res.data
 }
 
-const incidentsApi = {getIncidents,getVerifiedIncidents,verifiedIncident}
+const incidentsApi = {getIncidents,getVerifiedIncidents,verifyIncident}
 
 export default incidentsApi;

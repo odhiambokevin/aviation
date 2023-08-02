@@ -17,6 +17,7 @@ import Dashheader from "./Dashheader";
 import {activeUser, loginActiveUser} from "../state/slices/userSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {useNavigate, useLocation, useParams} from "react-router-dom";
+import { verifyIncident } from "../state/slices/incidentsSlice";
 
 const Verify = () => {
   const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
@@ -37,7 +38,7 @@ const Verify = () => {
         wildlifenumber:'',
         wildlifenumberactual:'',
         airlineoperator:'',
-        is_verified:verified
+        is_verified:false
    }
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const [showPassword, setShowPassword] = useState(false);
@@ -52,8 +53,10 @@ const Verify = () => {
       };
 
   const loginUser = async (values) => {
-    setVerified(true);
-    console.log(values);}
+    dispatch(verifyIncident({incidentid,values}))
+    .then(console.log(values))
+    .then(console.log(incidentid))
+    }
   const flightphase = [
     {
       value: 'landing roll',
@@ -78,12 +81,8 @@ const Verify = () => {
       label: 'None',
     },
     {
-      value: 'precautionary',
-      label: 'Precautionary',
-    },
-    {
-      value: 'landing',
-      label: 'Landing',
+      value: 'precautionary landing',
+      label: 'Precautionary Landing',
     },
     {
       value: 'engine shutdown',
@@ -97,8 +96,8 @@ const Verify = () => {
       label: '1 to 5'
     },
     {
-      value: '5 to 50',
-      label: '5 to 50'
+      value: '6 to 50',
+      label: '6 to 50'
     },
     {
       value: 'More than 50',
@@ -142,7 +141,7 @@ const Verify = () => {
               />
               <TextField
                 name="recordedby"
-                label="Recorded By"a
+                label="Recorded By"
                 defaultValue={incident.recordedby}
                 InputProps={{
                   readOnly: true,
@@ -325,6 +324,20 @@ const Verify = () => {
                 helperText={touched.airlineoperator && errors.airlineoperator}
                 sx={{ gridColumn: "span 4" }}
               />
+
+              <FormControl variant="outlined">
+                <FormControlLabel
+                  control={
+                    <Switch                      
+                      checked={values.is_verified}                      
+                      inputProps={{ 'aria-label': 'controlled' }}
+                      onChange={handleChange}
+                    />
+                    }    
+                    name="is_verified"
+                    label="Verify Incident"            
+                />
+              </FormControl>
             </Box>
             <Box display="flex" justifyContent="end" mt="20px">
               <Button type="submit" color="secondary" variant="contained">

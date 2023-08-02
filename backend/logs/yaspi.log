@@ -4698,3 +4698,1357 @@ DETAIL:  Failing row contains (dbfc93de-b6a2-4082-920f-d107408d34b5, null, null,
 2023-07-26 14:05:14,245 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
 2023-07-26 14:05:21,117 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-07-26 14:07:39,513 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/
+2023-07-26 20:36:05,055 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-27 10:39:14,200 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-27 12:08:57,906 django.request WARNING  Not Found: /favicon.ico
+2023-07-27 13:27:34,031 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/<uuid:incidentid>/
+2023-07-27 13:32:01,416 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/<incidentid>/
+2023-07-27 13:36:30,029 django.request WARNING  Method Not Allowed: /api/v1/incidentcontrol/raw/
+2023-07-27 13:54:01,615 django.request WARNING  Method Not Allowed: /api/v1/incidentcontrol/raw/
+2023-07-28 11:31:57,798 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-28 11:48:17,567 django.request WARNING  Not Found: /favicon.ico
+2023-07-29 16:24:58,251 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-29 16:31:10,073 django.request WARNING  Not Found: /favicon.ico
+2023-07-29 16:33:50,334 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/undefined/
+2023-07-29 16:38:31,390 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/undefined
+2023-07-29 18:29:37,577 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-29 18:40:30,150 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/undefined/
+2023-07-29 18:58:33,717 django.request WARNING  Not Found: /api/v1/incidentcontrol/raw/undefined/
+2023-07-30 06:26:34,613 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 07:16:11,780 django.request WARNING  Not Found: /favicon.ico
+2023-07-30 07:17:10,014 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 40, in patch
+    rawincident.verifiedby = data.get("verifiedby", rawincident.verifiedby)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'admin'": "IncidentControl.verifiedby" must be a "User" instance.
+2023-07-30 07:55:15,985 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-30 07:55:56,632 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 08:00:56,643 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'verifiedby'
+2023-07-30 08:01:21,781 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'verifiedby'
+2023-07-30 08:06:16,258 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-30 08:06:25,238 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 08:10:47,424 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-07-30 08:10:55,881 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 08:11:31,003 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'verifiedby'
+2023-07-30 08:23:09,793 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-30 08:23:16,808 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 08:26:08,935 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-30 08:26:17,490 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 08:27:24,251 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 38, in patch
+    rawincident = IncidentControl.objects.get(incidentid=data.incidentid)
+AttributeError: 'dict' object has no attribute 'incidentid'
+2023-07-30 08:29:39,842 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-30 08:29:48,991 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 08:30:13,743 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 37, in patch
+    rawincident = IncidentControl.objects.get(incidentid=request.data.get("incidentid"))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 496, in get
+    raise self.model.DoesNotExist(
+apps.incidentcontrol.models.IncidentControl.DoesNotExist: IncidentControl matching query does not exist.
+2023-07-30 08:30:59,330 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-30 08:31:07,049 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 17:53:57,640 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-30 17:58:29,455 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 40, in patch
+    rawincident.verifiedby = data.get("verifiedby", rawincident.verifiedby)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'admin'": "IncidentControl.verifiedby" must be a "User" instance.
+2023-07-31 09:28:50,438 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 09:31:07,407 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 34, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-07-31 09:32:04,347 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-07-31 09:32:29,988 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 09:33:19,806 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 40, in patch
+    rawincident.verifiedby = data.get("verifiedby")
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "7": "IncidentControl.verifiedby" must be a "User" instance.
+2023-07-31 09:40:56,434 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 09:41:16,407 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 09:41:50,638 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 41, in patch
+    rawincident.verifiedby = verifiedby #data.get("verifiedby")
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "<django.contrib.auth.models.AnonymousUser object at 0x0000027D35A5B7C0>": "IncidentControl.verifiedby" must be a "User" instance.
+2023-07-31 09:42:50,471 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 09:43:09,646 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 09:43:23,602 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 40, in patch
+    rawincident.verifiedby = data.get("verifiedby")
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\related_descriptors.py", line 235, in __set__
+    raise ValueError(
+ValueError: Cannot assign "'admin'": "IncidentControl.verifiedby" must be a "User" instance.
+2023-07-31 14:20:10,003 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 14:29:53,927 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-07-31 14:36:53,435 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 14:37:23,857 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 21:01:13,587 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 21:05:45,846 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-07-31 21:06:22,857 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 21:06:47,596 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 21:07:01,016 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 21:07:09,957 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 21:14:44,665 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 21:15:05,558 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 21:15:21,990 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-07-31 21:16:02,750 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-07-31 21:16:09,967 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-07-31 21:21:46,285 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-08-01 14:30:07,597 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:33:48,155 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-08-01 14:35:38,932 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:36:17,968 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:37:03,293 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:37:12,463 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:37:23,497 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-08-01 14:40:20,656 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:40:29,874 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:41:07,708 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'username'
+2023-08-01 14:41:36,148 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:41:45,591 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:41:59,812 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    rawincident = IncidentControl.objects.get(incidentid=request.data.incidentid)
+AttributeError: 'IncidentAPIView' object has no attribute 'data'
+2023-08-01 14:42:48,170 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:42:59,036 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:43:08,098 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    rawincident = IncidentControl.objects.get(incidentid=request.incidentid)
+AttributeError: 'IncidentAPIView' object has no attribute 'incidentid'
+2023-08-01 14:45:18,085 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:45:29,074 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:46:23,352 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 41, in patch
+    data = request.data
+AttributeError: 'IncidentAPIView' object has no attribute 'data'
+2023-08-01 14:48:38,470 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:48:46,996 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:48:57,468 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'get'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 43, in patch
+    rawincident.verifiedby = User.objects.get(username=data.get("verifiedby", rawincident.verifiedby))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'get'
+2023-08-01 14:50:27,523 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:50:36,769 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:50:47,449 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    data = request.data
+AttributeError: 'IncidentAPIView' object has no attribute 'data'
+2023-08-01 14:54:05,227 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:54:16,776 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:54:45,129 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'username'
+2023-08-01 14:55:39,329 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'username'
+2023-08-01 14:56:22,010 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:56:30,845 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:57:17,512 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:57:25,214 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:57:34,953 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    rawincident = IncidentControl.objects.get()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 499, in get
+    raise self.model.MultipleObjectsReturned(
+apps.incidentcontrol.models.IncidentControl.MultipleObjectsReturned: get() returned more than one IncidentControl -- it returned 8!
+2023-08-01 14:58:43,325 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:58:51,455 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:59:06,063 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 14:59:14,365 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 14:59:25,120 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    data = request.data
+AttributeError: 'IncidentAPIView' object has no attribute 'data'
+2023-08-01 15:00:12,145 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 15:00:20,498 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 15:00:31,451 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 40, in patch
+    rawincident = IncidentControl.objects.get(incidentid=data.get("incidentid"))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 496, in get
+    raise self.model.DoesNotExist(
+apps.incidentcontrol.models.IncidentControl.DoesNotExist: IncidentControl matching query does not exist.
+2023-08-01 15:06:56,546 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 15:07:11,800 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 15:07:18,072 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    data = request.data
+AttributeError: 'IncidentAPIView' object has no attribute 'data'
+2023-08-01 19:47:55,387 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 19:50:43,009 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    rawincident = IncidentControl.objects.get()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 499, in get
+    raise self.model.MultipleObjectsReturned(
+apps.incidentcontrol.models.IncidentControl.MultipleObjectsReturned: get() returned more than one IncidentControl -- it returned 8!
+2023-08-01 19:52:25,022 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 19:52:40,775 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 19:53:13,508 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\request.py", line 416, in __getattr__
+    return getattr(self._request, attr)
+AttributeError: 'WSGIRequest' object has no attribute 'incidentid'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 39, in patch
+    rawincident = IncidentControl.objects.get(incidentid=request.incidentid)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\request.py", line 418, in __getattr__
+    return self.__getattribute__(attr)
+AttributeError: 'Request' object has no attribute 'incidentid'
+2023-08-01 19:53:57,012 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 19:54:05,658 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:01:33,789 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:01:41,447 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:02:16,050 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:02:23,087 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:02:31,183 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'verifiedby'
+2023-08-01 20:04:06,207 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:04:13,530 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:04:24,930 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'verifiedby'
+2023-08-01 20:06:19,464 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:06:27,883 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:06:39,682 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'verifiedby'
+2023-08-01 20:07:24,750 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:07:32,824 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:07:45,173 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+TypeError: patch() missing 1 required positional argument: 'request'
+2023-08-01 20:09:10,454 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:09:19,068 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:10:20,232 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:10:33,434 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:10:57,428 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-01 20:11:05,194 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:11:50,558 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.verifiedby =  User.objects.get(username=data.get("verifiedby", rawincident.date))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 496, in get
+    raise self.model.DoesNotExist(
+apps.users.models.User.DoesNotExist: User matching query does not exist.
+2023-08-01 20:12:11,767 django.request WARNING  Bad Request: /api/v1/incidentcontrol/raw/beac4ae0-0cbb-49d5-ae9e-2d20988046dd/
+2023-08-01 20:12:27,635 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-01 20:12:34,679 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:13:40,874 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 27, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:15:16,230 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 27, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:15:28,793 django.request WARNING  Not Found: /favicon.ico
+2023-08-01 20:19:54,580 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:20:10,620 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:20:24,430 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 27, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:20:45,161 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:20:52,511 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:23:22,262 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-01 20:23:39,307 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:26:27,381 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\urls.py changed, reloading.
+2023-08-01 20:26:39,883 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:28:08,159 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-01 20:28:15,226 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:28:29,346 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 27, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawListSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:33:45,301 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-01 20:33:55,944 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:36:55,276 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/f989b264-da73-4b0a-87e6-6caa8610a732/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 36, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:36:55,773 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/f989b264-da73-4b0a-87e6-6caa8610a732/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 36, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:37:41,631 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/f989b264-da73-4b0a-87e6-6caa8610a732/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 36, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:40:04,117 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/f989b264-da73-4b0a-87e6-6caa8610a732
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\middleware\common.py", line 88, in get_full_path_with_slash
+    raise RuntimeError(
+RuntimeError: You called this URL via PATCH, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PATCH data. Change your form to point to 127.0.0.1:8000/api/v1/incidentcontrol/raw/f989b264-da73-4b0a-87e6-6caa8610a732/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2023-08-01 20:41:21,054 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 36, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 555, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:43:09,275 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:43:34,121 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:43:46,133 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 26, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:44:49,179 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-01 20:44:59,119 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-01 20:45:19,824 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+AttributeError: 'NoneType' object has no attribute 'username'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 27, in get
+    return Response(serializer.data)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 768, in data
+    ret = super().data
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 253, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 686, in to_representation
+    return [
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 687, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\serializers.py", line 509, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\fields.py", line 490, in get_attribute
+    raise type(exc)(msg)
+AttributeError: Got AttributeError when attempting to get a value for field `verifiedby` on serializer `IncidentControlRawSerializer`.
+The serializer field might be named incorrectly and not match any attribute or key on the `IncidentControl` instance.
+Original exception text was: 'NoneType' object has no attribute 'username'.
+2023-08-01 20:45:45,342 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-01 20:45:55,174 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 08:45:00,059 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 09:16:28,285 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.

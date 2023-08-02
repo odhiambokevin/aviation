@@ -8,12 +8,14 @@ from apps.incident.serializers import IncidentSerializer
 class IncidentControlRawSerializer(ModelSerializer):
     recordedby = serializers.CharField(source='recordedby.username')
     airport = serializers.CharField(source='incidentid.airport')
+    
     class Meta:
         model = IncidentControl
         fields = ["incidentid","recordedby","verifiedby","date","airport",
                   "altitude","damage","impact","pilotwarning","flightphase",
                   "aircraftmodel","scientificname","wildlifenumber","wildlifenumberactual",
                   "airlineoperator","is_verified"]
+        
         
 class IncidentControlSerializer(ModelSerializer):
     recordedby = serializers.CharField(source='recordedby.username')

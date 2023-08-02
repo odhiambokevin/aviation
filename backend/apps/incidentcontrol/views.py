@@ -4,7 +4,9 @@ from rest_framework.response import Response
 from apps.incidentcontrol.pagination import IncidentControlPagination
 from .models import IncidentControl
 # from .renderers import BlogJSONRenderer
+from django.contrib.auth import get_user_model
 from .serializers import IncidentControlSerializer, IncidentControlRawSerializer
+User = get_user_model()
 
 class IncidentControlListAPIView(generics.ListAPIView):
     #use this if authentication needed before accessing api permission_classes = [permissions.IsAuthenticated]
@@ -33,12 +35,14 @@ class IncidentAPIView(views.APIView):
         serializer = IncidentControlRawSerializer(rawincident)
         return Response(serializer.data)
     
-    def patch(self, request,incidentid, *args, **kwargs):
+    def patch(self,request,incidentid,*args, **kwargs):        
         rawincident = IncidentControl.objects.get(incidentid=incidentid)
         data = request.data
-
-        rawincident.verifiedby = data.get("verifiedby", rawincident.verifiedby)
+        # rawincident.verifiedby = User.objects.get(username=data.get("verifiedby", rawincident.verifiedby))
+  
+        # rawincident.verifiedby = User.objects.get(username=data.get("verifiedby", rawincident.date))
         rawincident.date = data.get("date", rawincident.date)
+        rawincident.verifiedby =  User.objects.get(username=data.get("verifiedby", rawincident.date))
         rawincident.altitude = data.get("altitude", rawincident.altitude)
         rawincident.damage = data.get("damage", rawincident.damage)
         rawincident.impact = data.get("impact", rawincident.impact)
@@ -54,6 +58,3 @@ class IncidentAPIView(views.APIView):
         rawincident.save()
         serializer = IncidentControlRawSerializer(rawincident)
         return Response(serializer.data)
-
-class IncidentVerify(generics.RetrieveUpdateAPIView):
-    pass

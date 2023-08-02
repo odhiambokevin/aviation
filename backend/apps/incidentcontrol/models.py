@@ -29,7 +29,7 @@ class IncidentControl(models.Model):
     recordedby = models.ForeignKey(User,related_name="recorder",db_column="recordedby",default=1,on_delete=models.SET_DEFAULT)
     date = models.DateTimeField(null=True,db_column="date")
     altitude = models.IntegerField(blank=True, null=True,db_column="altitude")
-    damage = models.BooleanField(default=False,null=True, verbose_name="Damage to Aircraft",db_column="damagetoaircraft")
+    damage = models.BooleanField(default=False,null=True, verbose_name="Damage to Aircraft",db_column="damage")
     impact = models.CharField(choices=Impact.choices,null=True, default=Impact.zero, max_length=100,db_column="impact")
     pilotwarning = models.BooleanField(default=False, null=True,db_column="pilotwarning")
     flightphase = models.CharField(choices=Phase.choices, null=True, default=Phase.take_off_run, max_length=100,db_column="flightphase")
@@ -39,7 +39,7 @@ class IncidentControl(models.Model):
     wildlifenumberactual = models.IntegerField(null=True,db_column="wildlifenumberactual")
     airlineoperator = models.CharField(null=True, max_length=100,db_column="airlineoperator")
     is_verified = models.BooleanField(default=False, verbose_name="Verification Status")
-    verifiedby = models.ForeignKey(User,related_name="incidentverify",db_column="verifiedby",null=True,default=1,on_delete=models.SET_DEFAULT)
+    verifiedby = models.ForeignKey(User,related_name="incidentverify",db_column="verifiedby",blank=True,null=True,default=1,on_delete=models.SET_DEFAULT)
 
     class Meta:
         ordering = ['-date',]
