@@ -11,7 +11,7 @@ class IncidentControlRawSerializer(ModelSerializer):
     
     class Meta:
         model = IncidentControl
-        fields = ["incidentid","recordedby","verifiedby","date","airport",
+        fields = ["incidentid","recordedby","verifiedby","date","date_modified","airport",
                   "altitude","damage","impact","pilotwarning","flightphase",
                   "aircraftmodel","scientificname","wildlifenumber","wildlifenumberactual",
                   "airlineoperator","is_verified"]
@@ -23,7 +23,7 @@ class IncidentControlSerializer(ModelSerializer):
     airport = serializers.CharField(source='incidentid.airport')
     class Meta:
         model = IncidentControl
-        fields = ["incidentid","recordedby","verifiedby","date","airport",
+        fields = ["incidentid","recordedby","verifiedby","date","date_modified","airport",
                   "altitude","damage","impact","pilotwarning","flightphase",
                   "aircraftmodel","scientificname","wildlifenumber","wildlifenumberactual",
                   "airlineoperator"]

@@ -24,10 +24,8 @@ const Verify = () => {
   const {user} = useSelector((state)=> state.users)
   const {incidentid} = useParams();
   const incident = incidents.find((incident) => incident.incidentid === incidentid);
-  const [verified, setVerified] = useState(false);
   const incidentData = {
         verifiedby:user.username,
-        date:'',
         altitude:'',
         damage:false,
         impact:'',
@@ -42,20 +40,15 @@ const Verify = () => {
    }
   const isNonMobile = useMediaQuery("(min-width:600px)");
   const [showPassword, setShowPassword] = useState(false);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || 'dashboard';
-  const verifyUser = async (values) => {
-          dispatch(loginActiveUser(values))
-          .then(()=>dispatch(activeUser()))
-          .then(()=>navigate(from, {replace: true}))
-      };
 
   const loginUser = async (values) => {
     dispatch(verifyIncident({incidentid,values}))
     .then(console.log(values))
-    .then(console.log(incidentid))
     }
   const flightphase = [
     {
@@ -156,26 +149,14 @@ const Verify = () => {
                 }}
               />
               <TextField
-                name="airport"
-                label="Airport"
+                name="verifiedby"
+                label="Verfied By"
                 defaultValue={user.username}
                 InputProps={{
                   readOnly: true,
                 }}
               />
-              <TextField
-                fullWidth
-                variant="filled"
-                type="text"
-                label="Date"
-                onBlur={handleBlur}
-                onChange={handleChange}
-                value={values.date}
-                name="date"
-                error={!!touched.date && !!errors.date}
-                helperText={touched.date && errors.date}
-                sx={{ gridColumn: "span 4" }}
-              />
+              
               <TextField
                 fullWidth
                 variant="filled"

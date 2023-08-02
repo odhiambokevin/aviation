@@ -27,7 +27,8 @@ class Wildlife(models.TextChoices):
 class IncidentControl(models.Model):
     incidentid = models.OneToOneField(Incident,primary_key=True,related_name="incidentidl2",db_column="incidentid",default="staff", on_delete=models.SET_DEFAULT)
     recordedby = models.ForeignKey(User,related_name="recorder",db_column="recordedby",default=1,on_delete=models.SET_DEFAULT)
-    date = models.DateTimeField(null=True,db_column="date")
+    date = models.DateTimeField(null=True,db_column="date", auto_now_add=True)
+    date_modified = models.DateTimeField(null=True,db_column="date_modified", auto_now=True)
     altitude = models.IntegerField(blank=True, null=True,db_column="altitude")
     damage = models.BooleanField(default=False,null=True, verbose_name="Damage to Aircraft",db_column="damage")
     impact = models.CharField(choices=Impact.choices,null=True, default=Impact.zero, max_length=100,db_column="impact")

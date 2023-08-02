@@ -6052,3 +6052,716 @@ Original exception text was: 'NoneType' object has no attribute 'username'.
 2023-08-01 20:45:55,174 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-08-02 08:45:00,059 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-08-02 09:16:28,285 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-08-02 09:18:18,389 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 09:20:10,038 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/cf717769-d5ac-4c1a-8eb1-fc8c52834e23/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.verifiedby =  User.objects.get(username=data.get("verifiedby", rawincident.date))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 496, in get
+    raise self.model.DoesNotExist(
+apps.users.models.User.DoesNotExist: User matching query does not exist.
+2023-08-02 09:23:00,332 django.request WARNING  Not Found: /favicon.ico
+2023-08-02 09:42:47,224 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 58, in patch
+    rawincident.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 970, in _save_table
+    updated = self._do_update(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1034, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 885, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1783, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1348, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1749, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1546, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1524, in get_prep_value
+    value = super().get_prep_value(value)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1403, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1506, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“ 2023-08-02 13:56:45+03” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+2023-08-02 09:43:48,345 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 58, in patch
+    rawincident.save()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 806, in save
+    self.save_base(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 857, in save_base
+    updated = self._save_table(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 970, in _save_table
+    updated = self._do_update(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\base.py", line 1034, in _do_update
+    return filtered._update(values) > 0
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 885, in _update
+    return query.get_compiler(self.db).execute_sql(CURSOR)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1783, in execute_sql
+    cursor = super().execute_sql(result_type)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1348, in execute_sql
+    sql, params = self.as_sql()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1749, in as_sql
+    val = field.get_db_prep_save(val, connection=self.connection)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 910, in get_db_prep_save
+    return self.get_db_prep_value(value, connection=connection, prepared=False)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1546, in get_db_prep_value
+    value = self.get_prep_value(value)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1524, in get_prep_value
+    value = super().get_prep_value(value)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1403, in get_prep_value
+    return self.to_python(value)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\fields\__init__.py", line 1506, in to_python
+    raise exceptions.ValidationError(
+django.core.exceptions.ValidationError: ['“ 2023-08-02 13:56” value has an invalid format. It must be in YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ] format.']
+2023-08-02 10:05:28,042 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-02 10:06:07,717 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 10:18:38,079 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data ' 2023-08-02 13:56' does not match format 'YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]'
+2023-08-02 10:19:56,904 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data ' 2023-08-02 13:56:45+03' does not match format 'YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]'
+2023-08-02 10:35:52,289 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data ' 2023-08-02 13:56:45' does not match format 'YYYY-MM-DD HH:MM[:ss[.uuuuuu]][TZ]'
+2023-08-02 10:45:57,818 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-02 10:46:10,687 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 10:46:44,086 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%D")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 341, in _strptime
+    raise ValueError("'%s' is a bad directive in format '%s'" %
+ValueError: 'D' is a bad directive in format '%Y/%M/%D'
+2023-08-02 10:47:47,475 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py changed, reloading.
+2023-08-02 10:47:58,287 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 10:48:12,945 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data ' 2023-08-02 13:56:45' does not match format '%Y/%M/%d'
+2023-08-02 10:48:51,697 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data ' 2023-08-02' does not match format '%Y/%M/%d'
+2023-08-02 11:06:07,951 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data ' 2023-08-02' does not match format '%Y/%M/%d'
+2023-08-02 11:20:35,064 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:20:38,868 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:22:27,757 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:26:34,271 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:27:30,997 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:28:28,591 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:29:29,893 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:30:29,683 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:32:07,687 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:32:13,428 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 11:35:46,989 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/raw/dbfc93de-b6a2-4082-920f-d107408d34b5/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\code\Portfolio\backend\apps\incidentcontrol\views.py", line 45, in patch
+    rawincident.date = datetime.strptime(data.get("date", rawincident.date), "%Y/%M/%d")
+  File "C:\Program Files\Python39\lib\_strptime.py", line 568, in _strptime_datetime
+    tt, fraction, gmtoff_fraction = _strptime(data_string, format)
+  File "C:\Program Files\Python39\lib\_strptime.py", line 349, in _strptime
+    raise ValueError("time data %r does not match format %r" %
+ValueError: time data '' does not match format '%Y/%M/%d'
+2023-08-02 12:00:49,125 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-08-02 12:01:51,854 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 12:02:50,608 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-08-02 12:02:58,329 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 12:03:37,078 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\admin.py changed, reloading.
+2023-08-02 12:03:46,380 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 12:04:40,902 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\serializers.py changed, reloading.
+2023-08-02 12:04:48,852 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 12:06:14,201 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/all/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column incidentcontrol.date_verified does not exist
+LINE 1: ...ol"."incidentid", "incidentcontrol"."recordedby", "incidentc...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\pagination.py", line 216, in paginate_queryset
+    return list(self.page)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\paginator.py", line 177, in __len__
+    return len(self.object_list)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column incidentcontrol.date_verified does not exist
+LINE 1: ...ol"."incidentid", "incidentcontrol"."recordedby", "incidentc...
+                                                             ^
+
+2023-08-02 12:08:01,144 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 12:55:39,997 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\incidentcontrol\models.py changed, reloading.
+2023-08-02 12:57:07,012 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-02 12:57:53,264 django.request ERROR    Internal Server Error: /api/v1/incidentcontrol/all/
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+psycopg2.errors.UndefinedColumn: column incidentcontrol.date does not exist
+LINE 1: ...ol"."incidentid", "incidentcontrol"."recordedby", "incidentc...
+                                                             ^
+
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\views\generic\base.py", line 84, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\generics.py", line 199, in get
+    return self.list(request, *args, **kwargs)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\mixins.py", line 40, in list
+    page = self.paginate_queryset(queryset)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\generics.py", line 171, in paginate_queryset
+    return self.paginator.paginate_queryset(queryset, self.request, view=self)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\rest_framework\pagination.py", line 216, in paginate_queryset
+    return list(self.page)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\paginator.py", line 177, in __len__
+    return len(self.object_list)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 302, in __len__
+    self._fetch_all()
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 1507, in _fetch_all
+    self._result_cache = list(self._iterable_class(self))
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\query.py", line 57, in __iter__
+    results = compiler.execute_sql(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\models\sql\compiler.py", line 1361, in execute_sql
+    cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 103, in execute
+    return super().execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 67, in execute
+    return self._execute_with_wrappers(
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 80, in _execute_with_wrappers
+    return executor(sql, params, many, context)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\utils.py", line 91, in __exit__
+    raise dj_exc_value.with_traceback(traceback) from exc_value
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\db\backends\utils.py", line 89, in _execute
+    return self.cursor.execute(sql, params)
+django.db.utils.ProgrammingError: column incidentcontrol.date does not exist
+LINE 1: ...ol"."incidentid", "incidentcontrol"."recordedby", "incidentc...
+                                                             ^
+
+2023-08-02 13:00:22,795 django.utils.autoreload INFO     Watching for file changes with StatReloader

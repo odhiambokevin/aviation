@@ -3,6 +3,7 @@ from rest_framework import generics, permissions, status, filters,views, respons
 from rest_framework.response import Response
 from apps.incidentcontrol.pagination import IncidentControlPagination
 from .models import IncidentControl
+from datetime import datetime
 # from .renderers import BlogJSONRenderer
 from django.contrib.auth import get_user_model
 from .serializers import IncidentControlSerializer, IncidentControlRawSerializer
@@ -38,10 +39,7 @@ class IncidentAPIView(views.APIView):
     def patch(self,request,incidentid,*args, **kwargs):        
         rawincident = IncidentControl.objects.get(incidentid=incidentid)
         data = request.data
-        # rawincident.verifiedby = User.objects.get(username=data.get("verifiedby", rawincident.verifiedby))
-  
-        # rawincident.verifiedby = User.objects.get(username=data.get("verifiedby", rawincident.date))
-        rawincident.date = data.get("date", rawincident.date)
+       
         rawincident.verifiedby =  User.objects.get(username=data.get("verifiedby", rawincident.date))
         rawincident.altitude = data.get("altitude", rawincident.altitude)
         rawincident.damage = data.get("damage", rawincident.damage)
