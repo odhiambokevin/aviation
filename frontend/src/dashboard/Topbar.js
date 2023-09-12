@@ -46,8 +46,8 @@ const Topbar = () => {
                     <PersonOutlinedIcon />
                 </IconButton>
 
-                <IconButton>
-                <NavLink to='sign-in' onClick={()=> dispatch(logout())}><HowToRegOutlinedIcon /> </NavLink>
+                <IconButton onClick={()=> dispatch(logout())}>
+                <NavLink to='sign-in' ><HowToRegOutlinedIcon /> </NavLink>
                 </IconButton>
                 </>
                 :

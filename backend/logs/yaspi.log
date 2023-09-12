@@ -6765,3 +6765,22 @@ LINE 1: ...ol"."incidentid", "incidentcontrol"."recordedby", "incidentc...
                                                              ^
 
 2023-08-02 13:00:22,795 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-03 10:26:48,281 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-03 13:48:30,476 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-04 11:55:19,789 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-04 13:53:40,173 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-13 13:41:54,241 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-08-14 16:35:39,094 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-05 09:48:35,501 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-07 11:01:57,526 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-08 11:54:51,035 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-10 14:05:35,507 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-10 16:11:25,636 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2023-09-10 16:12:46,036 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2023-09-10 16:13:08,649 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2023-09-10 16:14:31,080 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2023-09-10 16:15:16,118 django.request WARNING  Not Found: /favicon.ico
+2023-09-11 14:49:31,533 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-12 09:47:01,614 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-12 12:01:04,965 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-12 13:34:25,825 django.utils.autoreload INFO     Watching for file changes with StatReloader
