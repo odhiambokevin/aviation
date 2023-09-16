@@ -6,10 +6,11 @@ class Airport(models.TextChoices):
     Airstrip = "airstrip", "Airstrip"
 
 class County(models.TextChoices):
+    '''codeBaseValue = 'databaseValue','adminDisplayValue'''
     Mombasa = 'Mombasa', 'Mombasa'
     Kwale = 'Kwale', 'Kwale'
     Kilifi = 'Kilifi', 'Kilifi'
-    Tana_River = 'Tana River', 'Tana_River'
+    Tana_River = 'Tana River', 'Tana River'
     Lamu = 'Lamu', 'Lamu'
     Taita_Taveta = 'Taita Taveta', 'Taita Taveta'
     Garissa = 'Garissa', 'Garissa'

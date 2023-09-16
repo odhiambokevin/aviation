@@ -18,4 +18,4 @@ have conceptualized.
 .. note::
     This is a development version of the projects and is not complete.
 
-Project documentation is found at 
+Project documentation and website will be hosted soon.

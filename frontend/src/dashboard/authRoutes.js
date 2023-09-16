@@ -8,5 +8,4 @@ export const AuthRoutes = ({allowedDesignation})=> {
     return allowedDesignation?.includes(user.designation) ? <Outlet /> :
     user.username ? <Navigate to='unauthorized' state={{from: location}} replace />
     : <Navigate to='sign-in' state={{from: location}} replace />
-    // return user.username ? <Outlet /> : navigate('sign-in',{state:{from: location}, replace: true})
 }

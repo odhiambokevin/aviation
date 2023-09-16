@@ -50,6 +50,7 @@ USER_APPS = [
     'apps.incident',
     'apps.incidentcontrol',
     'apps.airports',
+    'apps.feedback',
 ]  
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + USER_APPS
@@ -209,13 +210,13 @@ DJOSER = {
  
 #Leaflet Config
 LEAFLET_CONFIG = {
-    'DEFAULT_CENTER': (0.36, 36.635),
-    'DEFAULT_ZOOM': 8,
+    'DEFAULT_CENTER': (0.36,36.635),
+    'DEFAULT_ZOOM': 6,
     'MAX_ZOOM': 20,
+    'MIN_ZOOM': 6,
     'SCALE':'both',
-    'SRID':4326,
     'ATTRIBUTION_PREFIX': 'Yaspi Labs',
-    'MIN_ZOOM': 4,
+    'SPATIAL_EXTENT': (32,-8,45,8)
 }
 
 #logs

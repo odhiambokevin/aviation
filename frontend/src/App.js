@@ -27,6 +27,7 @@ import Event from './dashboard/Event';
 import Verification from './dashboard/Verification';
 import Signupdash from './dashboard/Signupdash';
 import Signindash from './dashboard/Signindash';
+import Verify from './dashboard/Verify';
 import ScrollToTop from './ScrollToTop';
 import {AuthRoutes} from './dashboard/authRoutes';
 import {useSelector} from "react-redux";
@@ -77,7 +78,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route element={<AuthRoutes allowedDesignation={["wmanager","admin"]} />}>
       <Route path='staff' element={<Staff />} />
       <Route path='incidents' element={<Incidentraw/>} />
-      <Route path='incidentsl1' element={<Incident/>} />
+      <Route path='incidents/:incidentid' element={<Verify/>} />
       <Route path='verification' element={<Incident/>} />
     </Route>
   </Route>

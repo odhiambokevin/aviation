@@ -6,17 +6,17 @@ from apps.incident.models import Incident
 User = get_user_model()
 
 class Phase(models.TextChoices):
-    landing_roll = "Landing Roll"
-    take_off_run = "Take Off Run"
-    approach = "Approach"
-    climbing = "Climbing"
+    landing_roll = "landing roll","Landing Roll"
+    take_off_run = "take-off run","Take-off Run"
+    approach = "approach","Approach"
+    climbing = "climbing","Climbing"
 
 class Impact(models.TextChoices):
-    zero = "None"
-    precautionary = "Precautionary"
-    landing = "Landing"
-    flight_cancelled = "Flight Cancelled"
-    engine_shut_down = "Engine Shut Down"
+    zero = "none","None"
+    precautionary = "precautionary","Precautionary"
+    landing = "landing","Landing"
+    flight_cancelled = "flight cancelled","Flight Cancelled"
+    engine_shut_down = "engine shutdown","Engine Shut Down"
 
 class Wildlife(models.TextChoices):
     less_than_5 = "1 to 5"
@@ -27,9 +27,10 @@ class Wildlife(models.TextChoices):
 class IncidentControl(models.Model):
     incidentid = models.OneToOneField(Incident,primary_key=True,related_name="incidentidl2",db_column="incidentid",default="staff", on_delete=models.SET_DEFAULT)
     recordedby = models.ForeignKey(User,related_name="recorder",db_column="recordedby",default=1,on_delete=models.SET_DEFAULT)
-    date = models.DateTimeField(null=True,db_column="date")
+    date = models.DateTimeField(null=True,db_column="date", auto_now_add=True)
+    date_modified = models.DateTimeField(null=True,db_column="date_modified", auto_now=True)
     altitude = models.IntegerField(blank=True, null=True,db_column="altitude")
-    damage = models.BooleanField(default=False,null=True, verbose_name="Damage to Aircraft",db_column="damagetoaircraft")
+    damage = models.BooleanField(default=False,null=True, verbose_name="Damage to Aircraft",db_column="damage")
     impact = models.CharField(choices=Impact.choices,null=True, default=Impact.zero, max_length=100,db_column="impact")
     pilotwarning = models.BooleanField(default=False, null=True,db_column="pilotwarning")
     flightphase = models.CharField(choices=Phase.choices, null=True, default=Phase.take_off_run, max_length=100,db_column="flightphase")
@@ -38,7 +39,8 @@ class IncidentControl(models.Model):
     wildlifenumber = models.CharField(choices=Wildlife.choices, null=True,default=Wildlife.less_than_5, max_length=100,db_column="wildlifenumber")
     wildlifenumberactual = models.IntegerField(null=True,db_column="wildlifenumberactual")
     airlineoperator = models.CharField(null=True, max_length=100,db_column="airlineoperator")
-    verifiedby = models.ForeignKey(User,related_name="incidentverify",db_column="verifiedby",null=True,default=1,on_delete=models.SET_DEFAULT)
+    is_verified = models.BooleanField(default=False, verbose_name="Verification Status")
+    verifiedby = models.ForeignKey(User,related_name="incidentverify",db_column="verifiedby",blank=True,null=True,default=1,on_delete=models.SET_DEFAULT)
 
     class Meta:
         ordering = ['-date',]
