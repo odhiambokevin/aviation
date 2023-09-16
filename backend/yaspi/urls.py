@@ -19,6 +19,7 @@ urlpatterns = [
     path('api/v1/works/', include('apps.works.urls')),
     path('api/v1/incidents/', include('apps.incident.urls')),
     path('api/v1/incidentcontrol/', include('apps.incidentcontrol.urls')),
+    path('api/v1/feedback/', include('apps.feedback.urls')),
 
 
 ]

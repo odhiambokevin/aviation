@@ -50,6 +50,7 @@ USER_APPS = [
     'apps.incident',
     'apps.incidentcontrol',
     'apps.airports',
+    'apps.feedback',
 ]  
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + USER_APPS

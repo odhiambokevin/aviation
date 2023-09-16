@@ -5,24 +5,33 @@ import {motion, AnimatePresence} from "framer-motion"
 const Homeheader = () => {
 
     const [index, setIndex] = useState(0);
-    const headings = [
-        'Location Analytics',
-        'Utilities Mapping',
-        'Watershed Management',
-        'Biodiversity Informatics'
-    ]
-    const descriptions = [
-        'Mapping Things That Move You',
-        'Integrate Your Architecture with Automated Mapping',
-        'Agronomy and Watershed Management',
-        'Data-based Solutions for Targeted Results'
-    ]
     const banners = [
-        'static/images/slider/1.jpg',
-        'static/images/slider/2.jpg',
-        'static/images/slider/3.jpg',
-        'static/images/slider/data.jpg']
-    
+        {
+            'id':1,
+            'heading':'Location Analytics',
+            'description':'Mapping Things That Move You',
+            'image':'static/images/slider/1.jpg'
+        },
+        {
+            'id':2,
+            'heading':'Utilities Mapping',
+            'description':'Integrate Your Architecture with Automated Mapping',
+            'image':'static/images/slider/2.jpg'
+        },
+        {
+            'id':3,
+            'heading':'Watershed Management',
+            'description':'Agronomy and Watershed Management',
+            'image':'static/images/slider/3.jpg'
+        },
+        {
+            'id':4,
+            'heading':'Biodiversity Informatics',
+            'description':'Data-based Solutions for Targeted Results',
+            'image':'static/images/slider/data.jpg'
+        },
+    ]
+        
     const nextslide = () => {
         if (index === banners.length -1 ) {
             setIndex(0)
@@ -46,24 +55,6 @@ const Homeheader = () => {
         return () => clearInterval(slideInterval);
     }, [index]);
 
-    console.log(index);
-    const variants = {
-       initial:{
-            x:"120vw",
-            opacity: 0,
-        },
-        animation:{
-            x:0,
-            opacity: 1,
-        },
-        exit:{ 
-            opacity: 0,
-            x: "-100vw",
-            transition: {
-                duration: 1,
-            },
-        },
-    }
     return ( 
         <section id="home" className="home">
             <div className="slider-overlay"></div>
@@ -80,10 +71,10 @@ const Homeheader = () => {
                             <motion.div className="container"
                              animate={{x: 0}} 
                         transition={{duration: 0.8}}
-                        exit={{x: "101vw"}} key={banners[index]}
+                        exit={{x: "101vw"}} key={banners[index].id}
                     initial={{x: '-101vw'}}>
-                                <div className="big">{headings[index]}</div>          
-                                <div className="small">{descriptions[index]}</div>
+                                <div className="big">{banners[index].heading}</div>          
+                                <div className="small">{banners[index].description}</div>
                                 <Link className="middle btn btn-white" to="works"
                                 spy={true} smooth={true}
                                 offset={-10} duration={1500}>VIEW PORTFOLIO</Link>
@@ -92,8 +83,8 @@ const Homeheader = () => {
                        
                         <motion.img  animate={{x: 0}} 
                         transition={{duration: 0.8}}
-                        exit={{x: "-101vw"}} key={banners[index]}
-                    initial={{x: '101vw'}} src={banners[index]} alt="" />
+                        exit={{x: "-101vw"}} key={banners[index].id}
+                    initial={{x: '101vw'}} src={banners[index].image} alt="" />
                        
                     </li>
                     </AnimatePresence>

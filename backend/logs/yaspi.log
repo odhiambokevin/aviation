@@ -6784,3 +6784,48 @@ LINE 1: ...ol"."incidentid", "incidentcontrol"."recordedby", "incidentc...
 2023-09-12 09:47:01,614 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-09-12 12:01:04,965 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2023-09-12 13:34:25,825 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-14 09:35:07,494 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-15 13:53:39,006 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-15 13:56:01,360 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-09-15 13:56:07,212 django.request WARNING  Not Found: /favicon.ico
+2023-09-15 14:04:38,365 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\feedback\admin.py changed, reloading.
+2023-09-15 14:05:33,693 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-15 14:05:59,415 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\feedback\admin.py changed, reloading.
+2023-09-15 14:06:08,929 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-15 14:07:28,383 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\feedback\models.py changed, reloading.
+2023-09-15 14:07:37,908 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-15 14:34:44,929 django.request WARNING  Method Not Allowed: /api/v1/feedback/
+2023-09-15 15:17:48,928 django.request WARNING  Method Not Allowed: /api/v1/feedback/
+2023-09-16 10:46:02,035 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2023-09-16 10:47:39,971 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\Portfolio-KVziFJuc\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2023-09-16 10:47:42,337 django.request WARNING  Not Found: /favicon.ico
+2023-09-16 10:56:23,763 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\apps\feedback\views.py changed, reloading.
+2023-09-16 10:56:43,677 django.utils.autoreload INFO     Watching for file changes with StatReloader
