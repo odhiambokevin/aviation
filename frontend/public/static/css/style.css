@@ -3096,16 +3096,14 @@ footer {
 .social-icons ul li a:hover {
     color: #FFF;
 }
-/* dashboard */
-/* .dashcontent {
+
+
+/* Map container for leaflet */
+
+.leaflet-container {
     height: 100%;
     width: 100%;
 }
-
-.app {
-    display: flex;
-    position: relative;
-} */
 
 @media (min-width: 992px) and (max-width: 1024px) {
     .navbar-right {

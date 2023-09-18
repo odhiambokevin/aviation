@@ -13,8 +13,7 @@ This is my portfolio website
 ============================
 
 
-This is a portfolio website for projects that I
-have conceptualized.
+This is a portfolio website for conceptual projects.
 
 .. note::
     This is a development version of the projects and is not complete.
