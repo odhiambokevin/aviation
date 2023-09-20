@@ -2,7 +2,7 @@ import axios from "axios";
 
 //retrieve latest unverified incidents
 const getIncidents = async ()=>{
-    const res = await axios.get("http://127.0.0.1:8000/api/v1/incidentcontrol/raw/");
+    const res = await axios.get("http://127.0.0.1:8000/api/v1/incidents/all/");
     return res.data
 }
 //retrieve verified incidents

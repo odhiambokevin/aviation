@@ -8,7 +8,7 @@ from apps.incident.serializers import IncidentSerializer
 class IncidentControlRawSerializer(ModelSerializer):
     recordedby = serializers.CharField(source='recordedby.username')
     airport = serializers.CharField(source='incidentid.airport')
-    
+        
     class Meta:
         model = IncidentControl
         fields = ["incidentid","recordedby","verifiedby","date","date_modified","airport",
@@ -21,10 +21,11 @@ class IncidentControlSerializer(ModelSerializer):
     recordedby = serializers.CharField(source='recordedby.username')
     verifiedby = serializers.CharField(source='verifiedby.username')
     airport = serializers.CharField(source='incidentid.airport')
+    location = serializers.CharField(source='incidentid.location')
     class Meta:
         model = IncidentControl
         fields = ["incidentid","recordedby","verifiedby","date","date_modified","airport",
                   "altitude","damage","impact","pilotwarning","flightphase",
                   "aircraftmodel","scientificname","wildlifenumber","wildlifenumberactual",
-                  "airlineoperator"]
+                  "airlineoperator", "location"]
         # read_only_fields = []

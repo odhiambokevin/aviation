@@ -70,7 +70,7 @@ export const incidentsSlice = createSlice({
         [allRawIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
-            state.incidents = payload;
+            state.incidents = payload.results.features;
         },
         [allRawIncidents.rejected]: (state,{ payload })=>{
             state.isLoading = false;
