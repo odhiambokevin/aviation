@@ -36,6 +36,7 @@ THIRD_PARTY_APPS = [
     'corsheaders',
     'djoser',
     'rest_framework',
+    'rest_framework_gis',
     'rest_framework_simplejwt',
     'leaflet',
 

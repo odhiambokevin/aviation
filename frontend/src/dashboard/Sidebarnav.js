@@ -2,6 +2,7 @@ import {useState} from 'react';
 import {Sidebar, Menu, MenuItem, useProSidebar} from 'react-pro-sidebar';
 // import 'react-pro-sidebar/dist/styles.css';
 import {Box, IconButton, Typography, useTheme} from '@mui/material';
+import { useDispatch, useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
 import {tokens} from '../theme';
 import HomeOutlinedIcon from "@mui/icons-material/HomeOutlined";
@@ -18,6 +19,7 @@ import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 const Item = ({ title, to, icon, selected, setSelected }) => {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
+    
 
     return (
       <MenuItem
@@ -41,6 +43,7 @@ const Sidebarnav = () => {
     const {collapseSidebar,toggled, toggleSidebar} = useProSidebar();
     const [isCollapsed, setIsCollapsed] = useState(false);
     const [selected, setSelected] = useState("Dashboard");
+    const {user} = useSelector((state)=> state.users);
     const toggle = ()=>{
         toggleSidebar();
         if (toggled) {
@@ -107,7 +110,7 @@ const Sidebarnav = () => {
                     alt=""
                     width="100px"
                     height="100px"
-                    src="/static/images/device.png"
+                    src={user.photo}
                     style={{ cursor: "pointer", borderRadius: "50%" }} />
                 </Box>
                 <Box textAlign="center">
@@ -117,10 +120,10 @@ const Sidebarnav = () => {
                     fontWeight="bold"
                     sx={{ m: "10px 0 0 0" }}
                     >
-                    Kevin Odhiambo
+                    {user.username}
                     </Typography>
-                    <Typography variant="h5" color={colors.greenAccent[500]}>
-                    Data Admin
+                    <Typography variant="h5" color={colors.greenAccent[800]}>
+                    {user.designation === "wmanager" ? "Widlife Manager" : "Wildlife Officer"}
                     </Typography>
                 </Box>
                 </Box>
