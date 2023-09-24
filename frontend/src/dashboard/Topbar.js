@@ -1,4 +1,4 @@
-import {Box, IconButton, useTheme} from '@mui/material';
+import {Box, IconButton, useTheme, Tooltip} from '@mui/material';
 import { useContext, useEffect } from 'react';
 import { ColorModeContext, tokens } from '../theme';
 import InputBase from '@mui/material/InputBase';
@@ -29,36 +29,46 @@ const Topbar = () => {
                 </IconButton>
             </Box>
             <Box display={'flex'}>
-                <IconButton onClick={colorMode.toggleColorMode}>
-                    {theme.palette.mode === 'dark' ? (<DarkModeOutlinedIcon />):(<LightModeOutlinedIcon />)}
-                </IconButton>
+                <Tooltip title="mode">
+                    <IconButton onClick={colorMode.toggleColorMode}>
+                        {theme.palette.mode === 'dark' ? (<DarkModeOutlinedIcon />):(<LightModeOutlinedIcon />)}
+                    </IconButton>
+                </Tooltip>
                 {user.username ? 
                 <>
-                <IconButton>
-                    <NotificationsOutlinedIcon />
-                </IconButton>
-
-                <IconButton>
-                    <SettingsOutlinedIcon />
-                </IconButton>
-
-                <IconButton>
-                    <PersonOutlinedIcon />
-                </IconButton>
-
-                <IconButton onClick={()=> dispatch(logout())}>
-                <NavLink to='sign-in' ><HowToRegOutlinedIcon /> </NavLink>
-                </IconButton>
+                <Tooltip title="notification">
+                    <IconButton>
+                        <NotificationsOutlinedIcon />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="settings">
+                    <IconButton>
+                        <SettingsOutlinedIcon />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="profile">
+                    <IconButton>
+                        <PersonOutlinedIcon />
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="logout">
+                    <IconButton onClick={()=> dispatch(logout())}>
+                    <NavLink to='sign-in' ><HowToRegOutlinedIcon /> </NavLink>
+                    </IconButton>
+                </Tooltip>
                 </>
                 :
                 <>
-                <IconButton>
-                <NavLink to='sign-up'><HowToRegOutlinedIcon /> </NavLink>
-                </IconButton>
-    
-                <IconButton>
-                <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
-                </IconButton>
+                <Tooltip title="sign up">
+                    <IconButton>
+                    <NavLink to='sign-up'><HowToRegOutlinedIcon /> </NavLink>
+                    </IconButton>
+                </Tooltip>
+                <Tooltip title="sign in">
+                    <IconButton>
+                    <NavLink to='sign-in'><HowToRegOutlinedIcon /> </NavLink>
+                    </IconButton>
+                </Tooltip>
                 </>
                 }
             </Box>

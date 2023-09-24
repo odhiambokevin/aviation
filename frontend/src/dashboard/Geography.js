@@ -59,7 +59,8 @@ const Geography = () => {
                 <MarkerClusterGroup>
                 <Marker position={[incident.geometry.coordinates[1],incident.geometry.coordinates[0] ]} icon={myIcon} key={incident.id}>
                   <Popup>
-                    {incident.id}
+                    <p>{incident.id}</p>
+                    <p>{incident.properties.airport}</p>
                   </Popup>
                 </Marker>
                 </MarkerClusterGroup>
