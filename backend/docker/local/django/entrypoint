@@ -1,12 +1,12 @@
 #!/bin/bash
 
-# entire script fails on any error
+# entire script fails on any error in code the code
 set -o errexit
 
 #exit if any pipe command fails
 set -o pipefail
 
-#exists if no variable is available
+#exits if any variable is not set
 set -o nounset
 
 postgres_ready() {
@@ -18,7 +18,7 @@ try:
         dbname="${DB_NAME}",
         user="${DB_USER}",
         password="${DB_PASSWORD}",
-        host="${localhost}",
+        host="${DB_HOST}",
         port="${DB_PORT}"
     )
 except psycopg2.OperationalError:
@@ -28,9 +28,9 @@ END
 }
 
 until postgres_ready; do
- >& echo "Database loading.."
+ >&2 echo "Database loading.."
  sleep 1
 done
->& echo "Database Ready!"
+>&2 echo "Database Ready!"
 
 exec "$@"
