@@ -1,4 +1,4 @@
-.. image:: frontend/public/static/images/logo.png
+.. image:: backend/frontend/public/static/images/logo.png
 .. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio/development
 
 

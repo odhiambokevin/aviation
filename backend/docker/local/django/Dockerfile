@@ -21,8 +21,8 @@ ENV PYTHONUNBUFFERED 1
 RUN apt-get update \
     && apt-get install -y build-essential \
     && apt-get install -y libpq-dev \
-    #&& apt-get install -y gcc make libc-dev musl-dev libpcre3 libpcre3-dev g++ \
-    #&& apt-get install -y libgeos-dev libgdal-dev \
+    && apt-get install -y gcc make libc-dev musl-dev libpcre3 libpcre3-dev g++ \
+    && apt-get install -y libgeos-dev libgdal-dev \
     && apt-get install -y gettext \
     && apt-get -y install netcat gcc postgresql \
     #&& apt-get -y --purge autoremove make libc-dev musl-dev g++ \

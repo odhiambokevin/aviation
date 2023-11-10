@@ -19,7 +19,7 @@ services:
       - yaspinetwork
     container_name: yaspi_backend
   yaspidb:
-    image: postgres:12.0-alpine
+    image: kartoza/postgis:latest
     ports:
       - "5432:5432"
     volumes:
