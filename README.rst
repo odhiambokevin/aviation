@@ -1,4 +1,5 @@
 .. image:: frontend/public/static/images/logo.png
+    :height: 100px
 .. image:: https://img.shields.io/github/last-commit/odhiambokevin/portfolio/development
 
 
