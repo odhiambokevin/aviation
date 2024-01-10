@@ -2,13 +2,15 @@ version: "3.9"
 services:
   backend:
     build:
-      context: ./backend
-    command: ./start
+      context: .
+      dockerfile: ./docker/local/django/Dockerfile
+    command: /start
     volumes:
-      - static_volume:/Yaspibackend/static
-      - media_volume:/Yaspibackend/media
-    ports:
-      - 8000:8000
+      - .:/app
+      - static:/app/static
+      - media:/app/media
+    expose:
+      - "8000"
     env_file:
       - .env
     depends_on:
@@ -19,13 +21,13 @@ services:
   yaspidb:
     image: kartoza/postgis:latest
     ports:
-      - 5432:5432
+      - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data/
     environment:
-      - DB_NAME=${DB_NAME}
-      - DB_USER=${DB_USER}
-      - DB_PASSWORD=${DB_PASSWORD}
+      - POSTGRES_DB=${DB_NAME}
+      - POSTGRES_USER=${DB_USER}
+      - POSTGRES_PASSWORD=${DB_PASSWORD}
     restart: on-failure
     networks:
       - yaspinetwork
@@ -33,27 +35,29 @@ services:
   frontend:
     build:
       context: ./frontend
+      dockerfile: ./Dockerfile
     restart: on-failure
     volumes:
-      - frontend_buildfiles:/frontend/build
+      - ./frontend:/app
+      - /app/node_modules
     depends_on:
       - backend
     networks:
       - yaspinetwork
     container_name: yaspi_frontend
   nginx:
-    build:
-      context: ./Nginx
     restart: always
     depends_on:
       - backend
       - frontend
     volumes:
-      - static_volume:/Yaspibackend/static
-      - media_volume:/Yaspibackend/media
-      - frontend_buildfiles:/var/www/frontend/build
+      - static:/app/static
+      - media:/app/media
+    build:
+      context: ./docker/local/nginx
+      dockerfile: Dockerfile
     ports:
-      - 80:80
+      - "8080:80"
     networks:
       - yaspinetwork
     container_name: yaspi_nginx_proxy
@@ -62,6 +66,5 @@ networks:
     driver: bridge
 volumes:
   postgres_data:
-  static_volume:
-  media_volume:
-  frontend_buildfiles:
+  static:
+  media:

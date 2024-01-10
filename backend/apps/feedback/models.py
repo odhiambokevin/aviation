@@ -12,7 +12,7 @@ class Feedback(models.Model):
     posted_on = models.DateField(auto_now_add=True)
 
     def save(self,*args, **kwargs):
-        message = f"Message from {self.full_name}, {self.email}. '\n' {self.message}"
+        message = f"Message from {self.full_name}, {self.email}. \n {self.message}"
         send_mail(
             self.subject,
             message,
