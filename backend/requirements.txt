@@ -50,7 +50,6 @@ pipenv==2022.1.8
 pipx==1.0.0
 platformdirs==2.5.1
 prompt-toolkit==3.0.39
-psycopg2==2.9.2
 psycopg2-binary==2.9.2
 pycparser==2.21
 Pygments==2.16.1

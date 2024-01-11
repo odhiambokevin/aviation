@@ -20,9 +20,10 @@ urlpatterns = [
     path('api/v1/incidents/', include('apps.incident.urls')),
     path('api/v1/incidentcontrol/', include('apps.incidentcontrol.urls')),
     path('api/v1/feedback/', include('apps.feedback.urls')),
-
-
 ]
+
+urlpatterns += static(settings.STATIC_URL, document_root = settings.STATIC_ROOT)
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
 
 admin.site.site_header = "Yaspi Admin"
 admin.site.site_title = "Yaspi"

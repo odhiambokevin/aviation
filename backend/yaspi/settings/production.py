@@ -2,9 +2,9 @@ from .base import *
 
 DEBUG = False
 
-ALLOWED_HOSTS = ['']
+ALLOWED_HOSTS = ['.vercel.app']
 
-CORS_ALLOWED_ORIGINS = ["yaspikenya.com"]
+CORS_ALLOWED_ORIGINS = ["yaspikenya.com", "https://portfolio-sigma-two-34.vercel.app"]
 CORS_ALLOWED_METHODS = ["DELETE","GET","OPTIONS","PATCH","POST","PUT",]
 
 # HTTPS SETTINGS
