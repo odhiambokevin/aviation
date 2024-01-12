@@ -177,6 +177,9 @@ REST_FRAMEWORK = {
 
         )
 }
+
+GDAL_LIBRARY_PATH = "libgdal.so"
+GEOS_LIBRARY_PATH = "libgeos_c.so.1"
  
 from datetime import timedelta
 
