@@ -1,19 +1,19 @@
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import Dashheader from "./Dashheader";
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
-import { tokens } from "../theme";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import EmailIcon from "@mui/icons-material/Email";
-import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
+import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import TrafficIcon from "@mui/icons-material/Traffic";
-import LineChart from "./LineChartdash";
-import GeographyChart from "./GeographyChart";
-import StatBox from "./StatBox";
-import ProgressCircle from "./ProgressCircle";
-import { allVerifiedIncidents } from '../state/slices/incidentsSlice';
+import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { allVerifiedIncidents } from '../state/slices/incidentsSlice';
+import { tokens } from "../theme";
+import Dashheader from "./Dashheader";
+import GeographyChart from "./GeographyChart";
+import LineChart from "./LineChartdash";
+import ProgressCircle from "./ProgressCircle";
+import StatBox from "./StatBox";
 
 const mockTransactions = [
     {

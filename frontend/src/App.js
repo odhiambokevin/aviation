@@ -1,45 +1,31 @@
-import {createBrowserRouter,
-        createRoutesFromElements,
-        RouterProvider,
-        Route, Outlet,
-        Redirect, useLocation
-      }
-        from 'react-router-dom';
 import { CssBaseline, ThemeProvider } from "@mui/material";
-import { ColorModeContext, useMode } from "./theme";
-import Home from "./pages/Home";
-import Blog from './pages/Blog';
-import Header from './components/Header';
+import {
+  Outlet,
+  Route,
+  RouterProvider,
+  createBrowserRouter,
+  createRoutesFromElements
+} from 'react-router-dom';
+import Dashboard from './dashboard';
+import Incidentraw from './dashboard/Incidentraw';
+import Incident from './dashboard/Incidents';
+import Sidebarnav from './dashboard/Sidebarnav';
+import Staff from './dashboard/Staff';
+import Topbar from './dashboard/Topbar';
 import NotFound from './pages/NotFound';
 import Unauthorized from './pages/Unauthorized';
-import Footer from './components/Footer';
-import Topbar from './dashboard/Topbar';
-import Sidebarnav from './dashboard/Sidebarnav';
-import Dashboard from './dashboard';
-import Staff from './dashboard/Staff';
-import Incident from './dashboard/Incidents';
-import Incidentraw from './dashboard/Incidentraw';
+import { ColorModeContext, useMode } from "./theme";
 // import Contacts from './dashboard/Contacts';
-import Line from './dashboard/Line';
+import ScrollToTop from './ScrollToTop';
+import Event from './dashboard/Event';
 import FAQ from './dashboard/FAQ';
 import Geography from './dashboard/Geography';
-import Event from './dashboard/Event';
-import Verification from './dashboard/Verification';
-import Signupdash from './dashboard/Signupdash';
+import Line from './dashboard/Line';
 import Signindash from './dashboard/Signindash';
+import Signupdash from './dashboard/Signupdash';
+import Verification from './dashboard/Verification';
 import Verify from './dashboard/Verify';
-import ScrollToTop from './ScrollToTop';
-import {AuthRoutes} from './dashboard/authRoutes';
-import {useSelector} from "react-redux";
-export const AppLayout = ()=>{
-  return(
-    <>
-    <Header />
-    <Outlet />
-    <Footer />
-    </>
-  )
-};
+import { AuthRoutes } from './dashboard/authRoutes';
 
 export const DashLayout = ()=>{
   return(
@@ -56,12 +42,9 @@ export const DashLayout = ()=>{
 
 const router = createBrowserRouter(createRoutesFromElements(
 <>
-  <Route path='/' element={<AppLayout />} errorElement={<NotFound />}>
-    <Route index element={<Home />} />
-    <Route path='blogs' element={<Blog />} />
-  </Route>
+
   {/* Dashboard Routes */}
-  <Route path='projects/airport-wildlife-management' element={<DashLayout />} errorElement={<NotFound />}>
+  <Route path='/' element={<DashLayout />} errorElement={<NotFound />}>
     <Route index element={<Dashboard />} />
     <Route path='sign-up' element={<Signupdash />} />
     <Route path='sign-in' element={<Signindash />} />

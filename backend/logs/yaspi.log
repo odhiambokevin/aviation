@@ -7467,3 +7467,56 @@ smtplib.SMTPDataError: (550, b'The from address does not match a verified Sender
 2024-01-10 11:40:54,093 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-01-10 11:43:18,712 django.utils.autoreload INFO     D:\Projects\code\Portfolio\backend\yaspi\settings\base.py changed, reloading.
 2024-01-10 11:43:48,983 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-24 09:50:04,951 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-01-24 09:51:18,660 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2024-01-24 09:51:21,410 django.request ERROR    Internal Server Error: /
+Traceback (most recent call last):
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "D:\Projects\code\Portfolio\backend\yaspi\views.py", line 4, in index
+    return render(request, 'index.html')
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\shortcuts.py", line 24, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+  File "C:\Users\Kevin Odhiambo\.virtualenvs\backend-IiEJQ7LW\lib\site-packages\django\template\loader.py", line 19, in get_template
+    raise TemplateDoesNotExist(template_name, chain=chain)
+django.template.exceptions.TemplateDoesNotExist: index.html
+2024-01-24 09:51:26,807 django.request WARNING  Not Found: /favicon.ico
+2024-01-24 10:13:17,392 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:18:49,065 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:18:50,614 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:20:50,022 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:20:53,728 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:21:20,656 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:21:23,174 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:21:43,862 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:21:44,573 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:21:58,694 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:21:59,409 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:22:16,533 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:22:17,359 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:22:33,995 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:22:34,640 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:25:25,316 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:25:27,155 django.request WARNING  Not Found: /media/default.png
+2024-01-24 10:30:47,125 django.request WARNING  Not Found: /media/default.png
+2024-02-01 12:29:01,693 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-02-01 12:32:24,548 django.request WARNING  Not Found: /favicon.ico
+2024-02-03 17:22:46,098 django.utils.autoreload INFO     Watching for file changes with StatReloader

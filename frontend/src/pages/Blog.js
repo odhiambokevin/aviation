@@ -1,11 +1,9 @@
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import {allBlogs, reset} from '../state/slices/blogSlice';
-import LoadingSpinner from "../components/LoadingSpinner";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
 import Blogs from "../components/Blogs";
+import LoadingSpinner from "../components/LoadingSpinner";
+import { allBlogs } from '../state/slices/blogSlice';
 
 function Blog() {
 	const {blogs,isError, isLoading,isSuccess,message} = useSelector((state)=> state.blogs)
