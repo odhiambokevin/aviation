@@ -1,9 +1,7 @@
-import { Box, Typography, useTheme } from "@mui/material";
-import {DataGrid} from '@mui/x-data-grid';
-import {tokens} from '../theme';
 import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
-import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
-import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
+import { Box, Typography, useTheme } from "@mui/material";
+import { DataGrid } from '@mui/x-data-grid';
+import { tokens } from '../theme';
 import Dashheader from "./Dashheader";
 
 
@@ -50,7 +48,7 @@ const Staff = ()=> {
                 <Box width="60%" m="0 auto" p="5px" display="flex" justifyContent="center" backgroundColor={
                     designation === 'Admin' ? colors.greenAccent[600] : colors.greenAccent[700]
 
-                } borderRadius="4px">
+                } borderRadius="4px" >
                     {designation === "Admin" && <AdminPanelSettingsOutlinedIcon />}
                     {designation === "Manager" && <AdminPanelSettingsOutlinedIcon />}
                     {designation === "Officer" && <AdminPanelSettingsOutlinedIcon />}

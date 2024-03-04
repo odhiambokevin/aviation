@@ -7520,3 +7520,6 @@ django.template.exceptions.TemplateDoesNotExist: index.html
 2024-02-01 12:29:01,693 django.utils.autoreload INFO     Watching for file changes with StatReloader
 2024-02-01 12:32:24,548 django.request WARNING  Not Found: /favicon.ico
 2024-02-03 17:22:46,098 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-04 12:38:01,486 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-04 12:49:32,235 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/
+2024-03-04 12:50:24,839 django.request WARNING  Unauthorized: /api/v1/auth/jwt/create/

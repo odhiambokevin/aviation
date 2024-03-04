@@ -1,15 +1,11 @@
-import { useParams, useNavigate,useLocation, Link } from 'react-router-dom';
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
-import { Box, Typography, useTheme } from "@mui/material";
-import {DataGrid, GridToolbar} from '@mui/x-data-grid';
-import {tokens} from '../theme';
-import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
-import LockOpenOutlinedIcon from '@mui/icons-material/LockOpenOutlined';
-import SecurityOutlinedIcon from '@mui/icons-material/SecurityOutlined';
-import Dashheader from "./Dashheader";
+import { Box, useTheme } from "@mui/material";
+import { DataGrid, GridToolbar } from '@mui/x-data-grid';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { allRawIncidents } from '../state/slices/incidentsSlice';
-import LoadingSpinner from '../components/LoadingSpinner';
+import { tokens } from '../theme';
+import Dashheader from "./Dashheader";
 
 
 const Incidentraw = ()=> {
@@ -21,14 +17,16 @@ const Incidentraw = ()=> {
     const location = useLocation();
     useEffect(()=> {
 		dispatch(allRawIncidents())
-	},[dispatch,isError, message])
+	},[dispatch,isError,isLoading, message])
     const [stateload, setIsLoading] = useState(isLoading);
     const Data = incidents
+    console.log(Data)
     // const handleCellClick = (params)=> navigate(params.row.incidentid);
+    
     const columns = [
-        {field:'incidentid', headerName:'Incident ID',HeaderAlign: 'center', flex: 1},
-        {field:'recordedby', headerName:'Recorded By',headerAlign:'center', align: 'center',minWidth: 35},
-        {field:'airport', headerName:'Airport',headerAlign:'left', align: 'left',flex: 1},
+        {field:'incidentid', headerName:'Incident ID',HeaderAlign: 'center', flex: 1, valueGetter: (Data) => Data.row.id},
+        {field:'recordedby', headerName:'Recorded By',headerAlign:'center', align: 'center',minWidth: 35, valueGetter: (Data) => Data.row.properties.recordedby},
+        {field:'airport', headerName:'Airport',headerAlign:'left', align:'left',flex: 1, valueGetter: (Data) => Data.row.properties.airport},
     ]
 
     useEffect(() => {
@@ -47,7 +45,7 @@ const Incidentraw = ()=> {
                     <DataGrid 
                     loading={isLoading === true?  true : false}
                     rows={Data}
-                    getRowId={(row)=> row.incidentid}
+                    getRowId={(row)=> row.id}
                     columns={columns}
                     pageSize={pageSize}
                     onPageSizeOptions={[25, 50, 100]}
@@ -57,11 +55,11 @@ const Incidentraw = ()=> {
                         top: params.isFirstVisible ? 0 : 5,
                         bottom: params.isLastVisible ? 0 : 5
                     })}
-                    onRowClick={params=> navigate(params.row.incidentid, {state:{from: location}, replace: true})}
+                    onRowClick={params=> navigate(params.row.id, {state:{from: location}, replace: true})}
                     />
                 </Box>
         </Box> 
-     );
+     ); 
 }
 
 export default Incidentraw;

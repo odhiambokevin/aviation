@@ -1,29 +1,21 @@
-import { useState } from "react";
 import { Box, Button, TextField } from "@mui/material";
-import { Formik } from "formik";
-import * as yup from "yup";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import Switch from '@mui/material/Switch';
 import FormControl from '@mui/material/FormControl';
 import FormControlLabel from '@mui/material/FormControlLabel';
-import MenuItem from '@mui/material/MenuItem';
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import IconButton from '@mui/material/IconButton';
-import InputAdornment from '@mui/material/InputAdornment';
-import Visibility from '@mui/icons-material/Visibility';
-import VisibilityOff from '@mui/icons-material/VisibilityOff';
-import Dashheader from "./Dashheader";
-import {activeUser, loginActiveUser} from "../state/slices/userSlice";
-import {useDispatch, useSelector} from "react-redux";
-import {useNavigate, useLocation, useParams} from "react-router-dom";
+import Switch from '@mui/material/Switch';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Formik } from "formik";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { verifyIncident } from "../state/slices/incidentsSlice";
+import Dashheader from "./Dashheader";
 
 const Verify = () => {
   const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
   const {user} = useSelector((state)=> state.users)
   const {incidentid} = useParams();
-  const incident = incidents.find((incident) => incident.incidentid === incidentid);
+  const incident = incidents.find((incident) => incident.id === incidentid);
+  console.log(incident)
   const incidentData = {
         verifiedby:user.username,
         altitude:'',
@@ -126,7 +118,7 @@ const Verify = () => {
               <TextField
                 name="incidentid"
                 label="Incident ID"
-                defaultValue={incident.incidentid}
+                defaultValue={incident.id}
                 InputProps={{
                   readOnly: true,
                 }}
@@ -135,7 +127,7 @@ const Verify = () => {
               <TextField
                 name="recordedby"
                 label="Recorded By"
-                defaultValue={incident.recordedby}
+                defaultValue={incident.properties.recordedby}
                 InputProps={{
                   readOnly: true,
                 }}
@@ -143,7 +135,7 @@ const Verify = () => {
               <TextField
                 name="airport"
                 label="Airport"
-                defaultValue={incident.airport}
+                defaultValue={incident.properties.airport}
                 InputProps={{
                   readOnly: true,
                 }}
@@ -168,7 +160,7 @@ const Verify = () => {
                 name="altitude"
                 error={!!touched.altitude && !!errors.altitude}
                 helperText={touched.altitude && errors.altitude}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 1" }}
               />
               <FormControl variant="outlined">
                 <FormControlLabel
@@ -196,7 +188,7 @@ const Verify = () => {
                 }}
                 name="impact"
                 helperText="Impact on flight"
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 1" }}
                 >
                   {impact.map((option) => (<option key={option.value} value={option.value}>{option.label}</option>))}
               </TextField>
@@ -226,7 +218,7 @@ const Verify = () => {
                 InputLabelProps={{
                   shrink: true
                 }}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 1" }}
                 >
                   {flightphase.map((option) => (<option key={option.value} value={option.value}>{option.label}</option>))}
                   {/* <MenuItem>
@@ -246,7 +238,7 @@ const Verify = () => {
                 name="aircraftmodel"
                 error={!!touched.aircraftmodel && !!errors.aircraftmodel}
                 helperText={touched.aircraftmodel && errors.aircraftmodel}
-                sx={{ gridColumn: "span 4" }}
+                sx={{ gridColumn: "span 1" }}
               />
               <TextField
                 fullWidth
@@ -259,7 +251,7 @@ const Verify = () => {
                 name="scientificname"
                 error={!!touched.scientificname && !!errors.scientificname}
                 helperText={touched.scientificname && errors.scientificname}
-                sx={{ gridColumn: "span 4" }}
+                
               />
               
               <TextField
@@ -275,7 +267,6 @@ const Verify = () => {
                 }}
                 name="wildlifenumber"
                 helperText="Number of involved wildlife"
-                sx={{ gridColumn: "span 4" }}
                 >
                   {wildlifenumber.map((option) => (<option key={option.value} value={option.value}>{option.label}</option>))}
               </TextField>            
@@ -290,7 +281,7 @@ const Verify = () => {
                 name="wildlifenumberactual"
                 error={!!touched.wildlifenumberactual && !!errors.wildlifenumberactual}
                 helperText={touched.wildlifenumberactual && errors.wildlifenumberactual}
-                sx={{ gridColumn: "span 4" }}
+                
               />
               <TextField
                 fullWidth
@@ -303,7 +294,7 @@ const Verify = () => {
                 name="airlineoperator"
                 error={!!touched.airlineoperator && !!errors.airlineoperator}
                 helperText={touched.airlineoperator && errors.airlineoperator}
-                sx={{ gridColumn: "span 4" }}
+                
               />
 
               <FormControl variant="outlined">

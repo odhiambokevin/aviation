@@ -15,21 +15,6 @@ import LineChart from "./LineChartdash";
 import ProgressCircle from "./ProgressCircle";
 import StatBox from "./StatBox";
 
-const mockTransactions = [
-    {
-      txId: "01e4dsa",
-      user: "johndoe",
-      date: "2021-09-01",
-      cost: "43.95",
-    },
-    {
-      txId: "0315dsaa",
-      user: "jackdower",
-      date: "2022-04-01",
-      cost: "133.45",
-    }
-  ];
-
 const Dashboard = () => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -40,7 +25,7 @@ const Dashboard = () => {
 
   const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
   const {user} = useSelector((state)=> state.users)
-
+ 
   useEffect(()=> {dispatch(allVerifiedIncidents())},[dispatch,isError, message])
 
   const da = (incident)=>{
@@ -57,7 +42,7 @@ const Dashboard = () => {
       <Box m="20px">
         {/* HEADER */}
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Dashheader title="DASHBOARD" subtitle={`Current user: ${user ? user.username : 'none'}`} />
+          <Dashheader title="DASHBOARD" subtitle={`Current user: ${user ? user.username : 'guest'}`} />
   
           <Box>
             <Button
@@ -83,7 +68,7 @@ const Dashboard = () => {
               xs: "block",
               sm: "block",
               md: "block",
-              lg: "block",
+              lg: "grid",
               xl: "grid",
             },
             gridTemplateColumns: "repeat(12, 1fr)",
@@ -229,7 +214,7 @@ const Dashboard = () => {
                 Live Incidents
               </Typography>
             </Box>
-            {incidents.map((incident, i) => (
+            {incidents ? incidents.map((incident, i) => (
               <Box
                 key={incident.incidentid}
                 display="flex"
@@ -261,7 +246,13 @@ const Dashboard = () => {
                   {incident.recordedby}
                 </Box>
               </Box>
-            ))}
+            ))
+          :
+          <Typography color={colors.grey[100]}>
+                    Check Database Connection
+          </Typography>
+
+          }
           </Box>
   
           {/* ROW 3 */}

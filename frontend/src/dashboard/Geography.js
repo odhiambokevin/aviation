@@ -1,14 +1,12 @@
-import React, {useEffect, useState} from 'react';
-import {useDispatch, useSelector} from 'react-redux';
 import { Box, useTheme } from "@mui/material";
+import { Icon } from 'leaflet';
 import 'leaflet/dist/leaflet.css';
-import {Icon} from 'leaflet';
-import {MapContainer, TileLayer, Popup, Marker} from 'react-leaflet';
-import GeographyChart from "./GeographyChart";
-import Dashheader from "./Dashheader";
+import React, { useEffect } from 'react';
+import { MapContainer, TileLayer } from 'react-leaflet';
+import { useDispatch, useSelector } from 'react-redux';
 import { allRawIncidents } from '../state/slices/incidentsSlice';
 import { tokens } from "../theme";
-import MarkerClusterGroup from "react-leaflet-cluster";
+import Dashheader from "./Dashheader";
 
 
 const Geography = () => {
@@ -54,7 +52,7 @@ const Geography = () => {
               attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
               url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            {
+            {/* {
               incidents.map(incident=>(
                 <MarkerClusterGroup>
                 <Marker position={[incident.geometry.coordinates[1],incident.geometry.coordinates[0] ]} icon={myIcon} key={incident.id}>
@@ -65,7 +63,7 @@ const Geography = () => {
                 </Marker>
                 </MarkerClusterGroup>
               ))
-            } 
+            }  */}
          </MapContainer>
       </Box>
     </Box>
