@@ -11,7 +11,7 @@ import Dashheader from "./Dashheader";
 const Incidentraw = ()=> {
     const theme = useTheme();
     const colors = tokens(theme.palette.mode);
-    const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
+    const {rawIncidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
 	const dispatch = useDispatch();
 	const navigate = useNavigate();
     const location = useLocation();
@@ -19,9 +19,8 @@ const Incidentraw = ()=> {
 		dispatch(allRawIncidents())
 	},[dispatch,isError,isLoading, message])
     const [stateload, setIsLoading] = useState(isLoading);
-    const Data = incidents
+    const Data = rawIncidents
     console.log(Data)
-    // const handleCellClick = (params)=> navigate(params.row.incidentid);
     
     const columns = [
         {field:'incidentid', headerName:'Incident ID',HeaderAlign: 'center', flex: 1, valueGetter: (Data) => Data.row.id},

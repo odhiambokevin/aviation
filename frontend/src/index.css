@@ -12,3 +12,22 @@ body,
     position: relative;
     font-family: 'Trebuchet MS', sans-serif serif;
 }
+
+/* ::-webkit-scrollbar {
+    width: .5rem;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+}
+
+::-webkit-scrollbar-track {
+background-color: #ffffff;
+} */
+
+.MuiCircularProgress-root {
+    left: 35%;
+    position: absolute;
+    
+}

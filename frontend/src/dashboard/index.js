@@ -3,8 +3,8 @@ import EmailIcon from "@mui/icons-material/Email";
 import PersonAddIcon from "@mui/icons-material/PersonAdd";
 import PointOfSaleIcon from "@mui/icons-material/PointOfSale";
 import TrafficIcon from "@mui/icons-material/Traffic";
-import { Box, Button, IconButton, Typography, useTheme } from "@mui/material";
-import React, { useEffect } from 'react';
+import { Alert, Box, Button, CircularProgress, IconButton, Typography, useTheme } from "@mui/material";
+import React, { useEffect, useState, } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { allVerifiedIncidents } from '../state/slices/incidentsSlice';
@@ -21,12 +21,20 @@ const Dashboard = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
- 
 
-  const {incidents,isError, isLoading,isSuccess,message} = useSelector((state)=> state.incidents)
+ const [load, setLoad] = useState(true)
+
+  const {verifiedIncidents,isError,message} = useSelector((state)=> state.incidents)
   const {user} = useSelector((state)=> state.users)
  
-  useEffect(()=> {dispatch(allVerifiedIncidents())},[dispatch,isError, message])
+  useEffect(()=> {dispatch(allVerifiedIncidents())},[dispatch,isError, message]);
+  useEffect(() => {
+    const timeout = setTimeout(() => {
+      setLoad(false)}, 10000);
+
+    return function ()  {
+      clearTimeout(timeout)}
+  }, []);
 
   const da = (incident)=>{
       let day = new Date().getDate(incident.date)
@@ -214,7 +222,7 @@ const Dashboard = () => {
                 Live Incidents
               </Typography>
             </Box>
-            {incidents ? incidents.map((incident, i) => (
+            {verifiedIncidents.length > 1 && verifiedIncidents.map((incident, i) => (
               <Box
                 key={incident.incidentid}
                 display="flex"
@@ -246,13 +254,18 @@ const Dashboard = () => {
                   {incident.recordedby}
                 </Box>
               </Box>
-            ))
-          :
-          <Typography color={colors.grey[100]}>
-                    Check Database Connection
-          </Typography>
+            ))}
 
+          { verifiedIncidents.length < 1 &&
+          <Box position="relative"  padding="25% 15%">
+           { load ? <CircularProgress color="info" size={80} /> : <Alert severity="info" variant="outlined" >
+            Check Database Connection
+            </Alert>}
+          </Box>
+            
           }
+          
+
           </Box>
   
           {/* ROW 3 */}

@@ -1,14 +1,15 @@
-import { createSlice, createAsyncThunk} from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import incidentsApi from '../api/incidentsApi';
 
 const initialState = {
-    incidents: [],
+    verifiedIncidents: [],
+    rawincIdents: [],
     incident: {},
     isError: false,
     isLoading: false,
     isSuccess: false,
     message: 'Initial STATE'
-}
+} 
 
 // retrieve unverified incidents
 export const allRawIncidents = createAsyncThunk('incidents/getIncidents', async (_,thunkAPI)=>{
@@ -55,7 +56,7 @@ export const incidentsSlice = createSlice({
         [allVerifiedIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
-            state.incidents = payload.results;
+            state.verifiedIncidents = payload.results;
         },
         [allVerifiedIncidents.rejected]: (state,{ payload })=>{
             state.isLoading = false;
@@ -70,7 +71,7 @@ export const incidentsSlice = createSlice({
         [allRawIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
-            state.incidents = payload.results.features;
+            state.rawIncidents = payload.results.features;
         },
         [allRawIncidents.rejected]: (state,{ payload })=>{
             state.isLoading = false;
