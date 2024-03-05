@@ -222,7 +222,7 @@ const Dashboard = () => {
                 Live Incidents
               </Typography>
             </Box>
-            {verifiedIncidents.length > 1 && verifiedIncidents.map((incident, i) => (
+            {verifiedIncidents && verifiedIncidents.map((incident, i) => (
               <Box
                 key={incident.incidentid}
                 display="flex"
@@ -256,7 +256,7 @@ const Dashboard = () => {
               </Box>
             ))}
 
-          { verifiedIncidents.length < 1 &&
+          { !verifiedIncidents &&
           <Box position="relative"  padding="25% 15%">
            { load ? <CircularProgress color="info" size={80} /> : <Alert severity="info" variant="outlined" >
             Check Database Connection
