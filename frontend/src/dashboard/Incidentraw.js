@@ -17,15 +17,15 @@ const Incidentraw = ()=> {
     const location = useLocation();
     useEffect(()=> {
 		dispatch(allRawIncidents())
-	},[dispatch,isError,isLoading, message])
+	},[])
     const [stateload, setIsLoading] = useState(isLoading);
-    const Data = rawIncidents
-    console.log(Data)
+    
+    console.log(rawIncidents)
     
     const columns = [
-        {field:'incidentid', headerName:'Incident ID',HeaderAlign: 'center', flex: 1, valueGetter: (Data) => Data.row.id},
-        {field:'recordedby', headerName:'Recorded By',headerAlign:'center', align: 'center',minWidth: 35, valueGetter: (Data) => Data.row.properties.recordedby},
-        {field:'airport', headerName:'Airport',headerAlign:'left', align:'left',flex: 1, valueGetter: (Data) => Data.row.properties.airport},
+        {field:'incidentid', headerName:'Incident ID',HeaderAlign: 'center', flex: 1, valueGetter: ( rawIncidents) =>  rawIncidents.row.id},
+        {field:'recordedby', headerName:'Recorded By',headerAlign:'center', align: 'center',minWidth: 35, valueGetter: ( rawIncidents) =>  rawIncidents.row.properties.recordedby},
+        {field:'airport', headerName:'Airport',headerAlign:'left', align:'left',flex: 1, valueGetter: (rawIncidents) => rawIncidents.row.properties.recordedby},
     ]
 
     useEffect(() => {
@@ -43,8 +43,8 @@ const Incidentraw = ()=> {
                 }}>                  
                     <DataGrid 
                     loading={isLoading === true?  true : false}
-                    rows={Data}
-                    getRowId={(row)=> row.id}
+                    rows={ rawIncidents}
+                    getRowId={( rawIncidents)=>  rawIncidents.id}
                     columns={columns}
                     pageSize={pageSize}
                     onPageSizeOptions={[25, 50, 100]}

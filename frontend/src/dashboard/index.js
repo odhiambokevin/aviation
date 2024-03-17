@@ -27,7 +27,7 @@ const Dashboard = () => {
   const {verifiedIncidents,isError,message} = useSelector((state)=> state.incidents)
   const {user} = useSelector((state)=> state.users)
  
-  useEffect(()=> {dispatch(allVerifiedIncidents())},[dispatch,isError, message]);
+  useEffect(()=> {dispatch(allVerifiedIncidents())},[]);
   useEffect(() => {
     const timeout = setTimeout(() => {
       setLoad(false)}, 10000);

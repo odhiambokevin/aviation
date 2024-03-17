@@ -1,5 +1,5 @@
-import {useSelector} from "react-redux";
-import {Outlet,useLocation,Navigate} from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Navigate, Outlet, useLocation } from "react-router-dom";
 
 export const AuthRoutes = ({allowedDesignation})=> {
     const {user} = useSelector((state)=>state.users)

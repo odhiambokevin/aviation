@@ -1,21 +1,15 @@
-.. image:: frontend/public/static/images/logo.png
+.. image:: frontend/public/assets/awm.png
     :height: 100px
-.. image:: https://img.shields.io/github/last-commit/odhiambokevin/aviation/development
+.. image:: https://img.shields.io/github/last-commit/odhiambokevin/aviation/main
 
 
 #############
-YASPI
+Aviation Dashboard
 #############
 
-
-
-This is my portfolio website
-============================
-
-
-This is a portfolio website for conceptual projects.
+This is a dashboard for wildife management at an airport.
 
 .. note::
     This is a development version of the projects and is not complete.
 
-Project documentation and website will be hosted soon.
+Project documentation will be posted soon.

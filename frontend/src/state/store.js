@@ -1,11 +1,10 @@
-import {configureStore, getDefaultMiddleware} from "@reduxjs/toolkit";
-import blogReducer from "./slices/blogSlice";
-import worksSlice from "./slices/worksSlice";
-import {userSlice} from "./slices/userSlice";
-import {incidentsSlice} from "./slices/incidentsSlice";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
+import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import {persistReducer, FLUSH, REHYDRATE, PURGE, PAUSE, PERSIST, REGISTER} from "redux-persist";
-import {combineReducers} from "@reduxjs/toolkit";
+import blogReducer from "./slices/blogSlice";
+import { incidentsSlice } from "./slices/incidentsSlice";
+import { userSlice } from "./slices/userSlice";
+import worksSlice from "./slices/worksSlice";
 
 const persistConfig = {
     key : "root",

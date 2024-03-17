@@ -3,7 +3,7 @@ import incidentsApi from '../api/incidentsApi';
 
 const initialState = {
     verifiedIncidents: [],
-    rawincIdents: [],
+    rawIncidents: [],
     incident: {},
     isError: false,
     isLoading: false,
@@ -50,38 +50,53 @@ export const incidentsSlice = createSlice({
     initialState: initialState,
     reducers: {},
     extraReducers: {
-        [allVerifiedIncidents.pending]: (state, {payload})=>{
+        [allVerifiedIncidents.pending]: (state,{ payload })=>{
             state.isLoading = true;
+            state.isSuccess = false;
+            state.isError = false;
+            state.message = 'loading...'
+            state.verifiedIncidents = []
         },
         [allVerifiedIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
             state.verifiedIncidents = payload.results;
+            state.message = payload.count + ' results';
         },
         [allVerifiedIncidents.rejected]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = false;
             state.isError = true;
             state.message = payload;
+            state.verifiedIncidents = []
         },
 
-        [allRawIncidents.pending]: (state, {payload})=>{
+        [allRawIncidents.pending]: (state,{ payload })=>{
             state.isLoading = true;
+            state.isSuccess = false;
+            state.isError = false;
+            state.message = 'loading...'
+            state.rawIncidents = []
         },
         [allRawIncidents.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = true;
             state.rawIncidents = payload.results.features;
+            state.message= 'success'
         },
         [allRawIncidents.rejected]: (state,{ payload })=>{
             state.isLoading = false;
             state.isSuccess = false;
             state.isError = true;
             state.message = payload;
+            state.rawIncidents = []
         },
 
-        [verifyIncident.pending]: (state)=>{
+        [verifyIncident.pending]: (state,{ payload })=>{
             state.isLoading = true;
+            state.isSuccess = false;
+            state.isError = false;
+            state.message= 'loading...'
         },
         [verifyIncident.fulfilled]: (state,{ payload })=>{
             state.isLoading = false;

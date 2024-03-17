@@ -1,19 +1,19 @@
-import { useState } from "react";
-import { Box, Button, TextField } from "@mui/material";
-import { Formik } from "formik";
-import * as yup from "yup";
-import useMediaQuery from "@mui/material/useMediaQuery";
-import OutlinedInput from '@mui/material/OutlinedInput';
-import InputLabel from '@mui/material/InputLabel';
-import IconButton from '@mui/material/IconButton';
-import InputAdornment from '@mui/material/InputAdornment';
-import FormControl from '@mui/material/FormControl';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
+import { Box, Button, TextField } from "@mui/material";
+import FormControl from '@mui/material/FormControl';
+import IconButton from '@mui/material/IconButton';
+import InputAdornment from '@mui/material/InputAdornment';
+import InputLabel from '@mui/material/InputLabel';
+import OutlinedInput from '@mui/material/OutlinedInput';
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { Formik } from "formik";
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import * as yup from "yup";
+import { activeUser, loginActiveUser } from "../state/slices/userSlice";
 import Dashheader from "./Dashheader";
-import {activeUser, loginActiveUser} from "../state/slices/userSlice";
-import {useDispatch, useSelector} from "react-redux";
-import {useNavigate, useLocation} from "react-router-dom";
 
 const Signindash = () => {
   const {user,isError, isLoading,isSuccess,message} = useSelector((state)=> state.users)
@@ -54,7 +54,7 @@ const Signindash = () => {
               gap="30px"
               gridTemplateColumns="repeat(4, minmax(0, 1fr))"
               sx={{
-                "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
+                "& > div": { gridColumn: isNonMobile ? "span 2" : "span 4" },
               }}
             >
               <TextField
@@ -69,7 +69,7 @@ const Signindash = () => {
                 error={!!touched.email && !!errors.email}
                 helperText={touched.email && errors.email}
                 sx={{ gridColumn: "span 4" }}
-              />
+              /> <br/>
               <FormControl sx={{ m: 1, width: '25ch' }} variant="outlined">
                 <InputLabel htmlFor="outlined-adornment-password">Password</InputLabel>
                 <OutlinedInput

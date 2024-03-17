@@ -2,11 +2,5 @@
 .gitignore
 .dockerignore
 .env
-dtoken
-documentation/build/
-__pycache__/*
-**/__pycache__/
-*.py[cod]
-*.pyc
-*$py.class
-dtpo
+documentation
+backend
