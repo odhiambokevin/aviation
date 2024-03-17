@@ -1,0 +1,10 @@
+2024-03-17 20:13:20,268 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-17 20:15:23,685 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-17 21:25:57,467 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-17 21:26:15,702 django.request WARNING  Not Found: /
+2024-03-17 21:26:16,943 django.request WARNING  Not Found: /favicon.ico
+2024-03-17 21:26:35,682 django.request WARNING  Not Found: /sadasdasdsd
+2024-03-17 21:27:26,316 django.utils.autoreload INFO     D:\Projects\code\aviation\be_aviation\aviation\urls.py changed, reloading.
+2024-03-17 21:27:38,357 django.utils.autoreload INFO     Watching for file changes with StatReloader
+2024-03-17 21:28:49,826 django.utils.autoreload INFO     D:\Projects\code\aviation\be_aviation\aviation\urls.py changed, reloading.
+2024-03-17 21:29:01,556 django.utils.autoreload INFO     Watching for file changes with StatReloader
