@@ -50,7 +50,7 @@ const Dashboard = () => {
       <Box m="20px">
         {/* HEADER */}
         <Box display="flex" justifyContent="space-between" alignItems="center">
-          <Dashheader title="DASHBOARD" subtitle={`Current user: ${user ? user.username : "guest"}`} />
+          <Dashheader title="DASHBOARD" subtitle={user ? (`Current user: ${user.username}`) : ('Current user: guest')} />
   
           <Box>
             <Button
