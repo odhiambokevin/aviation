@@ -41,6 +41,8 @@ THIRD_PARTY_APPS = [
 """user-generated apps"""
 USER_APPS = [
     "apps.users",
+    "apps.profiles",
+    "apps.airports",
 ]
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + USER_APPS
@@ -105,7 +107,7 @@ DOMAIN = config("DOMAIN")
 DEFAULT_FROM_EMAIL = config("DEFAULT_FROM_EMAIL")
 SITE_NAME = config("SITE_NAME")
 ADMINS = (
-    ("Yaspi Admin", config("DEFAULT_FROM_EMAIL")),
+    ("Yaspi Admin", config("ADMIN_EMAIL")),
 )
 MANAGERS = ADMINS
 
@@ -159,21 +161,18 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 AUTH_USER_MODEL = "users.User"
 
 REST_FRAMEWORK = {
-    "DEFAULT_AUTHENTICATION_CLASSES": (
-        "rest_framework_simplejwt.authentication.JWTAuthentication",
-    )
+    "DEFAULT_AUTHENTICATION_CLASSES": [
+        "rest_framework_simplejwt.authentication.JWTAuthentication"
+    ]
 }
 
 from datetime import timedelta
 
 SIMPLE_JWT = {
-    "AUTH_HEADER_TYPES": (
-        "JWT",
-        "Bearer",
-    ),
-    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=30),
-    "REFRESH_TOKEN_LIFETIME": timedelta(days=1),
-    "SIGNING_KEY": config("SIGNING_KEY"),
+    "AUTH_HEADER_TYPES": ("JWT","Bearer",),
+    "ACCESS_TOKEN_LIFETIME": timedelta(minutes=int(config("ACCESS_TOKEN_LIFETIME"))), 
+    "REFRESH_TOKEN_LIFETIME": timedelta(minutes=int(config("REFRESH_TOKEN_LIFETIME"))),
+    "SIGNING_KEY": config("SIMPLE_JWT_SIGNING_KEY"),
     "AUTH_HEADER_NAME": "HTTP_AUTHORIZATION",
     "AUTH_TOKEN_CLASSES": ("rest_framework_simplejwt.tokens.AccessToken",),
 }
@@ -225,10 +224,10 @@ logging.config.dictConfig(
         "disable_existing_loggers": False,
         "formatters": {
             "console": {
-                "format": "%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
+                "format": "%(asctime)s %(name)s %(module)s.py %(levelname)s %(message)s",
             },
             "file": {
-                "format": "%(asctime)s %(name)-12s %(levelname)-8s %(message)s",
+                "format": "%(asctime)s %(levelname)s %(name)s %(module)s.py (line %(lineno)d) %(message)s",
             },
             "django.server": DEFAULT_LOGGING["formatters"]["django.server"],
         },
@@ -238,16 +237,16 @@ logging.config.dictConfig(
                 "formatter": "console",
             },
             "file": {
-                "level": "INFO",
+                "level": config("DJANGO_LOG_LEVEL"),
                 "class": "logging.FileHandler",
                 "formatter": "file",
-                "filename": "logs/aviation.log",
+                "filename": config("DJANGO_LOG_FILE"),
             },
             "django.server": DEFAULT_LOGGING["handlers"]["django.server"],
         },
         "loggers": {
-            "": {"level": "INFO", "handlers": ["console", "file"], "propagate": False},
-            "apps": {"level": "INFO", "handlers": ["console","file"], "propagate": False},
+            "": {"level": config("DJANGO_LOG_LEVEL"), "handlers": ["console", "file"], "propagate": False},
+            "apps": {"level": config("APPS_LOG_LEVEL"), "handlers": ["file"], "propagate": False},
             "django.server": DEFAULT_LOGGING["loggers"]["django.server"],
         },
     }

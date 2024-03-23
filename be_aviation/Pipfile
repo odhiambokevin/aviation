@@ -16,6 +16,9 @@ python-decouple = "*"
 django-cors-headers = "*"
 djangorestframework-simplejwt = "*"
 djoser = "*"
+pyjwt = "*"
+black = "*"
+flake8 = "*"
 
 [dev-packages]
 black = "*"

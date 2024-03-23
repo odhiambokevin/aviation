@@ -12,44 +12,43 @@ class UserAdmin(BaseUserAdmin):
     form = CustomUserChangeForm
     model = User
     """Fields to be displayed"""
-    list_display = ["pkid","id","email","username","first_name","last_name","is_staff","is_active"]
+    list_display = ["pkid","email","username","is_staff","is_active"]
+    readonly_fields = ["date_created","last_login"]
     list_display_links = ["email"]
     list_filter = ["is_staff", "is_active", "username"]
-    fieldsets = (
+    
+    """sections as seen in the 'add' or 'change' user froms
+    """
+    fieldsets = [
         (
             "Login Credentials",
-            {"fields": ("email","password")}
+            {"fields": ["email","password"]}
         ),
         (
             "Personal Information",
-            {"fields": ("username", "first_name", "last_name")}
+            {"fields": ["username", "first_name", "last_name"]}
         ),
         (
             "Permissions and Groups",
-            {"fields": ("is_active","is_staff","is_superuser","user_permissions")}
+            {"fields": ["is_active","is_staff","is_superuser","user_permissions"]}
         ),
         (
-            "Important Dates",{"fields": ("last_login","date_created")}
+            "Important Dates",
+            {"fields": ["date_created","last_login"]}
         ),
-    )
+
+    ]
     add_fieldsets = (
         (
             (
                 None,
                 {
-                    "classes": ("wide",),
-                    "fields": (
-                        "email",
-                        "password1",
-                        "password2",
-                        "is_staff",
-                        "is_active",
-                    ),
-                },
+                    "classes": ["wide"],
+                    "fields": ["email","password1","password2","is_staff","is_active"]
+                }
             )
         ),
     )
     search_fields = ["email", "username", "first_name", "last_name"]
-
 
 admin.site.register(User, UserAdmin)
